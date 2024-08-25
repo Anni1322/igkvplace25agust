@@ -1,0 +1,113 @@
+h1{
+    color: rgb(19, 8, 67);
+    font-weight: bold;
+}
+
+// // Define base styles
+// $primary-color: #007bff;
+// $secondary-color: #424a51;
+// $border-radius: 0.25rem;
+// $padding: 0.50rem;
+
+// .container {
+//   padding: $padding;
+  
+//   // Form field styles
+//   .mat-form-field {
+//     width: 100%;
+//     margin-bottom: $padding;
+
+//     mat-label {
+//       color: $primary-color;
+//     }
+
+//     input {
+//       padding: $padding;
+//     }
+//   }
+
+//   // Table styles
+//   .mat-elevation-z8 {
+//     overflow-x: auto;
+    
+//     table {
+//       width: 100%;
+//       border-collapse: collapse;
+
+//       th, td {
+//         text-align: left;
+//         padding: $padding;
+//         border: 1px solid #dee2e6;
+//       }
+
+//       th {
+//         background-color: $secondary-color;
+//         color: white;
+//       }
+
+//       td {
+//         background-color: #ffffff;
+//       }
+//     }
+    
+//     // Handle responsiveness
+//     @media (max-width: 768px) {
+//       table {
+//         thead {
+//           display: none;
+//         }
+        
+//         tr {
+//           display: block;
+//           margin-bottom: $padding;
+//         }
+        
+//         td {
+//           display: block;
+//           text-align: right;
+//           position: relative;
+//           padding-left: 50%;
+//           white-space: nowrap;
+          
+//           &:before {
+//             content: attr(data-label);
+//             position: absolute;
+//             left: 0;
+//             width: 50%;
+//             padding: $padding;
+//             white-space: nowrap;
+//             font-weight: bold;
+//             background-color: $secondary-color;
+//             color: white;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   // Pagination styles
+//   mat-paginator {
+//     margin-top: $padding;
+//   }
+
+//   // Print button styles
+//   .btn-primary {
+//     background-color: $primary-color;
+//     border: none;
+//     color: white;
+//     padding: $padding;
+//     border-radius: $border-radius;
+//     cursor: pointer;
+    
+//     &:hover {
+//       background-color: darken($primary-color, 10%);
+//     }
+//   }
+
+//   // No data row styles
+//   .mat-no-data-row {
+//     text-align: center;
+//     font-style: italic;
+//     color: $secondary-color;
+//   }
+// }

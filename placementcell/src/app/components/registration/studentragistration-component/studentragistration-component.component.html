@@ -1,0 +1,278 @@
+<div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
+    <div class="container page-heading text-center p-0 bg-white rounded shadow">
+        <h3 style="background-color: #3aaaff"
+            class="card-header p-2 text-light rounded border border-end-0 border-bottom-0 border-start-0 border-5 border-dark">
+            <strong>Student Registration</strong>
+        </h3>
+    </div>
+  
+  <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
+    <form class="form" #NgForm="ngForm" enctype="multipart/form-data" >    
+     <div class="row basic-row "> 
+            <div class="#">
+                <div class="card">
+                    <div class="card-header p-1" style="background-color: #3aaaff">
+                        <h5 class="ms-1 mt-1 text-white"><b>Basic Information / मूलभूत जानकारी</b></h5>
+                    </div>
+  
+<mat-stepper >
+    <mat-step>
+      <div class="card-body">
+      <div class="row">
+     
+        <ng-template matStepLabel="content">FirstContent</ng-template>
+        <h2>Personal_Details</h2>       
+        <div class="col-lg-4 ">
+          <div class="form-group">
+              <label>
+              <b>User ID:</b></label>
+              <input type="number"  class=" form-control shadow rounded border-1 border-dark" id="name" [(ngModel)]="formData.user_id" name="user_id" placeholder="Enter user id" />
+          </div>
+      </div> 
+      <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+                <b>Registration Type:</b></label>
+                <select class="form-control shadow rounded border-1 border-dark" [(ngModel)]="formData.RegistrationType" name="RegistrationType" id="RegistrationType">
+                    <option value="S">Standerd</option>
+                    <option value="P">Premium</option>
+                    <option value="R">Referral</option>
+                </select>
+            <!--<input type="text" class="form-control shadow rounded border-1 border-dark" id="RegistrationType"  name="RegistrationType" placeholder="Standerd-S, Premium -P, Referral-R..."  /> -->
+       </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+                <b>Salutation_E:</b></label>
+                <select class="form-control shadow rounded border-1 border-dark" [(ngModel)]="formData.Salutation_E" name="Salutation_E" id="Salutation_E">
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                </select>
+               <!--<input type="text" class=" form-control shadow rounded border-1 border-dark" id="Salutation_E"  name="Salutation_E" placeholder="Enter 1 2"  /> -->
+      </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+                <b>Student First Name:</b>
+            </label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Student_First_Name_E" [(ngModel)]="formData.Student_First_Name_E" name="Student_First_Name_E" placeholder="First Name"  /> 
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+                <b>Student Middle Name:</b>
+            </label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Student_Middle_Name_E" [(ngModel)]="formData.Student_Middle_Name_E" name="Student_Middle_Name_E" placeholder="Middle Name"  />
+        </div>
+    </div>        
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label><b>Student Last Name:</b></label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Student_Last_Name_E" [(ngModel)]="formData.Student_Last_Name_E" name="Student_Last_Name_E" placeholder="Last Name"  />
+        </div>
+    </div>  
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label><b>Salutation_H:</b></label>
+            <select class="form-control shadow rounded border-1 border-dark" name="Salutation_H" [(ngModel)]="formData.Salutation_H" id="Salutation_H">
+                <option value="श्रीमान">श्रीमान</option>
+                <option value="श्रीमति">श्रीमति</option>
+            </select>
+             <!--  <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Salutation_H" [(ngModel)]="formData.Salutation_H" name="Salutation_H" placeholder="श्रीमान/श्रीमति"  /> -->
+   </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label><b>विद्यार्थी का प्रथम नाम:</b></label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Student_First_Name_H" [(ngModel)]="formData.Student_First_Name_H" name="Student_First_Name_H" placeholder="प्रथम नाम"  />
+        </div>
+    </div>  
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+                <b>विद्यार्थी का मध्य नाम:</b>
+            </label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Student_Middle_Name_H" [(ngModel)]="formData.Student_Middle_Name_H" name="Student_Middle_Name_H" placeholder="मध्य नाम" lang="hi"  />
+        </div>
+    </div>  
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+                <b>छात्र का अंतिम नाम:</b>
+            </label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Student_Last_Name_H" [(ngModel)]="formData.Student_Last_Name_H" name="Student_Last_Name_H" placeholder="अंतिम नाम"  />
+        </div>
+    </div> 
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+               <b>Date Of Birth:</b>
+            </label>
+            <input type="date" class="form-control shadow rounded border-1 border-dark" id="DOB" [(ngModel)]="formData.DOB" name="DOB" placeholder="D/M/Y"  />
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label><b>Gender:</b></label>
+            <select class="form-control shadow rounded border-1 border-dark"  name="Gender_Id" [(ngModel)]="formData.Gender_Id" id="Gender_Id">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+           <!-- <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Gender_Id"  name="Gender_Id" placeholder=" m1 f2"  /> -->
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>
+               <b>Mobile No:</b>
+            </label>
+            <input type="text" class="form-control shadow rounded border-1 border-dark" id="Mobile_No" [(ngModel)]="formData.Mobile_No" name="Mobile_No" placeholder="Mobile"  />
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label><b>Email:</b></label>
+            <input type="email" class=" form-control shadow rounded border-1 border-dark" id="Email_Id" [(ngModel)]="formData.Email_Id" name="Email_Id" placeholder="igkv@gmail.com"  />
+        </div>
+    </div>
+        
+        <button mat-button matStepperNext>Next</button>
+
+      </div>
+    </div>
+    </mat-step>
+
+    <mat-step>
+      <div class="card-body">
+        <div class="row">
+      <h2>Parents_Details</h2>
+      <ng-template matStepLabel="content">SecondContent</ng-template>
+      <div class="col-lg-6">
+        <div class="form-group">
+            <label><b>Father Name:</b> </label>
+            <label class="lbl-req">
+                *</label>
+                <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Father_Name_E" [(ngModel)]="formData.Father_Name_E" name="Father_Name_E" placeholder="Father Name"  />
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label><b>Mother Name:</b></label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Mother_Name_E" [(ngModel)]="formData.Mother_Name_E" name="Mother_Name_E" placeholder="Mother Name"  />
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label><b>Father Name:</b> </label>
+            <label class="lbl-req">
+                *</label>
+                <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Father_Name_H" [(ngModel)]="formData.Father_Name_H" name="Father_Name_H" placeholder="Father Name"  />
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label><b>Mother Name:</b></label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Mother_Name_H" [(ngModel)]="formData.Mother_Name_H" name="Mother_Name_H" placeholder="Mother Name"  />
+        </div>
+    </div>
+
+    <div  class="col-lg-6">
+        <div class="form-group">
+            <label><b>Guardian Name:</b></label>
+            <input type="text" class="form-control shadow rounded border-1 border-dark" id="Guardian_Name_E" [(ngModel)]="formData.Guardian_Name_E" name="Guardian_Name_E" placeholder="Guardian Name"  />
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label><b>Spouse Name:</b></label>
+            <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Spouse_Name_E" [(ngModel)]="formData.Spouse_Name_E" name="Spouse_Name_E" placeholder="Spouse Name"  />
+        </div>
+    </div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+  </div>
+  </div>
+    </mat-step>
+    
+    <mat-step>
+      <div class="card-body">
+        <div class="row">
+          <h2>Other_Details</h2>
+      <ng-template matStepLabel="content">Done</ng-template>
+      <div class="col-lg-6">
+           <div class="form-group">
+              <label><b>Created By:</b></label>
+                  <input type="text"  class=" form-control shadow rounded border-1 border-dark" id="Created_By" [(ngModel)]="formData.Created_By" name="Created_By" placeholder="text"  />
+           </div>
+                </div>
+                    <div class="col-lg-6">
+                         <div class="form-group">
+                             <label><b>Created Date:</b></label>
+                                 <input type="date" class=" form-control shadow rounded border-1 border-dark" id="Created_Date" [(ngModel)]="formData.Created_Date" name="Created_Date" placeholder="text"  />
+                         </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="form-group">
+                             <label><b>Modified By:</b></label>
+                                 <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Modified_By" [(ngModel)]="formData.Modified_By" name="Modified_By" placeholder="text"  />
+                        </div>
+                    </div>
+                     <div class="col-lg-6">
+                       <div class="form-group">
+                            <label><b>Modified Date:</b></label>
+                                <input type="date"  class=" form-control shadow rounded border-1 border-dark" id="Modified_Date" [(ngModel)]="formData.Modified_Date" name="Modified_Date" placeholder="text"  />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label><b>Delete_Flag:</b></label>
+                                <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Delete_Flag" [(ngModel)]="formData.Delete_Flag" name="Delete_Flag" placeholder="text"  />
+                         </div>
+                   </div>
+                     <div class="col-lg-6">
+                         <div class="form-group">
+                            <label><b>Public_IP_Address:</b></label>
+                                <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Public_IP_Address" [(ngModel)]="formData.Public_IP_Address" name="Public_IP_Address" placeholder="text"  />
+                         </div>
+                     </div>
+                   <div class="col-lg-6">
+                         <div class="form-group">
+                           <label><b>Private_IP_Address:</b></label>
+                               <input type="text" class=" form-control shadow rounded border-1 border-dark" id="Private_IP_Address" [(ngModel)]="formData.Private_IP_Address" name="Private_IP_Address" placeholder="text"  />
+                        </div>
+                    </div>
+      <p>submit your registration form</p>
+      <button mat-button matStepperPrevious>Back</button>
+  
+    </div>
+  </div>
+
+ </mat-step>
+     
+
+</mat-stepper>
+
+<div class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">            
+  <button type="submit" class="btn btn-primary" >Submit</button>
+</div>
+
+
+<div class="rounded-bottom border border-dark border-1 p-1 text-center m-0 bg-dark text-light fw-bold">
+
+<a class="text-light" href="#">User Manual</a> ||
+<a class="text-light" href="#">User Instruction</a> ||
+<small class="text-primary register-text">If Already have an account !..
+</small>
+<a class="text-warning" routerLink="/login" href="#"><b>Login</b></a>
+</div> 
+
+
+</div>
+</div>
+

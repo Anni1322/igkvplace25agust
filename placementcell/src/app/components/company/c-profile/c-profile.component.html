@@ -1,0 +1,139 @@
+
+
+<section class="bg-light">
+    <div class="container m-5">
+        <div class="row">
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div class="card card-style1 border-0">
+                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 ">
+                                <div class="logo-body shadow border-1 fixed-size-container">
+                                    <img class="fixed-size-image" [src]="baseimageur + companydata.Company_Logo_Url" alt="User Image" >
+                                </div>
+                                
+                            </div>
+    
+                            <div class="col-lg-6 px-xl-10">
+                                <!--<div class="bg-secondary d-lg-inline-block py-1-5 px-1-5 px-sm-6 mb-1-8 rounded">
+                                    <h1 class="h2 text-white mb-0">{{companydata.Company_Name}}</h1>
+                
+                                </div>-->
+                                <ul class="list-unstyled mb-1-9" >
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Company Name:</span>{{companydata.Company_Name}}</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Company Id:</span>{{companydata.Company_Id}} </li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Company Email:</span> {{companydata.Company_Email}}</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> {{companydata.Address}} </li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Website:</span><a href="#"> {{companydata.Website}} </a></li>
+                                    <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone No:</span>{{companydata.Company_Phone_Number}}</li>
+                                </ul>
+                                <button class="btn btn-primary" routerLink="/company/c-basic-details"> Update Details </button>
+                               <!-- <ul class="social-list list-inline mt-3 mb-0">
+                                    <li class="list-inline-item">
+                                        <a href="facobook.com" class="social-list-item border-purple text-purple"><i class="fab fa-facebook"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="Google.com" class="social-list-item border-danger text-danger"><i class="fab fa-google"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="Twitter.com" class="social-list-item border-info text-info"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="Github.com;" class="social-list-item border-secondary text-secondary"><i class="fab fa-github"></i></a>
+                                    </li>
+                                </ul>-->
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div class="row">
+                  <!-- About Company Section -->
+                  <div class="col-lg-7">
+                    <div>
+                      <span class="section-title text-primary mb-3 mb-sm-4">About Company</span>
+                      <p>Edith is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                      <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.</p>
+                    </div>
+                  </div>
+              
+                  <!-- Image Section -->
+                  <div class="col-lg-5">
+                    <span class="section-title text-primary mb-3 mb-sm-4"> Company Broucher </span>
+                    <div class="logo-body shadow border-1 fixed-size-container">
+                    
+                      <img class="fixed-size-image" [src]="baseimageur + companydata.Company_Broucher" alt="User Image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+                <!--<div>
+                    <span class="section-title text-primary mb-3 mb-sm-4">Other details</span>
+                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                        <p class="mb-1-9">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+              
+                </div>-->
+            </div>
+        </div>
+            
+</section>
+
+
+
+
+
+<!--<div class="container mt-3">
+    <h2>Company Profile</h2>
+    <div class="row">
+        <div class="col-md-3">-->
+            <!-- Company Logo -->
+           <!-- <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.1480204119.1718755200&semt=sph" alt="Company Logo" class="img-fluid">
+        </div>
+        <div class="col-md-9">-->
+            <!-- Company Information -->
+            <!-- <h1>{{companydata.Company_Name}}</h1> -->
+    
+            <!--<p><strong>Contact Information:</strong></p>
+            <ul>
+                <li>Email: {{companydata.Company_Email}}</li>
+                <li>Phone: {{companydata.Company_Phone_Number}}</li>
+                <li>Address: {{companydata.Address}}</li>
+            </ul>
+            <p><strong>Website:</strong> <a href="http://www.company.com">{{companydata.Website}}</a></p>
+        </div>
+        
+       
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="col-md-9 mt-2">-->
+              <!-- Company Information -->
+              <!-- <label for="logo">upload logo</label> -->
+             <!-- <input type="file" formControlName="logo" (change)="onFileChange($event)">
+              
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Update Logo</button>
+          </form>
+          
+          
+          
+    </div>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="logos-slide" *ngIf="images.length">
+    <img *ngFor="let image of images" [src]="'http://localhost:3000/' + image.imagePath" [alt]="image.imageName" />
+  </div> -->

@@ -1,0 +1,38 @@
+.notification-section {
+    // width: 100%;
+    // height: 200px;
+    background-color: #8dadf6ad;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    margin-bottom: 2px;
+  }
+  .notification_body{
+    height: 200px;
+  }
+  marquee {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .card1{
+    color: rgb(0, 0, 0);
+    background-image: url('/assets/icons/card1.jpg');
+    // background-image: url('/assets/icons/cardbg.jfif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+ 
+  .card2{
+    color: rgb(0, 0, 0);
+    background-image: url('/assets/icons/card2.png');
+    // background-image: url('/assets/icons/cardbg.jfif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  

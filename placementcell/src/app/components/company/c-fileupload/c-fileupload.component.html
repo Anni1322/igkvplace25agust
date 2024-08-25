@@ -1,0 +1,58 @@
+ 
+  <hr><hr>
+
+
+
+<div class=" container  mt-2 mb-3 p-0 user-select-none">
+  <div class="card main-con mt-2 bg-white-subtle p-4  rounded">
+    <div class="row fileupload" >
+      <div class="col" style="margin-top: 5px; margin-bottom: 5px;">
+          <div>Upload Company Logo</div>
+          <input type="file"  (change)="selectLogo($event)" required>
+      </div>
+      <div class="col" style="margin-top: 20px;">
+          <div></div>
+          <button mat-raised-button color="primary" type="button" (click)="uploadLogo()">Upload</button>
+      </div>
+
+      <!-- binding image -->
+
+      <img [src]="getImageUrl()" alt="Image from Method">
+
+      <!-- <input [(ngModel)]="dynamicImageUrl" placeholder="Enter image URL"> -->
+      <img [src]="dynamicImageUrl" alt="User Image">
+      <img [src]="imageur" alt="User Image">
+      <!-- binding image -->
+    
+
+
+    </div>
+
+      <!-- company Broucher uplaod -->
+      <div class="row fileupload">
+        <div class="col" style="margin-top: 5px; margin-bottom: 5px"  >
+          <div>Upload Company Broucher</div>
+          <input type="file" (change)="selectBroucher($event)" />
+        </div>
+        <div class="col" style="margin-top: 20px">
+          <div></div>
+          <button
+            mat-raised-button
+            color="primary"
+            type="button"
+            (click)="uploadBroucher()"
+          >
+            Upload
+          </button>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+ 
+
+
+
+
+

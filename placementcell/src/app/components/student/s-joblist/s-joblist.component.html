@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <h2>Job List for Students</h2>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search jobs" aria-label="Search jobs" aria-describedby="search-button">
+        <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4" *ngFor="let vacancy of data">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title  ">Post Name: {{ vacancy.Job_Title }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Company Id: {{ vacancy.Company_Id }}</h6>
+              <p class="card-text">Description: {{ vacancy.Job_Description }}</p>
+              <p class="card-text"><strong>Location:</strong> {{ vacancy.Job_Location }}</p>
+              <p class="card-text"><strong>Salary:</strong> {{ vacancy.Salary }}</p>
+              <p class="card-text"><strong>Type:</strong> {{ vacancy.Job_Selection }}</p>
+              <p class="card-text"><strong>Last Date to Apply:</strong> {{ vacancy.Last_Date_for_apply }}</p>
+              <!-- Add more properties as needed -->
+              <a href="#" class="card-link">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>

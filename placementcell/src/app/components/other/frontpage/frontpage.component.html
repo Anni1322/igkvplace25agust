@@ -1,0 +1,151 @@
+<div class="container-fluid p-0">
+    <!-- Header -->
+    <header class="header" > 
+        <div class="row" style="display: flex;">
+            <div class="header-university">
+                <!-- Logo -->
+                
+                    <span style="display: flex;"><a href="#">
+                        <img src="https://igkv.ac.in/Images/logo.png" alt="IGKV Logo">
+                    </a></span>
+                <!-- University Name -->
+                <span>
+                    <h2>Indira Gandhi Krishi Vishwavidyalaya</h2>
+                    <h2>इंदिरा गांधी कृषि विश्वविद्यालय</h2>
+                </span>
+                <!-- Welcome Message -->
+                    <div class="header-welcome">
+                        <button class="welcome-button" mat-button [matMenuTriggerFor]="menu">Welcome, Roshani Sahu</button>
+                    
+                        <mat-menu #menu="matMenu">
+                            <mat-card class="dropdown-card">
+                                <div class="card-content">
+                                    <img class="user-photo" src="https://igkv.ac.in/images/user.png" alt="User Photo">
+                                    <div class="user-info">
+                                        <p class="user-rollno">254123456</p>
+                                        <h3 class="user-name">Roshani Sahu</h3>
+                                    </div>
+                                </div>
+                                <div class="logout-button-container">
+                                    <button class="logout-button">Logout</button>
+                                </div>
+                            </mat-card>
+                        </mat-menu>
+                    </div>
+                
+        </div> 
+        </div>
+       
+
+        <!-- Navigation Section -->
+
+        <nav class="navbar navbar-expand-lg navbar-light " style="display: flex;">
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01"  >
+                <ul class="nav justify-content-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Fee Receipt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Download Admission Slip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Payment Status</a>
+                    </li>
+                   
+                </ul>
+            </div>
+
+        </nav>
+    
+</header>
+
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar">
+            <div class="sidebar-item">
+                <h2><i class="fa-solid fa-pen"></i> Latest Apply Activity </h2>
+                <!-- Divide the sidebar content into two rows -->
+                <div class="row">
+                    <div class="col-12">
+                        <button>
+                            <a href="#">Counseling Apply Form</a>
+                            <p class="close-time" >Close : 14-08-2024 11:39 PM</p>
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <button>
+                            <a href="#">Print Application</a>
+                            <p class="close-time">Close : 14-08-2024 11:29 PM</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10">
+            <div class="row">
+            <!-- Content will go here -->
+             <div class="content-item">
+                <h2 >Home</h2></div>
+               
+                    <div class="content">
+                        <h2 class="section-title">Important Instructions / महत्वपूर्ण निर्देश</h2>
+            
+                        <div class="section how-to">
+                            <h3 class="subsection-title">How to fill the application form?</h3>
+                            <ul>
+                                <li>Click on <strong>Online Counseling Apply / Edit</strong> from left side panel to apply.</li>
+                                <li>Form is divided into parts. Fill all of them properly.</li>
+                                <li>In <strong>Basic Details</strong>, fill your personal details and address details.</li>
+                                <li>In <strong>Academic Details</strong>, fill your last academic details and upload your recent photo and signature.</li>
+                                <li>In <strong>Preference Details</strong>, set your college/subject preference carefully.</li>
+                                <li>In <strong>Document Details</strong>, upload scanned file of required documents. Some of them are mandatory to upload, and upload others if they are applicable.</li>
+                                <li><strong>Preview & Declaration</strong> shows the filled details. Verify if all the information is correct. Correction can be made if required by clicking on <strong>Go to Edit</strong> button.</li>
+                            </ul>
+                        </div>
+            
+                        <div class="section fees">
+                            <h3 class="subsection-title">Application Fees</h3>
+                        </div>
+            
+                        <div class="section colleges">
+                            <h3 class="subsection-title">List of Colleges</h3>
+                        </div>
+            
+                        <div class="section photo-signature">
+                            <h3 class="subsection-title">Photo & Signature files</h3>
+                            <ul>
+                                <li>Photo should be less than 50KB in size.</li>
+                                <li>Signature should be less than 20KB in size.</li>
+                                <li>Photo and signature should be JPG/JPEG file only.</li>
+                            </ul>
+                        </div>
+            
+                        <div class="section document-files">
+                            <h3 class="subsection-title">Document files</h3>
+                            <ul>
+                                <li>Scanned copy of document should be 250KB-500KB in size.</li>
+                                <li>File should be JPG/JPEG/PDF file only.</li>
+                                <li>Uploaded document should be very clear to read.</li>
+                            </ul>
+                        </div>
+            
+                        <div class="section helpdesk">
+                            <h3 class="subsection-title">Helpdesk</h3>
+                            <p>अत्यधिक पूछताछ के लिए कृपया हमें "Online Complain" लिंक के माध्यम से हमें लिखें, जो की वेबसाइट <a href="https://igkv.ac.in/counselinghomenew.aspx">https://igkv.ac.in/counselinghomenew.aspx</a> पर उपलब्ध है।</p>
+                        </div>
+                </div>
+             </div>
+
+        </div>
+    </div>

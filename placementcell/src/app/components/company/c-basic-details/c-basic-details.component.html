@@ -1,0 +1,493 @@
+<div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
+    <div class="container page-heading text-center p-0 bg-white rounded shadow">
+        <h3 style="background-color: #1886E5"
+            class="card-header p-2 text-light rounded border border-end-0 border-bottom-0 border-start-0 border-5 border-dark">
+            <strong>Company Registration Details</strong>
+        </h3>
+    </div>
+
+    <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
+            <div class="row basic-row ">
+                <div class="#">
+                    <div class="card row">
+                        <div class="card-header p-1" style="background-color: #66b2f5">
+                            <h5 class="ms-1 mt-1 text-white"><b>Basic Information / मूलभूत जानकारी</b></h5>
+                        </div>
+                        
+                        <form [formGroup]="companyregistrationForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" autocomplete="off">
+                            
+                        <mat-stepper #stepper>
+                            <mat-step [stepControl]="companyregistrationForm" >
+                                
+                            <form [formGroup]="companyregistrationForm">
+                                <ng-template matStepLabel>Basic Details</ng-template>
+                                <div class="card-body"> 
+                                    <div class="row">
+                                <!--<div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Id">
+                                                 Id:
+                                             </mat-label>
+                                             <input matInput placeholder="enter id" formControlName="Id">
+                                        </mat-form-field>
+                                    </div>
+                                </div>-->
+                                <div class="col-md-3">
+                                    <div class="form-group"> 
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Id">
+                                                Company Id:
+                                            </mat-label>
+                                            <input matInput placeholder="company id" formControlName="Company_Id">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Registration_No">
+                                                Company Registration No:
+                                            </mat-label>
+                                            <input matInput placeholder="registration no" formControlName="Company_Registration_No">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Tnp_Registration_No">
+                                                Tnp registration no:
+                                            </mat-label>
+                                            <input matInput placeholder="tnp registration no" formControlName="Tnp_Registration_No">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Name">
+                                                Company Name:
+                                            </mat-label>
+                                            <input matInput type="text" placeholder="company name" formControlName="Company_Name">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Type">
+                                                Company Type:
+                                            </mat-label>
+                                            <!--<input matInput placeholder="" formControlName="Company_Type">-->
+                                            <mat-select formControlName="Company_Type">
+                                                <mat-option *ngFor="let c of companytype;" [value]="c.Company_Id">
+                                                    {{c.Company_Type}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div> 
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Category">
+                                                Company Category:
+                                            </mat-label>
+                                            <!--<input matInput type="text" placeholder="" formControlName="Company_Category">-->
+                                            <mat-select formControlName="Company_Category">
+                                                <mat-option *ngFor="let c of companycategory;" [value]="c.Category_Type_Id">
+                                                    {{c.Category_Name}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Email">
+                                                Company Email:
+                                            </mat-label>
+                                            <input matInput type="email" placeholder="igkv@gmail.com" formControlName="Company_Email">
+                                            <mat-error *ngIf="email?.invalid && email?.touched">
+                                                <span *ngIf="email?.errors?.['required']">Email is required.</span>
+                                                <span *ngIf="email?.errors?.['email']">Please enter a valid email address.</span>
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                      <mat-form-field appearance="outline" class="inputfieldsize">
+                                        <mat-label for="Company_Phone_Number">
+                                          Company Phone No:
+                                        </mat-label>
+                                        <input matInput type="number" placeholder="phone no" formControlName="Company_Phone_Number">
+                                        <mat-error *ngIf="companyregistrationForm?.get('Company_Phone_Number')?.hasError('invalidPhoneNumber')">
+                                           No. only 10 digits and start with 9, 8, 7, or 6 is valid..
+                                        </mat-error>
+                                      </mat-form-field>
+                                    </div>
+                                  </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Hr_Name">
+                                                Hr Name:
+                                            </mat-label>
+                                            <input matInput type="text" placeholder="Hr name" formControlName="Hr_Name">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Hr_Contact_No">
+                                                Hr Contact No:
+                                            </mat-label>
+                                            <input matInput type="number" placeholder="enter hr no" formControlName="Hr_Contact_No">
+                                            <mat-error *ngIf="companyregistrationForm?.get('Hr_Contact_No')?.hasError('invalidPhoneNumber')">
+                                                only 10 digits and start with 9, 8, 7, or 6 is valid..
+                                             </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Hr_Email">
+                                                Hr Email:
+                                            </mat-label>
+                                            <input matInput type="email" placeholder="enter hr email" formControlName="Hr_Email">
+                                        </mat-form-field>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Contact_Person">
+                                                Contact Person Name:
+                                            </mat-label>
+                                            <input matInput type="text" placeholder="contact person name" formControlName="Contact_Person">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Contact_Person_Email">
+                                                Contact Person Email:
+                                            </mat-label>
+                                            <input matInput type="email" placeholder="enter email" formControlName="Contact_Person_Email">
+                                        </mat-form-field>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Contact_Person_Phone">
+                                                Contact Person Phone No:
+                                            </mat-label>
+                                            <input matInput type="number" placeholder="enter no" formControlName="Contact_Person_Phone">
+                                            <mat-error *ngIf="companyregistrationForm?.get('Contact_Person_Phone')?.hasError('invalidPhoneNumber')">
+                                                only 10 digits and start with 9, 8, 7, or 6 is valid..
+                                             </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Short_Name">
+                                                Company Short Name:
+                                            </mat-label>
+                                            <input matInput placeholder="company short name" formControlName="Company_Short_Name">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                                <!--<div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="username">
+                                                Username:
+                                            </mat-label>
+                                            <input matInput placeholder="User Name" formControlName="username">
+                                        </mat-form-field>
+                                    </div>
+                                </div>-->
+
+
+                                <div>
+                                  <button mat-button matStepperNext class="btn text-center bg-primary mt-2" >Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        </form> 
+                              
+                            </mat-step> 
+                            <mat-step [stepControl]="companyregistrationForm">
+                                
+                                <form [formGroup]="companyregistrationForm">
+                                <ng-template matStepLabel>Address Section </ng-template>
+                                <div class="card-body">
+                                    <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Address">
+                                                Address: 
+                                            </mat-label>
+                                            <input matInput placeholder="address" formControlName="Address">
+                                         </mat-form-field>
+                                     </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="State">
+                                                State:
+                                            </mat-label>
+                                            <!--<input matInput placeholder="" formControlName="State">-->
+                                            <mat-select formControlName="State">
+                                                <mat-option *ngFor="let c of state;" [value]="c.State_Id">
+                                                    {{c.State_Name}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="District">
+                                                District: 
+                                            </mat-label>
+                                            <!--<input matInput placeholder="" formControlName="District">-->
+                                            <mat-select formControlName="District">
+                                                <mat-option *ngFor="let c of district;" [value]="c.District_Id">
+                                                    {{c.District_Name}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Block">
+                                                Block:
+                                            </mat-label>
+                                            <!--<input matInput placeholder="" formControlName="Block">-->
+                                            <mat-select formControlName="Block">
+                                                <mat-option *ngFor="let c of block;" [value]="c.Block_Id">
+                                                    {{c.Block_Name}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group mb-3">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Website">
+                                                Website:
+                                            </mat-label>
+                                            <input matInput placeholder="website name" formControlName="Website">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                       
+                             
+                                <div class="col-md-3" hidden>
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Logo_Url">
+                                                Company Logo Url:
+                                            </mat-label>
+                                            <input  matInput placeholder="logo url" formControlName="Company_Logo_Url">
+                                        </mat-form-field>
+                                    </div>
+                                </div>  
+                              
+                             <!-- image -->
+                            
+
+                             <!-- image -->
+                               
+
+                                <div class="col-md-3" hidden>
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Broucher">
+                                                Company Broucher:
+                                            </mat-label>
+                                            <input  matInput placeholder="Company Broucher url" formControlName="Company_Broucher">
+                                        </mat-form-field>
+                                    </div>
+                                </div>  
+
+                                <!-- <div class="col-md-3">
+                                    <div class="form-group">
+                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                            <mat-label for="Company_Other_Doc_Url">
+                                                Company Other Doc Url:
+                                            </mat-label>
+                                            <input  matInput placeholder="url" formControlName="Company_Other_Doc_Url">
+                                        </mat-form-field>
+                                    </div>
+                                </div>   -->
+
+                                
+                                
+
+
+
+                                
+
+
+                                <div class="text-white">
+
+                                  <button mat-button matStepperPrevious class="btn text-center bg-primary " style="margin-right: 8px;">Back</button>
+                                  <button mat-button matStepperNext class="btn text-center bg-primary" [disabled]="companyregistrationForm.invalid">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                              </form>
+                              
+                            </mat-step>
+                            <mat-step>
+                                <div class="card-body">
+
+                                    <div class="container">
+                                        <!-- company logo upload -->
+                                        <div class="row fileupload" >
+                                          <div class="col" style="margin-top: 5px; margin-bottom: 5px;">
+                                              <div>Upload Company Logo</div>
+                                              <input type="file"  (change)="selectLogo($event)" required>
+                                          </div>
+                                          <div class="col" style="margin-top: 20px;">
+                                              <div></div>
+                                              <button mat-raised-button color="primary" type="button" (click)="uploadLogo()">Upload</button>
+                                          </div>
+                                        </div>
+                                  
+                                          <!-- company Broucher uplaod -->
+                                          <div class="row fileupload">
+                                            <div class="col" style="margin-top: 5px; margin-bottom: 5px"  >
+                                              <div>Upload Company Broucher</div>
+                                              <input type="file" (change)="selectBroucher($event)" />
+                                            </div>
+                                            <div class="col" style="margin-top: 20px">
+                                              <div></div>
+                                              <button
+                                                mat-raised-button
+                                                color="primary"
+                                                type="button"
+                                                (click)="uploadBroucher()"
+                                              >
+                                                Upload
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <!-- company's other documents -->
+                
+                                          <!-- <div class="row fileupload">
+                                            <div class="col" style="margin-top: 5px; margin-bottom: 5px">
+                                              <div>Upload Other Documents(pdf)</div>
+                                              <input type="file" (change)="selectOther($event)" required />
+                                            </div>
+                                            <div class="col" style="margin-top: 20px">
+                                              <div></div>
+                                              <button
+                                                mat-raised-button
+                                                color="primary"
+                                                type="button"
+                                                (click)="uploadOther()"
+                                              >
+                                                Upload
+                                              </button>
+                                            </div>
+                                          </div> -->
+                
+                                          
+                                  </div> 
+
+
+
+
+
+
+
+                        <div class="row">
+                            <ng-template matStepLabel>Submition section</ng-template>
+                              <!-- <div class="col-md-3">
+                                <div class="form-group">
+                                  <mat-form-field appearance="outline" class="inputfieldsize">
+                                    <mat-label for="Created_Date">Created Date:</mat-label>
+                                    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="Created_Date">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #picker></mat-datepicker>
+                                  </mat-form-field>
+                                </div>
+                              </div> -->
+                              
+                             
+                              
+                              <div class="text-white">
+
+                                <!-- <button mat-button (click)="stepper.reset()" class="btn text-center bg-primary mb-2 ">Reset</button>  
+                                <button type="submit" class="btn btn-primary text-center mb-2" >Submit</button> -->
+
+
+
+                                <!-- <button mat-button matStepperPrevious class="btn text-center bg-primary " style="margin-right: 8px;">Back</button> -->
+                                <!-- <button mat-button (click)="stepper.reset()" class="btn text-center bg-primary ">Reset</button> -->
+                                
+                                <!--<button mat-button matStepperNext >Next</button>>-->
+                              </div>
+                              <div
+                                class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">
+                             <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                             <button mat-button matStepperPrevious class="btn text-center bg-primary " style="margin-right: 8px;">Back</button>
+                             <button mat-button (click)="stepper.reset()" class="btn text-center bg-primary ">Reset</button>    
+                             <button type="submit" class="btn btn-primary text-center" [disabled]="companyregistrationForm.invalid">Submit</button>
+                            </div>
+                            </div>
+                            </div>
+                           
+                    </mat-step>
+
+               
+                </mat-stepper>
+                           <!-- stapper end --> 
+                </form>
+
+                    <div
+                            class="rounded-bottom border border-dark border-1 p-1 text-center m-0 bg-dark text-light fw-bold">
+                            <!-- <a class="text-light" href="#">User Manual</a> || -->
+                            <!-- <a class="text-light" href="#">User Instruction</a> || -->
+                            <!-- <small class="text-primary register-text">If Already have an account !.. -->
+                            <!-- </small> -->
+                            <!-- <a class="text-warning" routerLink="/login" href="#"><b>Login</b></a> -->
+                        </div>
+
+                    </div>
+                </div>
+
+               
+
+
+            </div>
+        
+    </div>
+</div>
+
+                       
+                                                 
+
+<!-- <img [src]="baseimageur + companyLogo" alt="User Image"> -->
+
+ 

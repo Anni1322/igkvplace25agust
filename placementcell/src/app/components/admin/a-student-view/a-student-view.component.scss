@@ -1,0 +1,18 @@
+//for status columns 
+.status-approved {
+  color: green;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.status-rejected {
+  color: red;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.status-pending {
+  color: blue;
+  padding: 5px;
+  border-radius: 4px;
+}

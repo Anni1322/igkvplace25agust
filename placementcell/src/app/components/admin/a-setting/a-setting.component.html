@@ -1,0 +1,50 @@
+    <div class="container">
+        <!-- company logo upload -->
+        <div class="row fileupload" >
+        <div class="col" style="margin-top: 5px; margin-bottom: 5px;">
+            <div>Upload Company Logo(image)</div>
+            <input type="file"  (change)="selectLogo($event)" required>
+        </div>
+        <div class="col" style="margin-top: 20px;">
+            <div></div>
+            <button mat-raised-button color="primary" type="button" (click)="uploadLogo()">Upload</button>
+        </div>
+        </div>
+
+        <!-- company Broucher uplaod -->
+        <div class="row fileupload">
+            <div class="col" style="margin-top: 5px; margin-bottom: 5px">
+            <div>Upload Company Broucher(pdf)</div>
+            <input type="file" (change)="selectBroucher($event)" />
+            </div>
+            <div class="col" style="margin-top: 20px">
+            <div></div>
+            <button
+                mat-raised-button
+                color="primary"
+                type="button"
+                (click)="uploadBroucher()"
+            >
+                Upload
+            </button>
+            </div>
+        </div>
+        <!-- company's other documents -->
+        <div class="row fileupload">
+            <div class="col" style="margin-top: 5px; margin-bottom: 5px">
+            <div>Upload Other Documents(pdf)</div>
+            <input type="file" (change)="selectOther($event)" required />
+            </div>
+            <div class="col" style="margin-top: 20px">
+            <div></div>
+            <button
+                mat-raised-button
+                color="primary"
+                type="button"
+                (click)="uploadOther()"
+            >
+                Upload
+            </button>
+            </div>
+        </div>
+    </div>

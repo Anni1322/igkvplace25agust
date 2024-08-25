@@ -1,0 +1,103 @@
+<mat-sidenav-container class="sidenav-container" style="background-color: rgb(255, 255, 255);">
+    <mat-sidenav #drawer class="sidenav">
+
+       
+      <mat-toolbar>
+        <!-- <div class="item">
+          <img src="../../../../../assets/images/images (8).jpeg" width="20px" height="30px" class="hy-profile-image user-img" />
+          <h2>Admin anni</h2>
+        </div> -->
+        <div class="circle row align-items-center" style="margin-top: 100px;">
+          <div class="col-auto">
+              <img src="https://thumbs.dreamstime.com/b/vector-illustration-avatar-dummy-logo-collection-image-icon-stock-isolated-object-set-symbol-web-137160339.jpg" class="img-fluid rounded-circle" alt="Profile Picture" style="width: 50px; height: 50px;">
+          </div>
+          <div class="col"  >
+              <span class="name" > {{user.username}} </span><br>
+              <span class="name">{{user.eid}}</span><br>
+              <span class="name" style="color: blue;"><a href="#">Logout</a> </span><br>
+              <!-- <span class="name">ID: {{ user.eid }}</span><br> -->
+              <!-- <button class="" >Logout</button> -->
+          </div>
+      </div>
+     
+      </mat-toolbar>
+
+      <mat-nav-list style="margin-top: 100px; ">
+        <li class="nav-item" style="margin-left: 3px;">
+          <button mat-button routerLink="/admin/a-dashboard">
+            <mat-icon>dashboard</mat-icon>
+            <span >Dashboard</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <mat-expansion-panel style="border-radius: 0%; background-color: rgb(248, 255, 155);" class="mat-elevation-z0">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <button mat-button style="margin-left: -11px;">
+                  <mat-icon>assignment_turned_in</mat-icon>
+                  <span>Approve</span>
+                </button>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+              <a mat-list-item routerLink="/admin/a-dashboard">Dashboard</a>
+              <a mat-list-item routerLink="/admin/s-application">Students Application</a>
+              <a mat-list-item routerLink="/admin/c-vacancylist">Company Vacancy</a>
+          
+            </mat-nav-list>
+          </mat-expansion-panel>
+        </li>
+        <li class="nav-item">
+          <mat-expansion-panel style="border-radius: 0%; background-color: rgb(248, 255, 155);" class="mat-elevation-z0">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <button mat-button style="margin-left: -11px;">
+                  <mat-icon>visibility</mat-icon>
+                  <span>Registered</span>
+                </button>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+              <!--<a mat-list-item routerLink="viewusers">Users</a>-->
+              <a mat-list-item routerLink="/admin/a-student-view">Students</a>
+              <a mat-list-item routerLink="/admin/a-company-view">Company</a>
+              <!--<a mat-list-item routerLink="viewjobposts">Job Posts</a>-->
+            </mat-nav-list>
+          </mat-expansion-panel>
+        </li>
+        <li class="nav-item">
+          <button mat-button routerLink="/homem" >
+            <mat-icon>exit_to_app</mat-icon>
+            <span (click)="logout()">Logout</span>
+          </button>
+        </li>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar class="nav sticky-top shadow" style="background-color: rgb(255, 255, 255);">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <img src="https://igkv.ac.in/Images/img/logo_with_name2.png" width="210px" height="40px" alt="" srcset="">
+        <span class="spacer"></span>
+        <mat-menu #lvl1master="matMenu">
+            <button  mat-menu-item routerLink="student_registraion" >Student</button>
+            <button  mat-menu-item routerLink="company_registraion" >Company</button>
+        </mat-menu>
+        <button [matMenuTriggerFor]="login" mat-button>Welcome, {{ user?.username }}</button>
+        <mat-menu #login="matMenu">
+            <button  mat-menu-item routerLink="Profile" >Profile</button>
+            <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+        <mat-icon matBadge="15" routerLink="/student_notification" matBadgeColor="warn">notifications</mat-icon>
+    
+
+        
+      </mat-toolbar>
+      <!-- Add Content Here -->
+      <div class="user-body">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

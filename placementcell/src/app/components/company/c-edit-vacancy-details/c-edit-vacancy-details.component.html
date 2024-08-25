@@ -1,0 +1,235 @@
+ 
+
+
+<!-- oringinal  -->
+
+<div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
+    <div class="container page-heading text-center p-0 bg-white rounded shadow">
+   
+    </div>
+
+    <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
+        <form class="form" #NgForm="ngForm" enctype="multipart/form-data" autocomplete="off">
+            <div class="row basic-row ">
+                <div class="#">
+                    <div class="card">
+                        <div class="card-header p-1" style="background-color: #3aaaff">
+                            <h2 class="ms-1 mt-1 text-white"><b>Update Vacancy details</b></h2>
+                        </div>
+
+                       <!-- <mat-stepper>
+                            <mat-step>-->
+                                <div class="card-body">
+                                    <div class="row">
+
+                                        <!--<ng-template matStepLabel="content">First_Content</ng-template>
+                                        <h2>Vacancy_Details</h2>-->
+                                        <div class="col-lg-4 ">
+                                            <div class="form-group">
+                                                <label for="Vacancy_ID">Vacancy ID: </label>
+                                                <input type="text" class="form-control " [(ngModel)]="vacancydata.Vacancy_ID" id="Vacancy_ID" name="Vacancy_ID" ngModel required>
+                        
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="Company_Id">Company ID: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Company_Id"  id="Company_Id" name="Company_Id" ngModel required> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="Company_Name">Company_Name: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Company_Name"  id="Company_Name" name="Company_Name" ngModel required> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="Company_Registration_No">Company Registration No: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Company_Registration_No" id="Company_Registration_No" name="Company_Registration_No"ngModel>
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group"> 
+                                                <label for="Job_Title">Job Title: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Job_Title" id="Job_Title" name="Job_Title" ngModel>                                    
+                                            </div>
+                                        </div>
+                                     
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="Job_Selection">Job Selection: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Job_Selection" id="Job_Selection" name="Job_Selection" ngModel>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group"> 
+                                                <label for="Job_Location">Job Location: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Job_Location" id="Job_Location" name="Job_Location" ngModel>                             
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="No_Of_Post">Number of Posts: </label>
+                                                <input type="number" class="form-control" [(ngModel)]="vacancydata.No_Of_Post" id="No_Of_Post" name="No_Of_Post" ngModel>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">      
+                                                <label for="Salary">Salary: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Salary" id="Salary" name="Salary" ngModel>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">   
+                                                <label for="Last_Date_for_apply">Last Date to Apply: </label>
+                                                <input type="date" class="form-control" [(ngModel)]="vacancydata.Last_Date_for_apply" id="Last_Date_for_apply" name="Last_Date_for_apply" ngModel>      
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">  
+                                                <label for="Min_Experience_in_Year">Minimum Experience (Years): </label>
+                                                <input type="number" class="form-control" [(ngModel)]="vacancydata.Min_Experience_in_Year" id="Min_Experience_in_Year" name="Min_Experience_in_Year" ngModel>                              
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">                                          
+                                                <label for="Maximum_Age">Maximum Age: </label>
+                                                <input type="number" class="form-control" [(ngModel)]="vacancydata.Maximum_Age" id="Maximum_Age" name="Maximum_Age" ngModel>                                           
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <div class="form-group">         
+                                                <label for="Preferred_Gender">Preferred Gender: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Preferred_Gender" id="Preferred_Gender" name="Preferred_Gender" ngModel> 
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="Preferred_Language">Preferred Language: </label>
+                                                <select [(ngModel)]="vacancydata.Preferred_Language" class="form-control" id="Preferred_Language" name="Preferred_Language">
+                                                  <option value="English">English</option>
+                                                  <option value="Hindi">Hindi</option>
+                                                  <option value="Other">Other</option>
+                                                </select>
+                                              
+                                                <div *ngIf="vacancydata.Preferred_Language === 'Other'" class="mt-2">
+                                                  <input type="text" class="form-control" [(ngModel)]="vacancydata.Other_Language" placeholder="Please specify" id="Other_Language" name="Other_Language">
+                                                </div>
+                                              </div>
+                                              
+                                        </div> 
+
+                                        <div class="col-lg-4">
+                                            <div class="form-group">     
+                                                <label for="Job_Description">Job Description: </label>
+                                                <textarea class="form-control" [(ngModel)]="vacancydata.Job_Description" id="Job_Description" name="Job_Description" rows="4" ngModel></textarea>
+                                            </div>
+                                        </div>
+                                        <!--comment the create date
+                                        <button mat-button matStepperNext>Next</button>-->
+
+                                    </div>
+                                </div>
+                          <!-- </mat-step>
+                            end first step-->
+
+                            <!-- stap second 
+                            <mat-step> -->
+                                <div class="card-body">
+                                    <div class="row">
+                                      <!--  <h2>other_details</h2>
+                                        <ng-template matStepLabel="content">Second_Content</ng-template> -->
+                                         
+                                        <div class="col-lg-4">
+                                            <div class="form-group" hidden>
+                                                <label for="Status">Status: </label>
+                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Status" id="Status" name="Status" value="Pending" ngModel>                                            
+                                            </div>
+                                        </div> 
+                                        <!--<div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="Created_Date">Created Date: </label>
+                                                 <input type="datetime-local" class="form-control" [(ngModel)]="vacancydata.Created_Date" id="Created_Date" name="Created_Date" ngModel>
+                                            </div>
+                                        </div>-->
+
+                                       <!-- <button mat-button matStepperPrevious>Back</button>
+                                        <button mat-button matStepperNext>Next</button>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                              <button mat-button matStepperPrevious>Back</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <button mat-button matStepperNext>Next</button>
+                                            </div>
+                                          </div>-->
+                                          
+                                    </div>
+                                </div>
+<!--          </mat-step>
+
+                           
+                        </mat-stepper>-->
+                        <div
+                            class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">
+                            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                            <button type="submit" class="btn btn-primary"
+                                (click)="getvalueFromform(NgForm.value)" >Update</button>
+                        </div>
+
+                        <div
+                            class="rounded-bottom border border-dark border-1 p-1 text-center m-0 bg-dark text-light fw-bold">
+
+                            <a class="text-light" href="#">User Manual</a> ||
+                            <a class="text-light" href="#">User Instruction</a> ||
+                            <small class="text-primary register-text">If Already have an account !..
+                            </small>
+                            <a class="text-warning" routerLink="/login" href="#"><b>Login</b></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- stapper end -->
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!--After update form is redirect to the status page -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+<mat-toolbar  class="custom-toolbar mat-elevation-z8 ">
+    <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-spacer">IGKV Placement</span>
+    <button routerLink="" mat-button>Home</button>
+    
+    <button [matMenuTriggerFor]="lvl1master"  mat-button>Registration</button>
+    <mat-menu #lvl1master="matMenu">
+       
+        <button  mat-menu-item routerLink="student_registraion" >Student</button>
+
+        <button  mat-menu-item routerLink="company_registraion" >Company</button>
+    </mat-menu>
+    <button [matMenuTriggerFor]="login" mat-button>Lgoin</button>
+    <mat-menu #login="matMenu">
+        <button  mat-menu-item routerLink="" >Student</button>
+        <button  mat-menu-item routerLink="" >Company</button>
+    </mat-menu>
+    <!-- <button routerLink="" mat-button>about</button> -->
+    <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" opened="true"  mode="side">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button><mat-icon style="color: rgb(255, 149, 10);">dashboard</mat-icon>dashboard</button>
+              </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="admin"><mat-icon>account_circle</mat-icon>Profile</button>
+              </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>info</mat-icon>dashboard</button>
+              </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>help</mat-icon>dashboard</button>
+              </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>phone</mat-icon>dashboard</button>
+              </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>email</mat-icon>dashboard</button>
+              </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>settings</mat-icon>Setting</button>
+              </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+    <div style="text-align: center;min-height: 600px;"> 
+        
+        <router-outlet></router-outlet>
+    </div>
+    </mat-drawer-content>  
+  </mat-drawer-container>
+  

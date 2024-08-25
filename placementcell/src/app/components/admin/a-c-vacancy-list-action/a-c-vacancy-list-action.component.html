@@ -1,0 +1,190 @@
+ 
+
+
+<!-- oringinal  -->
+
+<div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
+    <div class="container page-heading text-center p-0 bg-white rounded shadow">
+   
+    </div>
+
+    <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
+        <form [formGroup]="vacancyForm" class="form" enctype="multipart/form-data">
+            <div class="row basic-row">
+              <div class="#">
+                <div class="card">
+                  <div class="card-header p-1" style="background-color: #3aaaff">
+                    <h2 class="ms-1 mt-1 text-white"><b>Action Vacancy</b></h2>
+                  </div>
+                  <!-- <mat-stepper> -->
+                    <!-- <mat-step> -->
+                      <div class="card-body">
+                        <div class="row">
+                          <!-- <ng-template matStepLabel="content">Vacancy ID</ng-template> -->
+                          <h2>Vacancy Details</h2>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Vacancy_ID">Vacancy ID</label>
+                              <input type="text" class="form-control" formControlName="Vacancy_ID" id="Vacancy_ID" name="Vacancy_ID" required>
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Company_Id">Company ID</label>
+                              <input type="text" class="form-control" formControlName="Company_Id" id="Company_Id" name="Company_Id" required>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Company_Name">Company Name</label>
+                              <input type="text" class="form-control" formControlName="Company_Name" id="Company_Name" name="Company_Name" required>
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Company_Registration_No">Company Registration No</label>
+                              <input type="text" class="form-control" formControlName="Company_Registration_No" id="Company_Registration_No" name="Company_Registration_No">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Job_Title">Job Title</label>
+                              <input type="text" class="form-control" formControlName="Job_Title" id="Job_Title" name="Job_Title">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Job_Description">Job Description</label>
+                              <textarea class="form-control" formControlName="Job_Description" id="Job_Description" name="Job_Description" rows="4"></textarea>
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Job_Selection">Job Selection</label>
+                              <input type="text" class="form-control" formControlName="Job_Selection" id="Job_Selection" name="Job_Selection">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Job_Location">Job Location</label>
+                              <input type="text" class="form-control" formControlName="Job_Location" id="Job_Location" name="Job_Location">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="No_Of_Post">Number of Posts</label>
+                              <input type="number" class="form-control" formControlName="No_Of_Post" id="No_Of_Post" name="No_Of_Post">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Salary">Salary</label>
+                              <input type="text" class="form-control" formControlName="Salary" id="Salary" name="Salary">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Last_Date_for_apply">Last Date to Apply</label>
+                              <input type="date" class="form-control" formControlName="Last_Date_for_apply" id="Last_Date_for_apply" name="Last_Date_for_apply">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Min_Experience_in_Year">Minimum Experience (Years)</label>
+                              <input type="number" class="form-control" formControlName="Min_Experience_in_Year" id="Min_Experience_in_Year" name="Min_Experience_in_Year">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Maximum_Age">Maximum Age</label>
+                              <input type="number" class="form-control" formControlName="Maximum_Age" id="Maximum_Age" name="Maximum_Age">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Preferred_Gender">Preferred Gender</label>
+                              <input type="text" class="form-control" formControlName="Preferred_Gender" id="Preferred_Gender" name="Preferred_Gender">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Prefered_Language">Preferred Language</label>
+                              <input type="text" class="form-control" formControlName="Prefered_Language" id="Prefered_Language" name="Prefered_Language">
+                            </div>
+                          </div>
+          
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label for="Status">Status</label>
+                              <select
+                                class="form-control"
+                                [ngClass]="getStatusClass()"
+                                formControlName="Status"
+                                id="Status"
+                                name="Status">
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                              </select>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    <!-- </mat-step> -->
+                  <!-- </mat-stepper> -->
+                  <div class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">
+                    <button type="submit" class="btn btn-primary" (click)="getvalueFromform(vacancyForm.value)">Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

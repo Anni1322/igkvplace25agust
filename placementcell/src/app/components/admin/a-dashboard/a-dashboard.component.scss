@@ -1,0 +1,33 @@
+.card1{
+    color: rgb(0, 0, 0);
+    background-image: url('/assets/icons/card1.jpg');
+    // background-image: url('/assets/icons/cardbg.jfif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+ 
+  .card2{
+    color: rgb(0, 0, 0);
+    background-image: url('/assets/icons/card2.png');
+    // background-image: url('/assets/icons/cardbg.jfif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+
+
+
+  /* a-dashboard.component.scss */
+:host {
+    display: block;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  

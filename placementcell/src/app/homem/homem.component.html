@@ -1,0 +1,285 @@
+ 
+<!-- <body style="font-family:Verdana;color:#aaaaaa; margin: 6px;"> -->
+
+ <!-- top nav bar -->
+ 
+
+ <app-header></app-header>
+
+    <!-- slider -->
+
+    <app-slider></app-slider>
+
+    <!-- slider -->
+
+
+
+
+
+<div style="overflow:auto">
+
+
+
+
+
+
+
+  <div class="main">
+
+      <!-- maques -->
+
+
+  <!-- maques -->
+      <app-company-slider></app-company-slider>
+
+</div>
+
+ 
+
+
+
+
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section" >
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Notification</span>
+        <h2>Notification</h2>
+      
+
+        <div class="col-lg-12">
+          <div class="faq-container">
+            <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+              <i class="faq-icon bi bi-bell"></i>
+              <h3>Notification</h3>
+              <div class="faq-content">
+                <!-- <p>jobs available's.</p> -->
+              </div>
+            </div><!-- End Faq item-->
+        
+            <marquee class="notification_body border" behavior="scroll" direction="up" scrollamount="10" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();" style="height: 300px; overflow: hidden;">
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300" *ngFor="let vacancy of data">
+                <i class="faq-icon bi bi-info-circle"></i>
+                <img src="https://img.icons8.com/?size=100&id=mIQ6moZZHoBs&format=png&color=000000" width="20px" alt="" srcset="">  
+                Last Date : {{ vacancy.Last_Date_for_apply | date }} 
+                <span class="card-subtitle text-muted" hidden>VID: {{ vacancy.Vacancy_ID }} </span>
+        
+                <a [routerLink]="['/login']" class="card-link"> Apply Now</a> 
+                <!-- <a [routerLink]="['/notification']" class="card-link"> More</a> -->
+        
+                <h3>Post : {{ vacancy.Job_Title }}</h3>
+        
+                <i [routerLink]="['/notification']" class="faq-toggle bi bi-chevron-right"><a [routerLink]="['/notification']" class="card-link"> More</a></i>
+              </div><!-- End Faq item-->
+            </marquee>
+          </div>
+        </div>
+        
+ 
+
+      </div><!-- End Section Title -->
+
+    </section>
+    <!-- /Faq Section -->
+
+
+
+
+</div>
+<section>
+  <div class="notification-section mt-2 mb-2" data-aos="fade-right" data-aos-duration="2000">
+    <div class="container ">
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="stat-item p-4">
+            <h1>{{StudentCont}}</h1>
+            <p class="stat">Registered Students</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-item p-4">
+            <h1>{{ComapnyCont}}</h1>
+            <p class="stat">Registered Companies</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-item p-4">
+            <h1>{{ComapnyCont}}</h1>
+            <p class="stat">Placed Students</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ 
+
+
+
+
+
+        <!-- topstudent Section -->
+        <section id="topstudent" class="topstudent section" style="background-color: #dfe4ea;">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <span>Top Student's<br></span>
+            <h2>Top Student's</h2>
+            <p>At Indira Gandhi Krishi Vishwavidyalaya (IGKV), we take immense pride in the accomplishments of our students. Here are the top 5 students who have secured prestigious placements, showcasing their exceptional talent and dedication. Congratulations to them!</p>
+          </div><!-- End Section Title -->
+
+          <div class="container">
+            <marquee class="notification_body border" behavior="scroll" direction="left" scrollamount="10" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();">
+            <div class="row gy-2 ">
+              <div class="d-flex">
+              <div class="col-lg-2 col-md-2" data-aos="fade-up" data-aos-delay="100"  *ngFor="let student of top5Students">
+                <div class="card rounded">
+                  <div class="card-img ">
+                    <!-- <img src="assets/img/service-1.jpg" alt="" class="img-fluid"> -->
+                    <img src="{{student.profileImageUrl || 'https://statinfer.com/wp-content/uploads/dummy-user.png'}}" alt="User Image" class="img-fluid">
+                  </div>
+                  <h3>{{student.Student_First_Name_E || 'Unknown'}}</h3>
+                  <p>ohter details</p>
+                </div>
+              </div><!-- End Card Item -->
+              </div>
+            </div>
+            </marquee>
+          </div>
+        </section><hr>
+        <!-- /topstudent Section -->
+
+
+
+
+  
+
+        <!-- topcompany Section -->
+        <section id="topcompany" class="topcompany section" style="background-color: #dfe4ea;">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <span>Top Compani's<br></span>
+            <h2>Top Company's</h2>
+            <p>Indira Gandhi Krishi Vishwavidyalaya (IGKV) is proud to partner with leading companies and organizations in the agricultural and allied sectors. These top companies actively participate in our placement programs, offering valuable opportunities to our graduates. Here are some of the most prestigious companies that visit IGKV for placements:</p>
+          </div><!-- End Section Title -->
+
+          <div class="container">
+            <marquee class="notification_body border" behavior="scroll" direction="left" scrollamount="10" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();">
+            <div class="row gy-2 ">
+              <div class="d-flex">
+              <div class="col-lg-2 col-md-2" data-aos="fade-up" data-aos-delay="100"  *ngFor="let cmapany of top5company">
+                <div class="card">
+                  <div class="card-img ">
+                    <!-- <img src="assets/img/service-1.jpg" alt="" class="img-fluid"> -->
+                    <img class="fixed-size-image" [src]="baseimageur + cmapany.Company_Logo_Url  || 'https://statinfer.com/wp-content/uploads/dummy-user.png'" alt="Company Logo" class="img-fluid">
+  
+                  </div>
+                  <h3>{{cmapany.Company_Name || 'Unknown'}}</h3>
+  
+                  <!-- <p class="stat">{{cmapany.Contact_Person || 'Unknown'}}</p>
+                  <p class="stat">{{cmapany.Hr_Contact_No || 'Unknown'}}</p> -->
+                  <p>{{cmapany.Contact_Person || 'Unknown'}}</p>
+                </div>
+              </div><!-- End Card Item -->
+              </div>
+            </div>
+            </marquee>
+          </div>
+        </section>
+        <!-- /topcompany Section -->
+
+
+
+
+
+    <!-- Section -->
+    <section id="cout" class="cout section">
+
+      <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row gy-4 d-flex justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h4 data-aos="fade-up ">Empowering Future Leaders: IGKV’s Placement Success</h4>
+            <p data-aos="fade-up" data-aos-delay="100">At Indira Gandhi Krishi Vishwavidyalaya (IGKV), we are dedicated to shaping the future of agriculture through exceptional education and real-world opportunities. Our commitment to academic excellence and industry collaboration has attracted a diverse and talented student body, all eager to make a difference in the agricultural sector.</p>
+
+         
+
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
+
+              <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="0" class="">{{StudentCont}}</span>
+                  <p>Registered Students</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+
+              <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span  class="">{{ComapnyCont}}</span>
+                  <p>Registered Companies</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <!-- <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0" class="purecounter">1453</span>
+                  <p>jobs</p>
+                </div>
+              </div> -->
+              <!-- End Stats Item -->
+
+              <!-- <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="0" class="purecounter">32</span>
+                  <p>Workers</p>
+                </div>
+              </div> -->
+              <!-- End Stats Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <!-- <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt=""> -->
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    
+    <!-- / Section -->
+
+
+
+
+
+
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+<div class="app-header" >
+    <app-c-header></app-c-header>
+  </div>
+  <div class="container">
+    <app-c-sidebar></app-c-sidebar>
+  </div>
+  
+   <div class="content" [ngClass]="isSidebarVisible ? 'with-sidebar' : 'without-sidebar'">
+    <!-- Your main content goes here -->
+    <router-outlet></router-outlet>
+  </div>
+  

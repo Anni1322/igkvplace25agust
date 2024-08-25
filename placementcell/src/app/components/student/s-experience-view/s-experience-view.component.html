@@ -1,0 +1,94 @@
+<div class="container">
+
+<!-- skill.component.html -->
+ <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="S.no">
+      <th mat-header-cell *matHeaderCellDef> S No. </th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </td>
+    </ng-container>
+  
+    <!-- Registration_No Column -->
+    <ng-container matColumnDef="Registration_No">
+      <th mat-header-cell *matHeaderCellDef> Registration No </th>
+      <td mat-cell *matCellDef="let element"> {{element.Registration_No}} </td>
+    </ng-container>
+    
+    <!-- Organization_Name Column -->
+    <ng-container matColumnDef="Organization_Name">
+      <th mat-header-cell *matHeaderCellDef> Organization_Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.Organization_Name}} </td>
+    </ng-container>
+    
+    <!-- Post_Name Column -->
+    <ng-container matColumnDef="Post_Name">
+      <th mat-header-cell *matHeaderCellDef> Post_Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.Post_Name}} </td>
+    </ng-container>
+    
+    <!-- Workplace_Address Column -->
+    <ng-container matColumnDef="WorkPlace_Address">
+      <th mat-header-cell *matHeaderCellDef> WorkPlace_Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.WorkPlace_Address}} </td>
+    </ng-container>
+
+    <!-- Workplace_District_Id Column -->
+    <ng-container matColumnDef="WorkPlace_District_Id">
+        <th mat-header-cell *matHeaderCellDef> WorkPlace_District_Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.WorkPlace_District_Id}} </td>
+      </ng-container>
+
+    <!-- Workplace_State_Id Column -->
+    <ng-container matColumnDef="WorkPlace_State_Id">
+        <th mat-header-cell *matHeaderCellDef> WorkPlace_State_Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.WorkPlace_State_Id}} </td>
+      </ng-container>
+
+    <!-- Workplace_Country_Id Column -->
+    <ng-container matColumnDef="WorkPlace_Country_Id">
+        <th mat-header-cell *matHeaderCellDef> WorkPlace_Country_Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.WorkPlace_Country_Id}} </td>
+      </ng-container>
+
+    <!-- City_Name Column -->
+    <ng-container matColumnDef="City_Name">
+        <th mat-header-cell *matHeaderCellDef> City_Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.City_Name}} </td>
+      </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef> Description</th>
+        <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+      </ng-container>
+
+    <!-- Period_From Column -->
+    <ng-container matColumnDef="Period_From">
+        <th mat-header-cell *matHeaderCellDef> Period_Form</th>
+        <td mat-cell *matCellDef="let element"> {{element.Period_From}} </td>
+      </ng-container>
+
+    <!-- Period_To Column -->
+    <ng-container matColumnDef="Period_To">
+        <th mat-header-cell *matHeaderCellDef> Period_To</th>
+        <td mat-cell *matCellDef="let element"> {{element.Period_To}} </td>
+      </ng-container>
+
+    <!-- Is_Currently_working_yn Column -->
+    <ng-container matColumnDef="Is_Currently_working_YN">
+        <th mat-header-cell *matHeaderCellDef> Is_Currently_working_YN </th>
+        <td mat-cell *matCellDef="let element"> {{element.Is_Currently_working_YN}} </td>
+      </ng-container>
+
+    <!-- salary Column -->
+    <ng-container matColumnDef="Salary">
+        <th mat-header-cell *matHeaderCellDef> Salary</th>
+        <td mat-cell *matCellDef="let element"> {{element.Salary}} </td>
+      </ng-container>
+
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

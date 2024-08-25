@@ -1,0 +1,11 @@
+
+.example-spacer{
+    flex: 1 1 auto;
+}
+
+.custom-toolbar {
+    // background-color: mix(#ffcf67, #0e0eff, 90%); /* This will mix red and blue with a 50% ratio */
+    background: linear-gradient(to right, #0000FF, #27a1ff, #0000FF);
+    color: white; /* Text color */
+  }
+  

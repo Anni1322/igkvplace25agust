@@ -1,0 +1,16 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+ 
+
+.container {
+  margin-top: 1rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .mat-elevation-z8{
+   box-shadow: 8px;
+  }
+
+}

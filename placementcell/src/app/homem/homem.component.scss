@@ -1,0 +1,252 @@
+ 
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  margin-left: 4px;
+  // background-color: #FFA934;
+  border: 1px solid rgb(168, 167, 167);
+  padding: 3px;
+  margin-top: 4px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+  
+
+
+.navbar{
+    // background-color: #1886E5;
+    border: 1.8px solid white;
+    border-radius: 5px;
+    
+ 
+  }
+.navbar li{
+    margin: 2px;
+    // float: right;
+  }
+.navbar li a{
+    color: #fff;
+  }
+.navbar li a:hover{
+      background-color: #ffffff;
+      color: #fff;
+      border: 1px solid white;
+      border-radius: 5px;
+  }
+
+//   span{
+//   // background-color: #FFA934;
+//  }
+
+
+.lastdate {
+  color: red;
+}
+
+
+// for cout
+.stat-item {
+  // background-image: url('/assets/icons/studentcard.png');
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #FFA934;
+  // box-shadow: 0 0 10px #FFA934;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.stat-item h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.stat-item p {
+  margin-bottom: 0;
+  color: #003cff;
+}
+.col-md-3{
+  gap: 20px;
+}
+.stat-item:hover{
+ background-color: #ffffff;
+ color: #ffffff; 
+}
+
+.stat-items:hover{
+ background-color: #225fee;
+ color: #ffffff; 
+}
+
+.stat:hover{
+ background-color: #ffffff;
+ color: #ffffff;
+ border-radius: 7px;
+}
+
+
+
+
+.notification-section {
+  text-align: center;
+}
+
+.stat-item {
+  background-color: #ffffff; /* White background for each item */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for better separation */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+
+// for cout
+
+
+// notification
+.notification{
+  background-color: #0a83fb;
+}
+// notification
+
+
+
+
+
+section{
+  margin-top: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for section 
+ 
+.notification-section {
+  text-align: center;
+}
+
+.stat-item {
+  background-color: #ffffff; /* White background for each item */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for better separation */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.image-container {
+  width: 100px; /* Set the desired width */
+  height: 100px; /* Set the desired height */
+  border-radius: 50%; /* Optional: if you want the image container to be circular */
+  overflow: hidden; /* Hide overflow to create circular effect */
+  margin-bottom: 15px;
+}
+
+.fixed-size-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+// for section 
+
+
+ 
+// for logo
+.leader {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.logo {
+  display: block;
+  font-size: 18px; /* Adjust size as needed */
+  font-weight: bold;
+  color: #e4f1ff; /* Custom color for the logo text */
+  text-transform: uppercase; /* Uppercase letters for a logo-like effect */
+  margin-bottom: 5px;
+}
+
+.abbreviation {
+  display: block;
+  font-size: 14px; /* Adjust size as needed */
+  font-weight: bold;
+  color: #ffffff; /* Custom color for the abbreviation */
+  text-transform: uppercase; /* Uppercase letters */
+  margin-bottom: 10px;
+}
+
+.position {
+  font-size: 18px; /* Adjust size as needed */
+  color: #333; /* Color for the position/title */
+}
+// for logo
+ 
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right{
+    width: 100%;
+  }
+ .d-flex{
+  display: none;
+ }
+ .col-md-3{
+  margin: 10px;
+  gap: 20px;
+}
+}
+ 

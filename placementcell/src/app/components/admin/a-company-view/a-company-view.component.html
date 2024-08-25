@@ -1,0 +1,101 @@
+<div class="container mt-3">
+  <h2>Company List</h2>
+  <mat-form-field class="search-form-field">
+    <mat-label>Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search Student" #filterInput>
+  </mat-form-field>
+  
+
+  <div class="mat-elevation-z8" id="print-section">
+    <div class="table-responsive border ">
+      <table mat-table [dataSource]="dataSource" matSort class="table table-bordered table-hover">
+
+        <!-- Sno Column -->
+        <ng-container matColumnDef="S.No.">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No. </th>
+            <td mat-cell *matCellDef="let i = index" data-label="S No."> {{i+1}} </td>
+        </ng-container>
+    
+        <!-- Company Id Column -->
+        <ng-container matColumnDef="Company_Id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.Company_Id}} </td>
+        </ng-container>
+    
+        <!-- Company registration no Column -->
+        <ng-container matColumnDef="Company_Registration_No">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company Reg. no </th>
+            <td mat-cell *matCellDef="let row"> {{row.Company_Registration_No}} </td>
+        </ng-container>
+    
+        <!-- Company Name Column -->
+        <ng-container matColumnDef="Company_Name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.Company_Name}} </td>
+        </ng-container>
+    
+        <!-- Company Type Column 
+        <ng-container matColumnDef="Company_Type">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company Type </th>
+            <td mat-cell *matCellDef="let row"> {{row.Company_Type}} </td>
+        </ng-container> -->
+            
+        <!-- Company Email Column -->
+        <ng-container matColumnDef="Company_Email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company Email </th>
+            <td mat-cell *matCellDef="let row"> {{row.Company_Email}} </td>
+        </ng-container>
+    
+        <!-- Company_Phone_Number Column -->
+        <ng-container matColumnDef="Company_Phone_Number">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company No </th>
+            <td mat-cell *matCellDef="let row"> {{row.Company_Phone_Number}} </td>
+        </ng-container>
+    
+        <!-- Address Column -->
+        <ng-container matColumnDef="Address">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+            <td mat-cell *matCellDef="let row"> {{row.Address}} </td>
+        </ng-container>
+    
+        <!-- Website Column -->
+        <ng-container matColumnDef="Website">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Website </th>
+            <td mat-cell *matCellDef="let row"> {{row.Website}} </td>
+        </ng-container>
+    
+       
+    
+        <!-- Status Column -->
+        <!-- <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+            <td mat-cell *matCellDef="let row" [ngClass]="getStatusClass(row.Status)">
+                {{row.Status}}
+            </td>
+        </ng-container> -->
+    
+        <!-- Edit Column -->
+
+        <!-- <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+            <td mat-cell *matCellDef="let row">
+                <a [routerLink]="'/admin/a-c-vacancylist-action/' + row.TnP_Student_Master_Id">
+                    <img width="20px" height="20px" src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" alt="Edit">
+                </a>
+            </td>
+        </ng-container> -->
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="12">No data matching the filter "{{filterInput.value}}"</td>
+        </tr>
+    </table>
+    
+    </div>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15, 20, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+  <button (click)="printTable()" class="btn btn-primary mt-3">Print</button>
+</div>

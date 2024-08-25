@@ -1,0 +1,134 @@
+<div class=" mt-3" style="margin: 20px;">
+    <!-- <h2>Welcome to Your Dashboard</h2> -->
+
+
+    <div class="notification-section">
+        <h2>Notifications</h2>
+  
+        <div class="card">
+            <marquee class="notification_body " style="margin: 20px;" behavior="scroll" direction="up" scrollamount="3" scrolldelay="10" onmouseover="this.stop();" onmouseout="this.start();">
+                <div class="row">
+                  <div class="mt-4" *ngFor="let vacancy of data">
+                      <span class="card-subtitle mb-2 text-muted" hidden>VID: {{ vacancy.Vacancy_ID }} </span>
+                    
+                              <span class="card-title"><img src="https://img.icons8.com/?size=100&id=mIQ6moZZHoBs&format=png&color=000000" width="20px"  height="15px" alt="" srcset="">  Last Date : {{ vacancy.Last_Date_for_apply | date }} </span>
+                              <span class="card-title">Post : {{ vacancy.Job_Title }} </span>
+                         
+                              <!-- <span class="card-title">Company : {{ vacancy.Company_Id }} </span> -->
+                          
+                              <!-- <span class="card-title">Post No : {{ vacancy.Vacancy_ID }} </span> -->
+                         
+                              <a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="card-link"> Apply Now</a> 
+                              <a [routerLink]="['/student/s-vacany-details']" class="card-link"> More</a>
+                       
+                  </div>
+              </div>
+              </marquee>
+        </div>
+        
+
+        <!-- <div class="col-md-4" *ngFor="let vacancy of data">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title  ">Post Name: {{ vacancy.Job_Title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">VID: {{ vacancy.Vacancy_ID }}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Company Id: {{ vacancy.No_Of_Post }}</h6>
+                <p class="card-text">Description: {{ vacancy.Job_Description }}</p>
+                <p class="card-text"><strong>Location:</strong> {{ vacancy.Job_Location }}</p>
+                <p class="card-text"><strong>Salary:</strong> {{ vacancy.Salary }}</p>
+                <p class="card-text"><strong>Type:</strong> {{ vacancy.Job_Selection }}</p>
+                <p class="card-text"><strong>Last Date to Apply:</strong> {{ vacancy.Last_Date_for_apply }}</p>
+        
+                <a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="card-link">Apply Now</a>
+              </div>
+            </div>
+          </div> -->
+
+
+      </div>
+
+    <div class="row mt-2">
+        <!-- <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Selected</h4>
+                    <p class="card-text">Some example text.</p>
+                    <a href="#" class="btn btn-primary">Click</a>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card bg-success text-white bg-opacity-25">
+                <div class="card-body">
+                    <h4 class="card-title">Interview date</h4>
+                    <p class="card-text">Some example text.</p>
+                    <a href="#" class="btn btn-primary">Click</a>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card bg-primary text-white bg-opacity-25">
+                <div class="card-body">
+                    <h4 class="card-title">Joining</h4>
+                    <p class="card-text">Some example text.</p>
+                    <a href="#" class="btn btn-warning ">Click</a>
+                  </div>
+            </div>
+        </div>
+   
+        <div class="col-md-4 mb-3">
+            <div class="card bg-warning text-white bg-opacity-25">
+                <div class="card-body">
+                    <h4 class="card-title">Rejected</h4>
+                    <p class="card-text">Some example text.</p>
+                    <a href="#" class="btn btn-warning">Click</a>
+                  </div>
+            </div>
+        </div> -->
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow card1 " >
+                <div class="card-body">
+                    <h4 class="card-title">My Application</h4>
+                    <!-- <p class="card-text">Some example text.</p> -->
+                    <!-- <a href="#" class="btn btn-warning">View</a> -->
+                    <a [routerLink]="'/student/s-status/' + user.eid" class="btn btn-warning">View</a>
+                  </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow card2 " >
+                <div class="card-body">
+                    <h4 class="card-title">My Vacancis</h4>
+                    <!-- <p class="card-text">Some example text.</p> -->
+                    <!-- <a href="#" class="btn btn-warning">View</a> -->
+                    <a [routerLink]="'/student/s-vacany-details'" class="btn btn-warning">View</a>
+                  </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow card1 " >
+                <div class="card-body">
+                    <h4 class="card-title">My Profile</h4>
+                    <!-- <p class="card-text">Some example text.</p> -->
+                    <!-- <a href="#" class="btn btn-warning">View</a> -->
+                    <a [routerLink]="'/student/s-profile/' + user.eid" class="btn btn-warning">View</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+
+
+
+ 
+   
+        <!-- Add more card columns here -->
+ 
+          
+</div>

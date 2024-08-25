@@ -1,0 +1,122 @@
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile devices */
+}
+
+.mat-table {
+  min-width: 600px; /* Minimum width to maintain structure */
+}
+
+@media (max-width: 600px) {
+  .mat-table {
+    font-size: 12px; /* Smaller text for smaller screens */
+   
+  }
+
+  .mat-header-cell, .mat-cell {
+    padding: 8px; /* Reduced padding for smaller screens */
+  }
+
+  .mat-paginator {
+    font-size: 12px; /* Smaller paginator text */
+  }
+}
+
+
+h1{
+    color: rgb(19, 8, 67);
+    font-weight: bold;
+}
+
+// // Define primary and secondary colors
+// $primary-color: #007bff;
+// $secondary-color: #6c757d;
+// $light-color: #f8f9fa;
+// $dark-color: #343a40;
+
+// .container {
+//   margin: 20px auto;
+//   padding: 20px;
+//   max-width: 1200px;
+//   background-color: $light-color;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
+
+// h1 {
+//   text-align: center;
+//   color: $dark-color;
+//   margin-bottom: 20px;
+// }
+
+// .mat-form-field {
+//   width: 100%;
+//   margin-bottom: 20px;
+// }
+
+// #print-section {
+//   .mat-elevation-z8 {
+//     overflow-x: auto;
+//     @media (max-width: 768px) {
+//       overflow-x: scroll;
+//     }
+//   }
+
+//   table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     margin-bottom: 20px;
+//     //display: flex;
+
+//     th, td {
+//       padding: 12px;
+//       text-align: left;
+//       border-bottom: 1px solid $secondary-color;
+//     }
+
+//     th {
+//       background-color: $primary-color;
+//       color: white;
+//       font-weight: bold;
+//     }
+
+//     td {
+//       background-color: white;
+//       color: $dark-color;
+//     }
+
+//     tr:hover {
+//       background-color: $light-color;
+//     }
+
+//     .mat-sort-header-arrow {
+//       color: white;
+//     }
+
+//     // Hide less important columns on smaller screens
+//     @media (max-width: 768px) {
+//       th:nth-child(3),
+//       td:nth-child(3),
+//       th:nth-child(4),
+//       td:nth-child(4),
+//       th:nth-child(5),
+//       td:nth-child(5) {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+// .mat-paginator {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .btn-primary {
+//   background-color: $primary-color;
+//   border-color: $primary-color;
+//   &:hover {
+//     background-color: darken($primary-color, 10%);
+//     border-color: darken($primary-color, 10%);
+//   }
+// }

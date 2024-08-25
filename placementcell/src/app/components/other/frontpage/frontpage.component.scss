@@ -1,0 +1,201 @@
+
+.header {
+     width: 100%;
+ }
+
+// /* University Name and Logo Section */
+.header-university {
+    background-color: white;
+    color: black;
+     //padding: 10px 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+.header-university h2 {
+    margin: 0;
+    font-size: 2vw;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    display: flex;
+
+}
+
+.header-university img {
+    max-height: 80px;
+    margin-left: 100px;
+}
+
+.header-welcome {
+    background-color: #c7c3b5;
+    color: rgb(63, 59, 59);
+    padding: 10px 20px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Section for the navigation bar */
+.navbar-light {
+    background-color: #c7c3b5;
+   // color: #000;
+    display: flex;
+}
+
+//dropdown 
+.dropdown-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px; /* Max width for larger screens */
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.user-rollno {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.logout-button-container {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #959696;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #f8f9fa;
+   // padding: 20px;
+   // height: 100vh;
+    border: 1px solid #dee2e6;
+   // border-radius: 5px;
+}
+
+.sidebar-item h2 {
+    font-size: 20px;
+    //margin-bottom: 20px;
+    color: white;
+    background-color: #120fc9;
+    border-bottom: 2px solid white;
+   // padding-bottom: 10px;
+    text-align: center;
+}
+
+.sidebar-item a {
+    color: #000;
+    //text-decoration: none;
+    //font-weight: bold;
+}
+
+
+.sidebar-item .close-time {
+    background-color: red;
+    //font-weight: bold;
+    font-size:15px;
+}
+
+.sidebar-item button {
+    width: 100%;
+   // padding: 10px;
+    background-color: #c7c3b5;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.sidebar-item button:hover {
+    background-color: #6ba7e8;
+}
+
+.content-item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #120fc9;
+    color: #ffffff;
+    padding: 5px 0;
+    border-radius: 8px 8px 0 0;
+
+    h2 {
+        margin: 0;
+        font-size: 24px;
+        color: white;
+    }
+}
+.content {
+    padding: 10px;
+
+    .section-title {
+        background-color: #2724d4;
+        color: #ffffff;
+        padding: 5px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .section {
+        margin-bottom: 5px;
+        padding: 1px;
+       // background-color: #ffe6e6;
+        border-radius: 2px;
+
+        .subsection-title {
+            background-color: #ffb3b3;
+            padding: 5px;
+            border-radius: 4px;
+        
+
+        }
+    }
+}

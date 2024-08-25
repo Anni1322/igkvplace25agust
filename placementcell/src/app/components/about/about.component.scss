@@ -1,0 +1,80 @@
+main{
+  background-color: #bab9f8b2;
+  height: 180%; 
+
+}
+.container{
+  width: 150%;
+
+}
+
+.container-fluid{
+  // background-color: #1886e5;
+   height: 95px;
+   font-size: medium;
+   padding: 1rem;
+  
+}
+
+.contact-card {
+    width:100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: #fff;
+    .card-title {
+      color: #007bff;
+      margin-bottom: 1rem;
+    
+    }
+    ul {
+      padding-left: 0;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #007bff; /* Adjust background color to match the one in the image */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+  
+  .official {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.official img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.info h2 {
+    font-size: 18px;
+    color: #0c529d; /* Adjust text color to match the one in the image */
+    margin: 10px 0 5px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #0c529d; /* Adjust text color to match the one in the image */
+    margin: 5px;
+}

@@ -1,0 +1,89 @@
+<div class="sidebar" [ngClass]="{ 'showSidebar': isSidebarVisible, 'hideSidebar': !isSidebarVisible }" [@fadeInOut]>
+    <ul>
+
+      <!-- <li>
+        <a routerLinkActive="active" (click)="toggleSubmenu()">
+          <span class="menu-icon material-icons">dashboard</span>
+          <span class="menu-text">Dashboard</span>
+          <span class="sub-menu-icon" [ngClass]="{ 'sub-menu-open': isSubmenuOpen }">
+            <mat-icon>{{ isSubmenuOpen ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}</mat-icon>
+          </span>
+        </a>
+        //Sub-menu for Dashboard with left padding //
+        <ul *ngIf="isSubmenuOpen" class="sub-menu">
+          <li><a routerLink="/dashboard" routerLinkActive="active"><span class="menu-icon material-icons">details</span><span class="menu-text">Details</span></a></li>
+          <li><a routerLink="/dashboard/messages" routerLinkActive="active"><span class="menu-icon material-icons">message</span><span class="menu-text">Messages</span></a></li>
+        </ul>
+      </li> -->
+
+      <li>
+        <div class="circle row align-items-center">
+            <div class="col-auto">
+                <img src="https://thumbs.dreamstime.com/b/vector-illustration-avatar-dummy-logo-collection-image-icon-stock-isolated-object-set-symbol-web-137160339.jpg" class="img-fluid rounded-circle" alt="Profile Picture" style="width: 50px; height: 50px;">
+            </div>
+            <div class="col"style="margin-top: 15px;">
+                <span class="name" style="font-size: 25px; margin-top: 15px;">{{ user.username }}</span><br>
+                <span class="name">ID: {{ user.eid }}</span><br>
+
+                
+            </div>
+           
+        </div>
+    </li><hr>
+
+
+
+    
+    
+    
+
+      <li>
+        <a routerLink="/student/s-dashboard" routerLinkActive="active">
+          <span class="menu-icon material-icons">dashboard</span>
+          <span class="menu-text">dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/student/s-basic-details" routerLinkActive="active">
+          <span class="menu-icon material-icons">face</span>
+          <span class="menu-text">Basic Details</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="'/student/s-profile/' + user.eid" routerLinkActive="active">
+          <span class="menu-icon material-icons">account_circle</span>
+          <span class="menu-text">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/student/s-vacany-details" routerLinkActive="active">
+          <span class="menu-icon material-icons">manage_search</span>
+          <span class="menu-text">Vacancy Details</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="'/student/s-status/' + user.eid" routerLinkActive="active">
+          <span class="menu-icon material-icons">info</span> 
+          <span class="menu-text">My Appication</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="menu-icon material-icons">logout</span>
+          <span class="btn" (click)="logout()" style="font-size: 15px;">Logout</span>
+        </a>
+      </li>
+
+      <li>
+        <!-- <a routerLink="/student/settings" routerLinkActive="active"> -->
+
+      <!-- <li>
+        <a routerLink="/settings" routerLinkActive="active">
+
+          <span class="menu-icon material-icons">settings</span>
+          <span class="menu-text">Setting</span>
+        </a>
+      </li> -->
+
+
+

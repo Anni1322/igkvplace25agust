@@ -1,0 +1,102 @@
+<div class=" container container-flude mt-2 p-0 user-select-none">
+ 
+    <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
+            <div class="row basic-row ">
+                <div class="#">
+                    <div class="card row">
+            
+                        
+                        <form [formGroup]="companyregistrationForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" autocomplete="off">
+                            
+                        <mat-stepper #stepper>
+        
+                            <mat-step>
+                                <div class="card-body">
+                                  <div class="">
+                                    <div class="form-group">
+                                      <mat-form-field appearance="outline" class="inputfieldsize">
+                                        <mat-label for="Company_Id">Company Id:</mat-label>
+                                        <input matInput placeholder="Company Id" formControlName="Company_Id">
+                                      </mat-form-field>
+                                    </div>
+                                    <div class="form-group">
+                                      <mat-form-field appearance="outline" class="inputfieldsize">
+                                        <mat-label for="Company_Logo_Url">Company Logo Url:</mat-label>
+                                        <input matInput placeholder="Company Logo Url" formControlName="Company_Logo_Url">
+                                      </mat-form-field>
+                                    </div>
+                                    <div class="form-group">
+                                      <mat-form-field appearance="outline" class="inputfieldsize">
+                                        <mat-label for="Company_Broucher">Company Broucher:</mat-label>
+                                        <input matInput placeholder="Company Broucher Url" formControlName="Company_Broucher">
+                                      </mat-form-field>
+                                    </div>
+                                    <div class="form-group">
+                                      <mat-form-field appearance="outline" class="inputfieldsize">
+                                        <mat-label for="Company_Other_Doc_Url">Company Other Document Url:</mat-label>
+                                        <input matInput placeholder="Company Other Document Url" formControlName="Company_Other_Doc_Url">
+                                      </mat-form-field>
+                                    </div>
+                                  </div>
+                                  <div class="container">
+                                    <!-- Company Logo Upload -->
+                                    <div class="row fileupload">
+                                      <div class="col" style="margin-top: 5px; margin-bottom: 5px;">
+                                        <div>Upload Company Logo</div>
+                                        <input type="file" (change)="selectLogo($event)" required>
+                                      </div>
+                                      <div class="col" style="margin-top: 20px;">
+                                        <button mat-raised-button color="primary" type="button" (click)="uploadLogo()">Upload</button>
+                                      </div>
+                                    </div>
+                                    <!-- Company Broucher Upload -->
+                                    <div class="row fileupload">
+                                      <div class="col" style="margin-top: 5px; margin-bottom: 5px;">
+                                        <div>Upload Company Broucher</div>
+                                        <input type="file" (change)="selectBroucher($event)" />
+                                      </div>
+                                      <div class="col" style="margin-top: 20px;">
+                                        <button mat-raised-button color="primary" type="button" (click)="uploadBroucher()">Upload</button>
+                                      </div>
+                                    </div>
+                                    <div class="row fileupload">
+                                      <div class="col" style="margin-top: 5px; margin-bottom: 5px;">
+                                        <div>Upload Company Other Doc</div>
+                                        <input type="file" (change)="selectOtherDoc($event)" />
+                                      </div>
+                                      <div class="col" style="margin-top: 20px;">
+                                        <button mat-raised-button color="primary" type="button" (click)="uploadOtherDoc()">Upload</button>
+                                      </div>
+                                    </div>
+                                    <!-- Company's Other Documents -->
+
+
+                                  </div>
+                                  <div class="row">
+                                    <ng-template matStepLabel>Files Uploads</ng-template>
+                                    <div class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">
+                                      <button mat-button (click)="stepper.reset()" class="btn text-center bg-primary">Reset</button>
+                                      <button type="submit" class="btn btn-primary text-center">Submit</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </mat-step>
+                              
+                
+                
+                           
+                            </mat-stepper>
+                           <!-- stapper end --> 
+                </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+                       
+                                                 
+
+<!-- <img [src]="baseimageur + companyLogo" alt="User Image"> -->
+
+ 

@@ -1,0 +1,238 @@
+@import 'aos/dist/aos.css';
+
+
+.navbar-toggler {
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+}
+.navbar-toggler-icon{
+  margin: -18px -12px -11px;
+  padding: 0px;
+  // background-color: #000000;
+}
+
+.navbar{
+  background-color: #1886E5;
+  border: 1.8px solid white;
+  border-radius: 5px;
+  width: 100%;
+  height: 67px;
+}
+.navbar li a:hover{
+    background-color: #FFA934;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+main{
+    background-color: #bab9f8b2;
+    height: 100%; 
+    // margin-left: 62px;
+}
+// .container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 20px;
+//   }
+  
+
+.notification-section {
+  width: 50%;
+  
+  // height: 50%;
+  background-color: #8dadf6ad;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.notification-section .card{
+ 
+  height: 222px;
+  // background-color: #8dadf6ad;
+  // padding: 20px;
+  // border: 1px solid #ddd;
+  // border-radius: 5px;
+}
+
+ 
+  nav {
+    display: flex;
+  }
+
+
+  .logo {
+    margin: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    margin-left: auto;
+    
+  }
+
+  
+  .nav-links li {
+    margin-top: 10px;
+    margin-right: 20px;
+
+  }
+  
+  .nav-links a {
+
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .cta-buttons {
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  button:hover {
+    background-color: #00a2ff;
+  }
+  
+  
+
+// for dropdown
+  #dropdownMenu {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+  }
+
+  /* Style for the dropdown options */
+
+section{
+  border-radius: 30px;
+  background-color: #ccc;
+}
+
+.sec-1{
+  height: 200px;
+  background-image: url('https://t4.ftcdn.net/jpg/03/92/25/09/360_F_392250914_2Od8jNRBPgpMu8W29vCh4hiu5EUXbgGU.jpg');
+}
+
+
+.stat-item h1,p {
+  color: #ccc;
+}
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container-sec {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 100%;
+}
+
+.mt-2:nth-child(1) {
+  order: 1;
+  flex: 1 1 48%;
+}
+
+.mt-2:nth-child(2) {
+  order: 2;
+  flex: 1 1 48%;
+}
+
+.mt-2:nth-child(3) {
+  order: 3;
+  flex: 1 1 100%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+p {
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1275px) {
+	.company{
+		margin: -20px -90px;
+	}
+
+}
+
+
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.container{
+		margin: -20px -20px;
+	}
+	.carousel{
+    margin-top: 20px;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+  // template
+
+  
+ 

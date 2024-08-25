@@ -1,0 +1,36 @@
+<mat-toolbar  class="custom-toolbar mat-elevation-z8 ">
+    <span class="example-spacer">IGKV Placement</span>
+
+    <mat-menu #lvl1master="matMenu">
+        <button  mat-menu-item routerLink="student_registraion" >Student</button>
+        <button  mat-menu-item routerLink="company_registraion" >Company</button>
+    </mat-menu>
+ 
+    <button [matMenuTriggerFor]="login" mat-button>Welcome, {{ user?.username }}</button>
+
+    <mat-menu #login="matMenu">
+        <button  mat-menu-item routerLink="Profile" >Profile</button>
+     
+        <button mat-menu-item (click)="logout()">Logout</button>
+
+    </mat-menu>
+ 
+    <mat-icon matBadge="15" routerLink="/student_notification" matBadgeColor="warn">notifications</mat-icon>
+
+</mat-toolbar>
+
+
+<mat-drawer-container class="example-container" autosize>
+    
+    <mat-drawer #drawer class="example-sidenav" opened="true"  mode="push">
+      
+    </mat-drawer>
+
+    <mat-drawer-content>
+    <div style="text-align: center;min-height: 600px;"> 
+
+      
+ 
+    </div>
+    </mat-drawer-content>  
+  </mat-drawer-container>

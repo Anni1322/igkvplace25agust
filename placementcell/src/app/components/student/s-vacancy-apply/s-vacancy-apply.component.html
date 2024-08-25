@@ -1,0 +1,132 @@
+<!-- oringinal  -->
+
+<div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
+  <div class="container page-heading text-center p-0 bg-white rounded shadow">
+
+  </div>
+
+  <div class="container card main-con mt-2 bg-white-subtle p-4  rounded">
+    <div class="border-1">
+      <h2>Vacancy Apply</h2>
+    </div>
+
+    <form [formGroup]="vacancyApplydata" (ngSubmit)="onSubmit()" novalidate>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group mb-2">
+            <label for="Company_ID">Company ID: </label>
+            <input type="text" id="Company_ID" formControlName="Company_ID" class="form-control"
+              [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched }">
+            <div class="invalid-feedback"
+              *ngIf="vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched">
+              Company_ID is required.
+            </div>
+          </div>
+          <div class="form-group mb-2">
+            <label for="Company_Name">Company_Name </label>
+            <input type="text" id="Company_Name" formControlName="Company_Name" class="form-control"
+              [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched }">
+            <div class="invalid-feedback"
+              *ngIf="vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched">
+              Company_Name is required.
+            </div>
+          </div>
+
+
+          <div class="form-group mb-2">
+            <label for="Full_Name">Student Full Name: </label>
+            <input type="text" id="Full_Name" placeholder="full name" formControlName="Full_Name" class="form-control">
+          </div>
+
+
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2" hidden>
+              <!-- <div class="form-group mb-2" > -->
+              <label for="Flag">Flag</label>
+              <input type="text" id="Flag" value="N" placeholder="flag" formControlName="Flag" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group" hidden>
+              <!-- <div class="form-group" > -->
+              <label for="Application_Submission_Date">Application Submission Date: </label>
+              <input type="date" id="Application_Submission_Date" placeholder="submission date"
+                formControlName="Application_Submission_Date" class="form-control">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-lg-4">
+
+          <div class="form-group mb-2">
+            <label for="Student_ID">Student ID: </label>
+            <input type="text" id="Student_ID" placeholder="student id" formControlName="Student_ID"
+              class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Fathers_Name">Father Name: </label>
+            <input type="text" id="Fathers_Name" placeholder="father name" formControlName="Fathers_Name"
+              class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Job_Title">Post Name: </label>
+            <input type="text" id="Job_Title" placeholder="Job Title" formControlName="Job_Title" class="form-control">
+          </div>
+        </div>
+
+      
+
+
+        <div class="col-lg-4">
+
+          <div class="form-group">
+            <label for="Vacancy_ID">Vacancy ID: </label>
+            <input type="text" id="Vacancy_ID" placeholder="vacancy id" formControlName="Vacancy_ID"
+              class="form-control">
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="Resume_Path">Resume Upload: </label>
+            <input type="file" id="Resume_Path" (change)="onFileSelected($event)" placeholder="resume path"
+              class="form-control" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+          </div>
+          
+          <div class="form-group mb-3">
+            <label for="Mobile">Mobile Number: </label>
+            <input type="number" id="Mobile" placeholder="number" class="form-control" formControlName="Mobile">
+          </div>
+
+        </div>
+
+ 
+
+     
+
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label for="Email">Email: </label>
+            <input type="Email" id="Email" placeholder="email" class="form-control" formControlName="Email">
+          </div>
+        </div>
+
+   
+        <div class="col-lg-4">
+          <div class="form-group" hidden>
+            <label for="Status">Status: </label>
+            <input type="text" id="Status" placeholder="status" class="form-control" formControlName="Status">
+          </div>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" >Submit</button>
+
+    </form>
+  </div>
+</div>

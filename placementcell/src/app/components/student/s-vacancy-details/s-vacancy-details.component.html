@@ -1,0 +1,66 @@
+<div class="container mt-3">
+  <h2>Vacancy Details for Students</h2>
+  <div class="input-group mb-3">
+      <!-- <input type="text" class="form-control" placeholder="Search jobs" aria-label="Search jobs" aria-describedby="search-button"> -->
+      <!-- <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button> -->
+  </div>
+  
+  <!-- <div class="row">
+      <div class="col-md-4" *ngFor="let vacancy of data">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title  ">Post Name: {{ vacancy.Job_Title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">VID: {{ vacancy.Vacancy_ID }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Company Id: {{ vacancy.Company_Id }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Post No: {{ vacancy.No_Of_Post }}</h6>
+            <p class="card-text">Description: {{ vacancy.Job_Description }}</p>
+            <p class="card-text"><strong>Location:</strong> {{ vacancy.Job_Location }}</p>
+            <p class="card-text"><strong>Salary:</strong> {{ vacancy.Salary }}</p>
+            <p class="card-text"><strong>Type:</strong> {{ vacancy.Job_Selection }}</p>
+            <p class="card-text"><strong>Last Date to Apply:</strong> {{ vacancy.Last_Date_for_apply }}</p>
+           
+            <a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="card-link">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     -->
+
+
+
+    <div class="table-responsive border">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Post Name</th>
+            <th>VID</th>
+            <th>Company Id</th>
+            <th>Company Name</th>
+            <th>Post No</th>
+            <!--<th>Description</th>-->
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Type</th>
+            <th>Last Date to Apply</th>
+            <th>Apply</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vacancy of data">
+            <td>{{ vacancy.Job_Title }}</td>
+            <td>{{ vacancy.Vacancy_ID }}</td>
+            <td>{{ vacancy.Company_Id }}</td>
+            <td>{{ vacancy.Company_Name }}</td>
+            <td>{{ vacancy.No_Of_Post }}</td>
+           <!-- <td>{{ vacancy.Job_Description }}</td>-->
+            <td>{{ vacancy.Job_Location }}</td>
+            <td>{{ vacancy.Salary }}</td>
+            <td>{{ vacancy.Job_Selection }}</td>
+            <td>{{ vacancy.Last_Date_for_apply | date }}</td>
+            <td><a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="btn-primary">Apply Now</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+</div>

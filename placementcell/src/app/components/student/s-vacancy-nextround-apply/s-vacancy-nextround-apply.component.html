@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body style="font-family:Verdana;color:#070707; margin: 6px;">
+
+  <div class="container container-flude mt-2 mb-3 p-0 user-select-none">
+    <div class="container page-heading text-center p-0 bg-white rounded shadow">
+      <h2>Second Round Form</h2>
+    </div>
+
+    <div class="container card main-con mt-2 bg-white-subtle p-4 rounded">
+      <form [formGroup]="vacancyApplydata" (ngSubmit)="onSubmit()" novalidate autocomplete="off">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Company_ID">Company ID:</label>
+              <input type="text" id="Company_ID" placeholder="Company_Id" formControlName="Company_ID"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched }">
+              <div class="invalid-feedback"
+                *ngIf="vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched">
+                Company ID is required.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Company_Name">Company_Name:</label>
+              <input type="text" id="Company_Name" placeholder="Company_Name" formControlName="Company_Name"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched }">
+              <div class="invalid-feedback"
+                *ngIf="vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched">
+                Company_Name is required.
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4" hidden>
+            <div class="form-group mb-2">
+              <label for="Flag">Flag</label>
+              <input type="text" id="Flag" value="N" placeholder="flag" formControlName="Flag" class="form-control">
+            </div>
+          </div> -->
+
+          <div class="col-lg-4" hidden>
+            <div class="form-group mb-2">
+              <label for="Application_Submission_Date">Application Submission Date:</label>
+              <input type="date" id="Application_Submission_Date" placeholder="submission date"
+                formControlName="Application_Submission_Date" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Vacancy_ID">Vacancy ID:</label>
+              <input type="text" id="Vacancy_ID" placeholder="vacancy id" formControlName="Vacancy_ID"
+                class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Student_ID">Student ID:</label>
+              <input type="text" id="Student_ID" placeholder="student id" formControlName="Student_ID"
+                class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Full_Name">Full Name: </label>
+              <input type="text" id="Full_Name" placeholder="full name" formControlName="Full_Name"
+                class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Fathers_Name">Father Name:</label>
+              <input type="text" id="Fathers_Name" placeholder="father name" formControlName="Fathers_Name"
+                class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Mobile">Mobile No:</label>
+              <input type="number" id="Mobile" placeholder="number" class="form-control" formControlName="Mobile">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Job_Title">Post Name:</label>
+              <input type="text" id="Job_Title" placeholder="job title" formControlName="Job_Title"
+                class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Email">Email:</label>
+              <input type="email" id="Email" placeholder="email" class="form-control" formControlName="Email">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="">Placement Schedule: </label>
+              <input type="text" id="schedule" placeholder="schedules" class="form-control" formControlName="Schedule">
+            </div>
+          </div>
+
+          <div class="col-lg-4" hidden>
+            <div class="form-group mb-2">
+              <label for="new">New </label>
+              <input type="text" id="" placeholder="new" class="form-control" formControlName="">
+            </div>
+          </div>
+
+          <div class="col-lg-4" hidden>
+            <div class="form-group mb-2">
+              <label for="Status">Status:</label>
+              <input type="text" id="Status" placeholder="status" class="form-control" formControlName="Status">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <button type="submit" class="form-group btn-primary btn-block"
+              [disabled]="vacancyApplydata.invalid">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body style="font-family:Verdana;color:#070707; margin: 6px;">
+
+  <div class="container container-flude mt-2 mb-3 p-0 user-select-none">
+    <div class="container page-heading text-center p-0 bg-white rounded shadow">
+      <h2>Second Round Form</h2>
+    </div>
+  
+    <div class="container card main-con mt-2 bg-white-subtle p-4 rounded">
+      <form [formGroup]="vacancynextrounddata" (ngSubmit)="onSubmit()" novalidate autocomplete="off">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Company_ID">Company ID:</label>
+              <input type="text" id="Company_ID" placeholder="Company_Id" formControlName="Company_ID" class="form-control" [ngClass]="{ 'is-invalid': vacancynextrounddata.controls['Company_ID'].invalid && vacancynextrounddata.controls['Company_ID'].touched }">
+              <div class="invalid-feedback" *ngIf="vacancynextrounddata.controls['Company_ID'].invalid && vacancynextrounddata.controls['Company_ID'].touched">
+                Company ID is required.
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-4" hidden>
+
+          <div class="col-lg-4" hidden>
+
+            <div class="form-group mb-2">
+              <label for="Flag">Flag</label>
+              <input type="text" id="Flag" value="N" placeholder="flag" formControlName="Flag" class="form-control">
+            </div>
+          </div> 
+  
+          <div class="col-lg-4" hidden>
+            <div class="form-group mb-2">
+              <label for="Application_Submission_Date">Application Submission Date:</label>
+              <input type="date" id="Application_Submission_Date" placeholder="submission date" formControlName="Application_Submission_Date" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Vacancy_ID">Vacancy ID:</label>
+              <input type="text" id="Vacancy_ID" placeholder="vacancy id" formControlName="Vacancy_ID" class="form-control">
+            </div>
+          </div>
+  
+      
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Student_ID">Student ID:</label>
+              <input type="text" id="Student_ID" placeholder="student id" formControlName="Student_ID" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+                <label for="Full_Name">Full Name: </label>
+                <input type="text" id="Full_Name" placeholder="full name" formControlName="Full_Name" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Fathers_Name">Father's Name:</label>
+              <input type="text" id="Fathers_Name" placeholder="father name" formControlName="Fathers_Name" class="form-control">
+            </div>
+          </div>
+  
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Vacancy_ID">Vacancy ID:</label>
+              <input type="text" id="Vacancy_ID" placeholder="vacancy id" formControlName="Vacancy_ID" class="form-control">
+            </div>
+
+       
+
+            <div class="form-group mb-2">
+              <label for="Job_Title">Post Name:</label>
+              <input type="text" id="Job_Title" placeholder="job title" formControlName="Job_Title" class="form-control">
+            </div>
+          </div>
+  
+         
+  
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="Email">Email:</label>
+              <input type="email" id="Email" placeholder="email" class="form-control" formControlName="Email">
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="form-group mb-2">
+              <label for="">Placement Schedule: </label>
+              <input type="text" id="schedule" placeholder="schedules" class="form-control" formControlName="Schedule">
+            </div>
+          </div>
+
+  
+          <div class="col-lg-4" hidden>
+            <div class="form-group mb-2">
+              <label for="Status">Status:</label>
+              <input type="text" id="Status" placeholder="status" class="form-control" formControlName="Status">
+            </div>
+          </div>
+  
+          <div class="col-lg-6">
+            <button type="submit" class="form-group btn-primary btn-block" [disabled]="vacancynextrounddata.invalid">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>
+ -->

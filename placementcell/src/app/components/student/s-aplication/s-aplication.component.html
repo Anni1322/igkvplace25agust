@@ -1,0 +1,333 @@
+<div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
+    <div class="container page-heading text-center p-0 bg-white rounded shadow">
+        <h3 style="background-color: #1886e5"
+            class="card-header p-2 text-light rounded border border-end-0 border-bottom-0 border-start-0 border-5 border-dark">
+            <strong>Student Registration</strong>
+        </h3>
+    </div>
+
+    <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
+        <div class="row basic-row ">
+            <div class="#">
+                <div class="card">
+                    <div class="card-header p-1" style="background-color: #66b2f5">
+                        <h5 class="ms-1 mt-1 text-white"><b>Basic Information / मूलभूत जानकारी</b></h5>
+                    </div>
+
+
+                    <div class="container-fluid" id="addstudent">
+                        <mat-card>
+                            <div class="container">
+                                <form [formGroup]="studentregistrationForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                                    <br>
+                                    <fieldset class="scheduler-border">
+
+                                        <div class="control-group">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="UE_ID">
+                                                                User Id:
+                                                            </mat-label>
+                                                            <input matInput placeholder="user id"
+                                                                formControlName="UE_ID">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-md-3">
+                                <div class="form-group">
+                                    <mat-form-field appearance="outline" class="inputfieldsize">
+                                        <mat-label for="username"> 
+                                            Username:
+                                        </mat-label>
+                                        <input matInput placeholder="user name" formControlName="Username">
+                                    </mat-form-field>
+                                </div>
+                            </div> -->
+
+                                                <!-- hide 
+                             <div class="col-md-3">
+                                <div claas='form-group'>
+                                    <mat-form-field apperance="outline" class="inputfieldsize">
+                                        <mat-label for="Name">Name:</mat-label>
+                                        <input matinput placeholder="name" formcontrolName="Name">
+                                    </mat-form-field>
+                                </div>
+                            </div>-->
+
+                                                <!-- <div class="col-md-3">
+                                <div class="form-group">
+                                <mat-form-field appearance="outline" class="inputfieldsize">
+                                    <mat-label for="Registration_Type">
+                                        Registration Type :
+                                    </mat-label>
+                                    <mat-select formcontrolName="Registration_Type">
+                                        <mat-option *ngFor="let c of registrationtype;" [value]="c.Registration_Id">
+                                            {{c.Name}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                </div>
+                            </div> -->
+
+                                                <!--Personal details-->
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Salutation_E"> Mr/Mrs</mat-label>
+                                                            <!--<input matInput placeholder="Salutation_E" formControlName="Salutation_E">-->
+                                                            <mat-select formControlName="Salutation_E">
+                                                                <mat-option *ngFor="let c of salutationenglish;"
+                                                                    [value]="c.Salutation_Id">
+                                                                    {{c.Value}}
+                                                                </mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Student_First_Name_E">
+                                                                First Name
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="First_Name"
+                                                                formControlName="Student_First_Name_E">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Student_Middle_Name_E">
+                                                                Middle Name
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder=" Middle_Name"
+                                                                formControlName="Student_Middle_Name_E">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div>
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Student_Last_Name_E">
+                                                                Last Name
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Last_Name"
+                                                                formControlName="Student_Last_Name_E">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Salutation_H">
+                                                                Mr/Mrs Hindi
+                                                            </mat-label>
+                                                            <!--<input matInput type="text" placeholder="salutation" formControlName="Salutation_H">-->
+                                                            <mat-select formControlName="Salutation_H">
+                                                                <mat-option *ngFor="let c of salutationhindi"
+                                                                    [value]="c.Salutation_Id">
+                                                                    {{c.Value}}
+                                                                </mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Student_First_Name_H">
+                                                                विद्यार्थी का प्रथम नाम:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="प्रथम नाम"
+                                                                formControlName="Student_First_Name_H">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Student_Middle_Name_H">
+                                                                विद्यार्थी का मध्य नाम:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="मध्य नाम"
+                                                                formControlName="Student_Middle_Name_H">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Student_Last_Name_H">
+                                                                विद्यार्थी का अंतिम नाम:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="अंतिम नाम"
+                                                                formControlName="Student_Last_Name_H">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label>Date Of Birth:</mat-label>
+                                                            <input matInput [matDatepicker]="picker" formControlName="DOB">
+                                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                            <mat-datepicker #picker></mat-datepicker>
+                                                        </mat-form-field>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Gender_Id">
+                                                                Gender Id:
+                                                            </mat-label>
+                                                            <!--<input matInput type="text" placeholder="Gender" formControlName="Gender_Id">-->
+                                                            <mat-select formControlName="Gender_Id">
+                                                                <mat-option *ngFor="let c of genderoption"
+                                                                    [value]="c.Gender_Id">
+                                                                    {{c.Value}}
+                                                                </mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Mobile_No">
+                                                                Mobile No:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Mobile no"
+                                                                formControlName="Mobile_No">
+                                                                <mat-error *ngIf="studentregistrationForm?.get('Mobile_No')?.hasError('invalidPhoneNumber')">
+                                                                     only 10 digits and start with 9, 8, 7, or 6 is valid..
+                                                                 </mat-error>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Email_Id">
+                                                                Email Id:
+                                                            </mat-label>
+                                                            <input matInput type="email" placeholder="igkv@gmail.com"
+                                                                formControlName="Email_Id">
+                                                                <mat-error *ngIf="email?.invalid && email?.touched">
+                                                                    <span *ngIf="email?.errors?.['required']">Email is required.</span>
+                                                                    <span *ngIf="email?.errors?.['email']">Please enter a valid email address.</span>
+                                                                  </mat-error>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <!--Parents details-->
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Father_Name_E">
+                                                                Father Name E:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Father_Name"
+                                                                formControlName="Father_Name_E">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Mother_Name_E">
+                                                                Mother Name E:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Mother_Name"
+                                                                formControlName="Mother_Name_E">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Father_Name_H">
+                                                                Father Name Hindi:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Father_Name"
+                                                                formControlName="Father_Name_H">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Mother_Name_H">
+                                                                Mother Name Hindi:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Mother_Name"
+                                                                formControlName="Mother_Name_H">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Guardian_Name_E">
+                                                                Guardian Name E:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Guardian_Name"
+                                                                formControlName="Guardian_Name_E">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Spouse_Name_E">
+                                                                Spouse Name E:
+                                                            </mat-label>
+                                                            <input matInput type="text" placeholder="Spouse_Name"
+                                                                formControlName="Spouse_Name_E">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                                <!--other details
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <mat-form-field appearance="outline" class="inputfieldsize">
+                                                            <mat-label for="Created_Date">
+                                                                Created Date:
+                                                            </mat-label>
+                                                            <input matInput type="date" placeholder="created date"
+                                                                formControlName="Created_Date">
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>-->
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col offset-5">
+                
+                                                <button mat-raised-button color="primary" [disabled]="studentregistrationForm.invalid" 
+                                                    type="submit">
+                                                    Submit
+                                                </button>
+                                                <!-- <button mat-raised-button color="primary"  *ngIf="iseditmode" (click)="onupdate()" type="button">
+                            Update
+                        </button>-->
+
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <br> <br>
+
+                </div>
+
+            </div>

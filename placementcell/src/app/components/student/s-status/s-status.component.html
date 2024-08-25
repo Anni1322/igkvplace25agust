@@ -1,0 +1,103 @@
+<div class="container mt-3">
+  <div class="mat-elevation-z8" id="print-section">
+    
+  </div>
+</div>
+
+
+<!-- <div class="container mt-3">
+  <h2>Student Job Application Status</h2>
+  <table class="table">
+      <thead>
+          <tr>
+              <th>#</th>
+              <th>Job Title</th>
+              <th>Company Name</th>
+              <th>Location</th>
+              <th>Status</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>1</td>
+              <td>Software Engineer Intern</td>
+              <td>ABC Tech Solutions</td>
+              <td>New York</td>
+              <td><span class="badge bg-primary">Pending</span></td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>Marketing Intern</td>
+              <td>XYZ Marketing Agency</td>
+              <td>London</td>
+              <td><span class="badge bg-danger">Rejected</span></td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td>Data Analyst Intern</td>
+              <td>DEF Analytics</td>
+              <td>San Francisco</td>
+              <td><span class="badge bg-success">Approved</span></td>
+          </tr>
+         
+      </tbody>
+  </table>
+</div> -->
+
+<div class="container">
+    <h2>Vacancy Applications</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <!-- <th>Company ID</th> -->
+                <th>Job Title</th>
+                <th>Student ID</th>
+                <th>Vacancy ID</th>
+                <th>Company_Name</th>
+                <!-- <th>Flag</th> -->
+                <th>Submission Date</th>
+                <th>Full Name</th>
+                <!-- <th>Father's Name</th> -->
+                <!-- <th>Mobile</th> -->
+                <!-- <th>Email</th> -->
+                <th>Status</th>
+                <th>Next Round Apply</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let application of vacancyApplications">
+                <!-- <td>{{ application.Company_ID }}</td> -->
+                <td>{{ application.Post_Name }}</td>
+                <td>{{ application.Student_ID }}</td>
+                <td>{{ application.Vacancy_ID }}</td>
+                <td>{{ application.Company_Name }}</td>
+                <!-- <td>{{ application.Flag }}</td> -->
+                <td>{{ application.Application_Submission_Date | date }}</td>
+                <td>{{ application.Full_Name }}</td>
+                <!-- <td>{{ application.Fathers_Name }}</td> -->
+                <!-- <td>{{ application.Mobile }}</td> -->
+                <!-- <td>{{ application.Email }}</td> -->
+                <td>{{ application.Status }}</td>
+                <td>
+                    <ng-container *ngIf="application.Status === 'Short Listed'; else blankCell">
+
+                        <span class="border" style="color: blue;" (click)="formNext(application)">Application fill </span>
+
+                        <!--<a href="#" routerLink="/student/s-vacancy-nextround-apply">Application fill</a>-->
+
+                        
+                    </ng-container>
+                    <ng-container *ngIf="application.Status === 'Not Seleted'; else blankCell">
+                        <a href="#"> See Reason</a>s
+                    </ng-container>
+                    <ng-template #blankCell></ng-template>
+                    <!-- <img (click)="formNext(row); scrollToBottom()" width="20px" height="20px" src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" alt="Edit"> -->
+            <!-- <img (click)="onedelete(row.Student_Application_ID);" width="20px" height="20px" src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png" alt="Edit"> -->
+ 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+  </div>

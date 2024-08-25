@@ -1,0 +1,136 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="experiencedetailsform" (ngSubmit)="onSubmit()" autocomplete="off">
+        <p class="mb-4"><span class="text-primary font-italic me-1"></span><b>Experience Details</b></p>
+
+        <!-- Grid Layout -->
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Student_ID" style="font-size: .77rem;">Student ID: </label>
+              <input id="Student_ID" formControlName="Student_ID" class="form-control" style="font-size: .77rem;" />
+            </div>
+          </div>
+          <!--Oragization details-->
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Registration_No" style="font-size: .77rem;">Registration No: </label>
+              <input id="Registration_No" type="number" formControlName="Registration_No" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Organization_Name" style="font-size: .77rem;">Organization Name: </label>
+              <input id="Organization_Name" type="text" formControlName="Organization_Name" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Post_Name" style="font-size: .77rem;">Post Name: </label>
+              <input type="text" id="Post_Name" formControlName="Post_Name" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <!--WorkPlace Details-->
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="WorkPlace_Address" style="font-size: .77rem;">WorkPlace Address: </label>
+              <input id="WorkPlace_Address" formControlName="WorkPlace_Address" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="WorkPlace_District_Id" style="font-size: .77rem;">WorkPlace District: </label>
+              <input id="WorkPlace_District_Id" formControlName="WorkPlace_District_Id" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="WorkPlace_State_Id" style="font-size: .77rem;">WorkPlace State: </label>
+              <input id="WorkPlace_State_Id" formControlName="WorkPlace_State_Id" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="WorkPlace_Country_Id" style="font-size: .77rem;">WorkPlace Country: </label>
+              <input id="WorkPlace_Country_Id" formControlName="WorkPlace_Country_Id" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="City_Name" style="font-size: .77rem;">City Name: </label>
+              <input type="text" id="City_Name" formControlName="City_Name" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Description" style="font-size: .77rem;">Description: </label>
+              <input type="text" id="Description" formControlName="Description" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+          <!--Time Period details-->
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Period_From" style="font-size: .77rem;">Period Form: </label>
+              <input type="date" id="Period_From" formControlName="Period_From" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Period_To" style="font-size: .77rem;">Period To: </label>
+              <input type="date" id="Period_To" formControlName="Period_To" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Is_Currently_working_YN" style="font-size: .77rem;">Is Currently Working YN: </label>
+              <input id="Is_Currently_working_YN" type="text" placeholder="yes/no" formControlName="Is_Currently_working_YN"
+                class="form-control" style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Salary" style="font-size: .77rem;">Salary: </label>
+              <input id="Salary" type="number" formControlName="Salary" class="form-control" style="font-size: .77rem;" />
+            </div>
+          </div>
+
+          <!--<div class="col-md-3">
+            <div class="form-group mb-1">
+              <label for="Created_Date" style="font-size: .77rem;">Created Date: </label>
+              <input type="date" id="Created_Date" formControlName="Created_Date" class="form-control"
+                style="font-size: .77rem;" />
+            </div>
+          </div>-->
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3" [disabled]="experiencedetailsform.invalid">Submit</button>
+        <!--<button type="clear" class="btn btn-primary mt-3" onclick="onClear()">Clear</button>-->
+
+      </form>
+    </div>
+  </div>
+</div>
