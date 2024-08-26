@@ -14,6 +14,10 @@ h2 {
   color:balck;
 }
 
+h1{
+  margin: 0 0 -4px;
+}
+
 .table {
   &.table-bordered {
     border: 1px solid $table-border-color;

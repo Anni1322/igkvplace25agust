@@ -1,0 +1,322 @@
+/* Variables */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-bg-color: white;
+$border-radius: 10px;
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+$font-size-large: 1.1rem;
+$font-size-small: 0.9rem;
+$font-family: 'Arial', sans-serif;
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+}
+
+.card-body {
+  padding: 2rem;
+
+  img {
+    border: 3px solid $primary-color;
+    border-radius: 50%;
+  }
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+
+  &.btn-primary {
+    background-color: $primary-color;
+    border: none;
+  }
+
+  &.btn-outline-primary {
+    color: $primary-color;
+    border: 2px solid $primary-color;
+  }
+}
+
+/* List Group Styles */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+
+  i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+}
+
+/* Header and Text Styles */
+h5 {
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0;
+}
+
+.text-muted {
+  color: $secondary-color;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .col-lg-4,
+  .col-lg-8 {
+    width: 100%;
+  }
+}
+
+// About Company Section
+.card-style1 {
+  background-color: $light-bg-color;
+  padding: 1.5rem;
+  border-radius: $border-radius;
+
+  p {
+    font-size: $font-size-small;
+    color: $secondary-color;
+
+    strong {
+      font-size: $font-size-large;
+      color: $primary-color;
+    }
+
+    &.mb-0 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// // Variables for colors and font sizes
+// $primary-color: #007bff;
+// $secondary-color: #6c757d;
+// $text-color: #212529;
+// $bg-light-color: #f8f9fa;
+// $card-border-color: #ddd;
+// $border-radius: 0.25rem;
+// $spacing-unit: 1rem;
+
+// // Mixin for responsive font sizes
+// @mixin responsive-font($small, $medium, $large) {
+//   font-size: $small;
+
+//   @media (min-width: 576px) {
+//     font-size: $medium;
+//   }
+
+//   @media (min-width: 768px) {
+//     font-size: $large;
+//   }
+// }
+
+// // Basic reset
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// body {
+//   font-family: Arial, sans-serif;
+//   color: $text-color;
+//   background-color: $bg-light-color;
+//   margin-top: 60px;
+// }
+
+// // Section styling
+// section.bg-light {
+//   padding:0-$spacing-unit;
+
+//   .container {
+//     max-width: 1140px;
+//     margin: 0 auto;
+//     padding: 0-$spacing-unit;
+//     margin-top: 40px;
+//   }
+
+//   .row {
+//     margin: 0-$spacing-unit;
+//   }
+
+//   .col-lg-12 {
+//     padding: 0-$spacing-unit;
+//   }
+
+//   .card {
+//     border: 1px solid $card-border-color;
+//     border-radius: $border-radius;
+//     overflow: hidden;
+
+//     &-style1 {
+//       border: none;
+//       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+//     }
+
+// // for image or logo
+// .fixed-size-container {
+//   width: 150px; /* Set desired fixed width */
+//   height: 150px; /* Set desired fixed height */
+//   overflow: hidden; /* Hide overflow if image is larger */
+// }
+// .fixed-size-image {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover; /* Cover the container while maintaining aspect ratio */
+// }
+// // for image or logo
+
+
+//     .card-body {
+//       padding: $spacing-unit * 1.9;
+
+//       @media (min-width: 576px) {
+//         padding: $spacing-unit * 2.3;
+//       }
+
+//       @media (min-width: 768px) {
+//         padding: $spacing-unit * 6;
+//       }
+
+//       @media (min-width: 992px) {
+//         padding: $spacing-unit * 7;
+//       }
+//     }
+//   }
+
+//   .img-fluid {
+//     max-width: 100%;
+//     height: auto;
+//   }
+
+//   .display-28 {
+//     @include responsive-font(1rem, 1.1rem, 1.2rem);
+//   }
+
+//   .display-26 {
+//     @include responsive-font(1.1rem, 1.2rem, 1.3rem);
+//     font-weight: 600;
+//   }
+
+//   .list-unstyled {
+//     margin-bottom: $spacing-unit * 1.9;
+
+//     .mb-2 {
+//       margin-bottom: $spacing-unit * 2;
+
+//       @media (min-width: 1200px) {
+//         margin-bottom: $spacing-unit * 3;
+//       }
+//     }
+//   }
+
+//   .btn {
+//     margin-top: $spacing-unit;
+//     font-size: 25px;
+//   }
+
+//   .social-list {
+//     margin-top: $spacing-unit * 3;
+//     margin-bottom: 0;
+
+//     .list-inline-item {
+//       margin-right: $spacing-unit;
+//       a {
+//         border: 2px solid transparent;
+//         border-radius: 50%;
+//         display: inline-flex;
+//         align-items: center;
+//         justify-content: center;
+//         width: 2.5rem;
+//         height: 2.5rem;
+//         color: $text-color;
+
+//         &.border-purple {
+//           border-color: purple;
+//         }
+
+//         &.border-danger {
+//           border-color: red;
+//         }
+
+//         &.border-info {
+//           border-color: cyan;
+//         }
+
+//         &.border-secondary {
+//           border-color: $secondary-color;
+//         }
+
+//         &.text-purple {
+//           color: purple;
+//         }
+
+//         &.text-danger {
+//           color: red;
+//         }
+
+//         &.text-info {
+//           color: cyan;
+//         }
+
+//         &.text-secondary {
+//           color: $secondary-color;
+//         }
+
+//         i {
+//           font-size: 1.2rem;
+//         }
+//       }
+//     }
+//   }
+
+//   .section-title {
+//     font-size: 1.5rem;
+//     color: $primary-color;
+//     margin-bottom: $spacing-unit * 3;
+
+//     @media (min-width: 576px) {
+//       margin-bottom: $spacing-unit * 4;
+//     }
+//   }
+
+//   p {
+//     margin-bottom: $spacing-unit * 1.9;
+//     line-height: 1.6;
+
+//     &.mb-0 {
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+// .fixed-size-image {
+//   max-width: 100%;
+//   max-height: 100%;
+//   object-fit: contain; // Ensures the image scales without cropping
+// }

@@ -4,13 +4,7 @@
 <!-- oringinal  -->
 
 <div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
-  <div class="container page-heading text-center p-0 bg-white rounded shadow">
-      <h3 style="background-color: #1886E5"
-          class="card-header p-2 text-light rounded border border-end-0 border-bottom-0 border-start-0 border-5 border-dark">
-          <strong>Add Vacancy Details</strong>
-      </h3>
-  </div>
-
+ 
   <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
       <!-- <form class="form" #NgForm="ngForm" enctype="multipart/form-data">
           <div class="row basic-row ">
@@ -180,7 +174,7 @@
           <div class="row basic-row">
             <div class="#">
               <div class="card">
-                <div class="card-header p-1" style="background-color:#66b2f5">
+                <div class="card-header p-1" style="background-color:#182C61">
                   <h5 class="ms-1 mt-1 text-white"><b>Basic Information</b></h5>
                 </div>
                 <!--<mat-stepper>
@@ -208,7 +202,7 @@
                         <!-- Company Name Column -->
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Company_Name"> Company_Name</label>
+                            <label for="Company_Name"> Company Name</label>
                             <input type="text" class="form-control" formControlName="Company_Name" id="Company_Name" required>
                           </div>
                         </div>
@@ -225,12 +219,27 @@
                           </div>
                         </div>
                      
-                        <div class="col-lg-3">
+                        <!-- <div class="col-lg-3">
                           <div class="form-group">
                             <label for="Job_Selection">Job Selection:</label>
-                            <input type="text" class="form-control" formControlName="Job_Selection" id="Job_Selection">
-                          </div>
+                            <select class="form-control" formControlName="Job_Selection" id="Job_Selection">
+                              <option value="interview">Interview</option>
+                              <option value="merit-list">Merit List</option>
+                              <option value="more">More</option>
+                            </select>
+                          </div>                         
+                        </div> -->
+
+
+                        <div class="col-md-3 form-group mt-3">
+                          <select formControlName="Job_Selection" id="Job_Selection" class="form-select" required="">
+                            <option value="">Select</option>
+                            <option value="interview">Interview</option>
+                            <option value="merit-list">Merit List</option>
+                          </select>
                         </div>
+
+
                         <div class="col-lg-3">
                           <div class="form-group">
                             <label for="Job_Location">Job Location:</label>
@@ -239,7 +248,7 @@
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="No_Of_Post">Number of Posts:</label>
+                            <label for="No_Of_Post">Post No:</label>
                             <input type="number" class="form-control" formControlName="No_Of_Post" id="No_Of_Post">
                           </div>
                         </div>
@@ -369,7 +378,7 @@
                             </div> -->
                             
                             <!-- <button mat-button matStepperPrevious>Back</button> -->
-                            <div class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">
+                            <div class="mt-2 d-flex justify-content-evenly pt-4 pb-3   bg-white  ">
                               <button type="submit" class="btn btn-primary" [disabled]="formData.invalid" (click)="getvalueFromform()" >Submit</button>
                             </div>
                           </div>

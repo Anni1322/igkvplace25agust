@@ -1,16 +1,11 @@
 <div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
-    <div class="container page-heading text-center p-0 bg-white rounded shadow">
-        <h3 style="background-color: #1886E5"
-            class="card-header p-2 text-light rounded border border-end-0 border-bottom-0 border-start-0 border-5 border-dark">
-            <strong>Company Registration Details</strong>
-        </h3>
-    </div>
+ 
 
-    <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
+    <div class="container main-con mt-2 bg-white-subtle   rounded">
             <div class="row basic-row ">
                 <div class="#">
-                    <div class="card row">
-                        <div class="card-header p-1" style="background-color: #66b2f5">
+                    <div class="card row">  
+                        <div class="" style="background-color: #182C61" >
                             <h5 class="ms-1 mt-1 text-white"><b>Basic Information / मूलभूत जानकारी</b></h5>
                         </div>
                         
@@ -39,7 +34,7 @@
                                             <mat-label for="Company_Id">
                                                 Company Id:
                                             </mat-label>
-                                            <input matInput placeholder="company id" formControlName="Company_Id">
+                                            <input matInput placeholder="company id" formControlName="Company_Id" readonly>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -220,7 +215,7 @@
 
 
                                 <div>
-                                  <button mat-button matStepperNext class="btn text-center bg-primary mt-2" >Next</button>
+                                  <button mat-button matStepperNext class="btn text-white text-center bg-primary mt-2" >Next</button>
                                 </div>
                             </div>
                         </div>
@@ -350,8 +345,8 @@
 
                                 <div class="text-white">
 
-                                  <button mat-button matStepperPrevious class="btn text-center bg-primary " style="margin-right: 8px;">Back</button>
-                                  <button mat-button matStepperNext class="btn text-center bg-primary" [disabled]="companyregistrationForm.invalid">Next</button>
+                                  <button mat-button matStepperPrevious class="btn text-center text-white bg-primary " style="margin-right: 8px;">Back</button>
+                                  <button mat-button matStepperNext class="btn text-center text-white bg-primary" [disabled]="companyregistrationForm.invalid">Next</button>
                                 </div>
                             </div>
                         </div>
@@ -451,9 +446,9 @@
                               <div
                                 class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">
                              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                             <button mat-button matStepperPrevious class="btn text-center bg-primary " style="margin-right: 8px;">Back</button>
-                             <button mat-button (click)="stepper.reset()" class="btn text-center bg-primary ">Reset</button>    
-                             <button type="submit" class="btn btn-primary text-center" [disabled]="companyregistrationForm.invalid">Submit</button>
+                             <button mat-button matStepperPrevious class="btn text-center text-white bg-primary " style="margin-right: 8px;">Back</button>
+                             <button mat-button (click)="stepper.reset()" class="btn text-white text-center bg-primary ">Reset</button>    
+                             <button type="submit" class="btn text-white btn-primary text-center" [disabled]="companyregistrationForm.invalid">Submit</button>
                             </div>
                             </div>
                             </div>
