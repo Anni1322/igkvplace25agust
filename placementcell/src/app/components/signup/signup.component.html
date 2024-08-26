@@ -1,292 +1,136 @@
  
 <main>
   <app-header></app-header>
-<div class="container-flude mt-2 mb-3 p-0 user-select-none">
-    <div class="container page-heading text-center p-0 bg-white rounded shadow">
-        <h3 style="background-color: #3aaaff"
-            class="card-header p-2 text-light rounded border border-end-0 border-bottom-0 border-start-0 border-5 border-dark">
-            <strong>Signup</strong>
-        </h3>
+     <!-- Signup Section -->
+     <section id="appointment" class="appointment section light-background" style="background-color: #EAEAEA;">
 
-
-          <!-- view look -->
-          <div class="m-6">
-            <form class="container-flude signupbg " [formGroup]="signupForm" (ngSubmit)="onSubmit()" autocomplete="off">
-              <div class="row mb-2" style="margin: 13px;">
-               <div class="col-md-3 ">
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" formControlName="name" class="form-control">
-                    <div class="text-danger" *ngIf="signupForm.get('name')!.hasError('required') && (signupForm.get('name')!.dirty || signupForm.get('name')!.touched)">
-                      Name is required.
-                    </div>
-                    <div class="text-danger" *ngIf="signupForm.get('name')!.hasError('minlength') && signupForm.get('name')!.dirty">
-                      Name must be at least 3 characters long.
-                    </div>
-                    <div class="text-danger" *ngIf="signupForm.get('name')!.hasError('maxlength') && (signupForm.get('name')!.dirty || signupForm.get('name')!.touched)">
-                      Name cannot be longer than 20 characters.
-                    </div>
-                  </div>
-                </div>
-            
-                <div class="col-md-3">
-                  <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" formControlName="username" class="form-control">
-                    <div class="text-danger" *ngIf="signupForm.get('username')!.hasError('required') && (signupForm.get('username')!.dirty || signupForm.get('username')!.touched)">
-                      Username is required.
-                    </div>
-                    <div class="text-danger" *ngIf="signupForm.get('username')!.hasError('minlength') && signupForm.get('username')!.dirty">
-                      Username must be at least 3 characters long.
-                    </div>
-                    <div class="text-danger" *ngIf="signupForm.get('username')!.hasError('maxlength') && (signupForm.get('username')!.dirty || signupForm.get('username')!.touched)">
-                      Username cannot be longer than 20 characters.
-                    </div>
-                  </div>
-                </div>
-
-
-
-
-
-
-                <div class="col-md-3">
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" formControlName="password" class="form-control">
-                    <div class="text-danger" *ngIf="signupForm.get('password')!.hasError('required') && (signupForm.get('password')!.dirty || signupForm.get('password')!.touched)">
-                      Password is required.
-                    </div>
-                    <div class="text-danger" *ngIf="signupForm.get('password')!.hasError('minlength') && (signupForm.get('password')!.dirty || signupForm.get('password')!.touched)">
-                      Password must be at least 6 characters long.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-3">
-                  <div class="form-group">
-                    <label for="rePassword">Confirm Password</label>
-                    <input type="password" id="rePassword" formControlName="rePassword" class="form-control">
-                    <div class="text-danger" *ngIf="signupForm.get('rePassword')!.hasError('required') && (signupForm.get('rePassword')!.dirty || signupForm.get('rePassword')!.touched)">
-                      Confirm Password is required.
-                    </div>
-                    <div class="text-danger" *ngIf="signupForm.hasError('passwordMismatch')">
-                      Passwords do not match.
-                    </div>
-                  </div>
-        
-         
-                </div>
-
-
-
-                <!-- <div class="row mb-3" style="margin: 13px;"> -->
-                  <div class="col-md-3 col-12">
-                    <div class="form-group">
-                      <label for="Role">Role</label>
-                      <div class="form-check">
-                        <input type="radio" id="student" formControlName="role" class="form-check-input" value="1">
-                        <label for="student" class="form-check-label">Student</label>
-                      </div>
-                      <div class="form-check">
-                        <input type="radio" id="company" formControlName="role" class="form-check-input" value="2">
-                        <label for="company" class="form-check-label">Company</label>
-                      </div>
-                      <div class="form-check">
-                        <input type="radio" id="admin" formControlName="role" class="form-check-input" value="3">
-                        <label for="admin" class="form-check-label">Admin</label>
-                      </div>
-                    </div>
-                  </div>
-                  
-
-
-                  <div class="col-md-3">
-                    <!-- captcha code -->
-                    <div class="form-group">
-                      <label for="captcha">CAPTCHA</label>
-                      <div class="d-flex align-items-center">
-                        <img class="bg-white me-2" [src]="captchaImage" alt="CAPTCHA" width="100" height="30" />
-                        <i (click)="loadCaptcha()" class="fa-solid fa-arrow-rotate-right me-2"></i>
-                        <input id="captcha" formControlName="captcha" type="text" required class="form-control w-auto">
-                      </div>
-                    </div>
-                    
-
-                  </div>
-
-              </div>
-              <div class="align-items-center">
-                <div class="d-flex justify-content-center">
-                  <div class="form-group btn text-center d-flex flex-column">
-                    <button type="submit" [disabled]="signupForm.invalid" class="  btn-primary mb-4">Sign Up</button>
-
-                  </div>
-                  <div class="form-group  btn text-center d-flex flex-column">
-                  <button type="button"  routerLink="/" class=" btn-primary mb-4">Home</button>
-                  </div>
-                </div>
-              </div>
-              
-
-            
-        
-        
-    
-             
-            
-        
-
-            
-            
-        <!-- captcha code -->
-        
-        
-              <!-- <div class="row mb-3">
-                <div class="col-md-12 text-center">
-                  <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary">Sign Up</button>
-                </div>
-              </div> -->
-            </form>
-
+     
+      <div class="container section-title" data-aos="fade-up" style="margin-top: -50px; padding: 0px;" >
+        <h2>Signup</h2>
+        <p style="margin: -10px 10px 0px 10px">Sign up to get access to exclusive content, personalized recommendations, and stay updated with the latest news and offers. It's quick, easy, and takes just a few minutes!</p>
+      </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100" style="margin: 0px; padding: 0px;">
+       <!-- new form  -->
+       <form  [formGroup]="signupForm" (ngSubmit)="onSubmit()" autocomplete="off" class="container" style="    margin-left: 80px;">
+        <div class="row">
+          <!-- Name Input -->
+          <div class="col-md-4 form-group">
+            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Name">
+            <div class="text-danger" *ngIf="signupForm.get('name')!.hasError('required') && (signupForm.get('name')!.dirty || signupForm.get('name')!.touched)">
+              Name is required.
+            </div>
+            <div class="text-danger" *ngIf="signupForm.get('name')!.hasError('minlength') && signupForm.get('name')!.dirty">
+              Name must be at least 3 characters long.
+            </div>
+            <div class="text-danger" *ngIf="signupForm.get('name')!.hasError('maxlength') && (signupForm.get('name')!.dirty || signupForm.get('name')!.touched)">
+              Name cannot be longer than 20 characters.
+            </div>
           </div>
-
-     <!-- view look -->
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
-
-        <form class="form" #NgForm="ngForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" >    
-            <div class="card">
-          
-                <div class="card-body">
-                    <div class="col">
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>
-                                   <b>User Name:</b>
-                                </label>
-                                <input type="text" class="form-control shadow rounded border-1 border-dark" id="Mobile_No" [(ngModel)]="formData.Mobile_No" name="username" placeholder="User Name"  />
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>
-                                   <b>Password:</b>
-                                </label>
-                                <input type="text" class="form-control shadow rounded border-1 border-dark" id="Mobile_No" [(ngModel)]="formData.Mobile_No" name="password" placeholder="Mobile"  />
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>
-                                   <b>Re-Password:</b>
-                                </label>
-                                <input type="text" class="form-control shadow rounded border-1 border-dark" id="Mobile_No" [(ngModel)]="formData.Mobile_No" name="password" placeholder="Mobile"  />
-                            </div>
-                        </div>                 
-                   
-                    </div>
-                </div>
+      
+          <!-- Email Input -->
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" formControlName="username" class="form-control" id="username" placeholder="Username">
+            <div class="text-danger" *ngIf="signupForm.get('username')!.hasError('required') && (signupForm.get('username')!.dirty || signupForm.get('username')!.touched)">
+              Username is required.
             </div>
-            <div class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">            
-                <button type="submit">Sign Up</button>
+            <div class="text-danger" *ngIf="signupForm.get('username')!.hasError('minlength') && signupForm.get('username')!.dirty">
+              Username must be at least 3 characters long.
             </div>
-        </form>
-    </div>
-</div> -->
-
-
- 
-
+            <div class="text-danger" *ngIf="signupForm.get('username')!.hasError('maxlength') && (signupForm.get('username')!.dirty || signupForm.get('username')!.touched)">
+              Username cannot be longer than 20 characters.
+            </div>
+          </div>
+      
+          <!-- Phone Input (could be added based on the form needs) -->
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="password" id="password" formControlName="password" placeholder="password"  class="form-control">
+            <div class="text-danger" *ngIf="signupForm.get('password')!.hasError('required') && (signupForm.get('password')!.dirty || signupForm.get('password')!.touched)">
+              Password is required.
+            </div>
+            <div class="text-danger" *ngIf="signupForm.get('password')!.hasError('minlength') && (signupForm.get('password')!.dirty || signupForm.get('password')!.touched)">
+              Password must be at least 6 characters long.
+            </div>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="password" id="rePassword" formControlName="rePassword" placeholder="Confirm Password" class="form-control">
+            <div class="text-danger" *ngIf="signupForm.get('rePassword')!.hasError('required') && (signupForm.get('rePassword')!.dirty || signupForm.get('rePassword')!.touched)">
+              Confirm Password is required.
+            </div>
+            <div class="text-danger" *ngIf="signupForm.hasError('passwordMismatch')">
+              Passwords do not match.
+            </div>
+          </div>
   
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select formControlName="role" id="department" class="form-select" required>
+              <option value="">Select Role</option>
+              <option value="1">Student</option>
+              <option value="2">Company</option>
+              <option value="3">Admin</option>
+            </select>
+          </div>
+  
+        </div>   
 
-<div class="signup-container"  data-aos="fade-down"  data-aos-duration="2000">
-  <div class="card" >
+        <!-- <div class="row">
     
-    <!-- <form class="m-3" (ngSubmit)="onSubmit()" #signupForm="ngForm">
- 
-      <div class="form-group">
-        <label for="username">Name</label>
-        <input type="text" id="name" name="name" [(ngModel)]="user.name" required minlength="3" maxlength="20" #username="ngModel">
+          <div class="text-center">
+            <div class="d-flex align-items-center">
+              <img class="bg-white me-2" [src]="captchaImage" alt="CAPTCHA" width="100" height="30" />
+              <i (click)="loadCaptcha()" class="fa-solid fa-arrow-rotate-right me-2"></i>
+              <input id="captcha" formControlName="captcha" type="text" required class="form-control w-auto">
+            </div>
+          </div>
+        </div> -->
+      
         
-        
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" [(ngModel)]="user.username" required minlength="3" maxlength="20" #username="ngModel">
-        <div style="color: red;" *ngIf="username.hasError('required') && (username.dirty || username.touched)" class="error">
-            Username is required.
+        <!-- Form Submission Buttons -->
+        <div class="mt-1">
+          <div class="mt-1">
+            <div class="text-center">
+              <img class="bg-white me-2" [src]="captchaImage" alt="CAPTCHA" width="100" height="30" />
+              <i (click)="loadCaptcha()" class="fa-solid fa-arrow-rotate-right me-2"></i>
+            </div>
           </div>
-          
-          <div style="color: red;" *ngIf="username.hasError('minlength') && username.dirty" class="error">
-            Username must be at least 3 characters long.
-          </div>
-          
-        <div style="color: red;" *ngIf="username.hasError('maxlength') && (username.dirty || username.touched)" class="error">
-            Username cannot be longer than 20 characters.
-          </div>
-          
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" [(ngModel)]="user.password" required minlength="6" #password="ngModel">
-        <div style="color: red;" *ngIf="password.hasError('required') && (password.dirty || password.touched)" class="error">
-            Password is required.
-          </div>
-          
 
-          <div style="color: red;" *ngIf="password.hasError('minlength') && (password.dirty || password.touched)" class="error">
-            Password must be at least 6 characters long.
-          </div>          
-      </div>
-      <div class="form-group">
-        <label for="re_password">Confirm Password</label>
-        <input type="password" id="re_password" name="re_password" [(ngModel)]="user.rePassword" required minlength="6" #rePassword="ngModel">
-        <div style="color: red;" *ngIf="rePassword.hasError('required') && (rePassword.dirty || rePassword.touched)" class="error">
-            Confirm Password is required.
-          </div>          
-        <div *ngIf="user.password !== user.rePassword" class="error">
-          Passwords do not match.
+
+          <div class="text-center">
+            <input id="captcha" formControlName="captcha" type="text" required class="col-md-3">
+          </div>
         </div>
+
+
+       
+
+
+        <div class="mt-2">
+          <div class="text-center">
+            <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+          </div>
+        </div>
+      </form>
+      
+      <!-- new form  -->
+
       </div>
-      <div class="form-group">
-        <label for="role">Type</label>
 
-        <select name="role" id="role" [(ngModel)]="user.role">
-          <option value="1">Student</option>
-          <option value="2">Company</option>
-          <option value="3">Admin</option>
-        </select>        
-      </div>
-
-    
-      <div class="text-center">  
-        <button type="submit"  [disabled]="signupForm.invalid" class="btn btn-primary">Sign Up</button>
-      </div>
-    </form> -->
-
-
-
-  
-    
-
-
-
-
-  </div>
-
-  
-   </div>
-</div>
+    </section>
 <app-footer></app-footer>
+
+
+
+
+ 
+
+
+
+ 
+
 </main>
   
+
+
+
+
+
+ 

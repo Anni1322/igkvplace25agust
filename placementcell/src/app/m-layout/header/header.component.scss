@@ -1,11 +1,12 @@
- 
+ /* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 .menu {
   float: left;
-  width: 20%;
   text-align: center;
 }
 
@@ -25,23 +26,19 @@
   width: 60%;
   padding: 0 20px;
 }
-.header{
-  margin: 0px;
-  background-color: #a29bfe;
-}
+ 
 .navbar{
-  background-color: #4834d4;
+ background-color: #8a2be2;
 }
 
 .navbar{
     // background-color: #1886E5;
-    border: 1.8px solid white;
     border-radius: 5px;
     
  
   }
 .navbar ul li a  {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
     margin: 6px;
     float: right;
   }
@@ -54,6 +51,46 @@
       border: 1px solid white;
       border-radius: 5px;
   }
+
+
+
+  // for logo
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .site-title {
+    color: #ffffff; /* Dark blue color */
+    font-size: 2rem; /* Larger size for h1 */
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* More spacing between letters */
+    font-family: 'Montserrat', sans-serif; /* Example of a stylish font */
+  }
+  
+  .site-subtitle {
+    color: #ffffff; /* Slightly lighter color */
+    font-size: 1rem; /* Smaller size for h4 */
+    margin: 0;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif; /* Complementary font for subtitle */
+  }
+  
+  // for logo
 
  
 

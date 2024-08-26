@@ -12,6 +12,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+
+
+
+  // focus:any;
+  // focus1:any;
+  // focus2:any;
+
   signupForm!: FormGroup;
   captchaImage!: string;
   captchaValue:any;

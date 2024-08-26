@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CServiceService } from '../components/company/service/c-service.service';
-
+ 
 
 declare var AOS: any;
 declare var PureCounter: any;

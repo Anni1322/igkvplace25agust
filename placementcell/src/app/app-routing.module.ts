@@ -89,6 +89,8 @@ import { ADashbComponent } from './components/admin/a-dashb/a-dashb.component';
 import { CFileuploadsComponent } from './components/company/c-fileuploads/c-fileuploads.component';
 import { authGuard } from './services/AuthGurd/auth.guard';
 import { FrontpageComponent } from './components/other/frontpage/frontpage.component';
+import { Home1Component } from './components/home1/home1.component';
+import { NavbarComponent } from './m-layout/navbar/navbar.component';
 
 
  
@@ -105,6 +107,7 @@ const routes: Routes = [
 
  
  
+  // {path:'', component:NavbarComponent},
   {path:'', component:HomemComponent},
   {path:'home', component:HomeComponent},
   {path:'admin',canActivate:[authGuard], component:AdminComponent,children:[

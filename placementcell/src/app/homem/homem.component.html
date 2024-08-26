@@ -4,13 +4,14 @@
  <!-- top nav bar -->
  
 
+
+ 
+
  <app-header></app-header>
 
     <!-- slider -->
-
     <app-slider></app-slider>
-
-    <!-- slider -->
+    <!--slider -->
 
 
 
@@ -25,71 +26,14 @@
 
 
   <div class="main">
-
-      <!-- maques -->
-
-
+  <!-- maques -->
   <!-- maques -->
       <app-company-slider></app-company-slider>
-
 </div>
 
- 
 
-
-
-
-
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section" >
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Notification</span>
-        <h2>Notification</h2>
-      
-
-        <div class="col-lg-12">
-          <div class="faq-container">
-            <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
-              <i class="faq-icon bi bi-bell"></i>
-              <h3>Notification</h3>
-              <div class="faq-content">
-                <!-- <p>jobs available's.</p> -->
-              </div>
-            </div><!-- End Faq item-->
-        
-            <marquee class="notification_body border" behavior="scroll" direction="up" scrollamount="10" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();" style="height: 300px; overflow: hidden;">
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300" *ngFor="let vacancy of data">
-                <i class="faq-icon bi bi-info-circle"></i>
-                <img src="https://img.icons8.com/?size=100&id=mIQ6moZZHoBs&format=png&color=000000" width="20px" alt="" srcset="">  
-                Last Date : {{ vacancy.Last_Date_for_apply | date }} 
-                <span class="card-subtitle text-muted" hidden>VID: {{ vacancy.Vacancy_ID }} </span>
-        
-                <a [routerLink]="['/login']" class="card-link"> Apply Now</a> 
-                <!-- <a [routerLink]="['/notification']" class="card-link"> More</a> -->
-        
-                <h3>Post : {{ vacancy.Job_Title }}</h3>
-        
-                <i [routerLink]="['/notification']" class="faq-toggle bi bi-chevron-right"><a [routerLink]="['/notification']" class="card-link"> More</a></i>
-              </div><!-- End Faq item-->
-            </marquee>
-          </div>
-        </div>
-        
- 
-
-      </div><!-- End Section Title -->
-
-    </section>
-    <!-- /Faq Section -->
-
-
-
-
-</div>
-<section>
+<!-- 
+<section >
   <div class="notification-section mt-2 mb-2" data-aos="fade-right" data-aos-duration="2000">
     <div class="container ">
       <div class="row justify-content-center">
@@ -114,25 +58,173 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="fas fa-user-md flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" [attr.data-purecounter-end]="StudentCont" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Registered Students</p>
+              </div>
+             
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="far fa-hospital flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" [attr.data-purecounter-end]="ComapnyCont" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Registered Companie's</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!-- <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="fas fa-flask flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" [attr.data-purecounter-end]="ComapnyCont" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Research Labs</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="fas fa-award flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" [attr.data-purecounter-end]="ComapnyCont" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Placed Student's</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Stats Section -->
+
+
+
+        <!-- Faq Section -->
+        <section id="faq" class="faq section" >
+
+          <!-- Section Title -->
+          <div class="container card section-title" data-aos="fade-up">
+            <div class="col-lg-12">
+              <div class="faq-container" style="margin-top: -80px;">
+                <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200" style="height: 7px; background-color: #8a2be2; border-radius: 10px;">
+                  <i style="margin-top: -11px;" class="faq-icon bi bi-bell"></i>
+                  <h3 style="margin-top: -11px;">Notification</h3>
+                  <div  class="faq-content">
+                    <!-- <p>jobs available's.</p> -->
+                  </div>
+                </div>
+                <!-- End Faq item-->
+            
+                <marquee class="notification_body " behavior="scroll" direction="up" scrollamount="3" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();" style="height: 200px;  overflow: hidden;">
+                  <div class="faq-item " data-aos="fade-up" data-aos-delay="300" *ngFor="let vacancy of data" style="height: 7px; margin-top: -11px;">
+                    <!-- <i class="faq -icon bi bi-info-circle"></i> -->
+                    <img src="https://img.icons8.com/?size=100&id=mIQ6moZZHoBs&format=png&color=000000" width="20px" alt="" srcset="">  
+                    Last Date : {{ vacancy.Last_Date_for_apply | date }} 
+                    <span class="card-subtitle text-muted" hidden>VID: {{ vacancy.Vacancy_ID }} </span>
+            
+                    <a [routerLink]="['/login']" class="card-link"> Apply Now  </a> 
+                    
+                    <a [routerLink]="['/login']" class="card-link text-black">
+                      <i class="bi bi-file-pdf "></i>
+                    </a> 
+                    <!-- <a [routerLink]="['/notification']" class="card-link"> More</a> -->
+                    <!-- <h3>Post : {{ vacancy.Job_Title }}</h3> -->
+                    <i [routerLink]="['/notification']" class="faq-toggle bi bi-chevron-right"><a [routerLink]="['/notification']" class="card-link"> More</a></i>
+                  </div><!-- End Faq item-->
+                </marquee>
+              </div>
+            </div>
+          </div>
+          <!-- End Section Title -->
+        </section>
+        <!-- /Faq Section -->
+
+
+
+
+
+  
+
+
+        <!-- student -->
+        <section id="faq" class="faq section" >
+          <!-- Section Title -->
+          <div class="container card section-title" style="background-color: #8a2be2;" data-aos="fade-up">
+            <div class="col-lg-12">
+              <div class="faq-container" style="margin-top: -80px;">
+
+              </div>
+              <div class="container transparent card section-title" data-aos="fade-up">
+                <span>Top Student's<br></span>
+                <h2>Top Student's</h2>
+                <p>At Indira Gandhi Krishi Vishwavidyalaya (IGKV), we take immense pride in the accomplishments of our students. Here are the top 5 students who have secured prestigious placements, showcasing their exceptional talent and dedication. Congratulations to them!</p>
+              </div>
+              <!-- End Section Title -->
+    
+              <div class="container">
+                <marquee class="notification_body " behavior="scroll" direction="left" scrollamount="3" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();">
+                <div class="row gy-2 ">
+                  <div class="d-flex">
+                  <div class="col-lg-2 col-md-2" data-aos="fade-up" data-aos-delay="100"  *ngFor="let student of top5Students">
+                    <div class="card rounded">
+                      <div class="card-img ">
+                        <!-- <img src="assets/img/service-1.jpg" alt="" class="img-fluid"> -->
+                        <img src="{{student.profileImageUrl || 'https://statinfer.com/wp-content/uploads/dummy-user.png'}}" alt="User Image" class="img-fluid">
+                      </div>
+                      <h3>{{student.Student_First_Name_E || 'Unknown'}}</h3>
+                      <p>ohter details</p>
+                    </div>
+                  </div><!-- End Card Item -->
+                  </div>
+                </div>
+                </marquee>
+              </div>
+
+
+            </div>
+
+          </div>
+        </section>
+<!-- student -->
+
+
+  
+
+
 
 
 
  
+ 
+      
 
 
 
-
-
-        <!-- topstudent Section -->
-        <section id="topstudent" class="topstudent section" style="background-color: #dfe4ea;">
-
-          <!-- Section Title -->
-          <div class="container section-title" data-aos="fade-up">
+<!--     <section id="topstudent" class=" card" style="background-color: #dfe4ea;">
+ 
+          <div class="container card section-title" data-aos="fade-up">
             <span>Top Student's<br></span>
             <h2>Top Student's</h2>
             <p>At Indira Gandhi Krishi Vishwavidyalaya (IGKV), we take immense pride in the accomplishments of our students. Here are the top 5 students who have secured prestigious placements, showcasing their exceptional talent and dedication. Congratulations to them!</p>
-          </div><!-- End Section Title -->
+          </div> 
 
           <div class="container">
             <marquee class="notification_body border" behavior="scroll" direction="left" scrollamount="10" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();">
@@ -141,18 +233,18 @@
               <div class="col-lg-2 col-md-2" data-aos="fade-up" data-aos-delay="100"  *ngFor="let student of top5Students">
                 <div class="card rounded">
                   <div class="card-img ">
-                    <!-- <img src="assets/img/service-1.jpg" alt="" class="img-fluid"> -->
+                 
                     <img src="{{student.profileImageUrl || 'https://statinfer.com/wp-content/uploads/dummy-user.png'}}" alt="User Image" class="img-fluid">
                   </div>
                   <h3>{{student.Student_First_Name_E || 'Unknown'}}</h3>
                   <p>ohter details</p>
                 </div>
-              </div><!-- End Card Item -->
+              </div> 
               </div>
             </div>
             </marquee>
           </div>
-        </section><hr>
+        </section>  -->
         <!-- /topstudent Section -->
 
 
@@ -161,17 +253,19 @@
   
 
         <!-- topcompany Section -->
-        <section id="topcompany" class="topcompany section" style="background-color: #dfe4ea;">
-
+        <section id="faq" class="faq section" style="margin-top: -51px;">
           <!-- Section Title -->
-          <div class="container section-title" data-aos="fade-up">
+          <div class="container card section-title" style="background-color: #8a2be2;" data-aos="fade-up">
+            <div class="col-lg-12">
+          <!-- Section Title -->
+          <div class="container card section-title" data-aos="fade-up" style="margin-top: -70px;">
             <span>Top Compani's<br></span>
             <h2>Top Company's</h2>
             <p>Indira Gandhi Krishi Vishwavidyalaya (IGKV) is proud to partner with leading companies and organizations in the agricultural and allied sectors. These top companies actively participate in our placement programs, offering valuable opportunities to our graduates. Here are some of the most prestigious companies that visit IGKV for placements:</p>
           </div><!-- End Section Title -->
 
           <div class="container">
-            <marquee class="notification_body border" behavior="scroll" direction="left" scrollamount="10" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();">
+            <marquee class="notification_body " behavior="scroll" direction="left" scrollamount="3" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();">
             <div class="row gy-2 ">
               <div class="d-flex">
               <div class="col-lg-2 col-md-2" data-aos="fade-up" data-aos-delay="100"  *ngFor="let cmapany of top5company">
@@ -192,6 +286,8 @@
             </div>
             </marquee>
           </div>
+          </div>
+          </div>
         </section>
         <!-- /topcompany Section -->
 
@@ -200,7 +296,7 @@
 
 
     <!-- Section -->
-    <section id="cout" class="cout section">
+    <!-- <section id="cout" class="cout section">
 
       <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
 
@@ -219,7 +315,7 @@
                   <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="0" class="">{{StudentCont}}</span>
                   <p>Registered Students</p>
                 </div>
-              </div><!-- End Stats Item -->
+              </div> 
 
 
               <div class="col-lg-3 col-6">
@@ -227,39 +323,117 @@
                   <span  class="">{{ComapnyCont}}</span>
                   <p>Registered Companies</p>
                 </div>
-              </div><!-- End Stats Item -->
+              </div> 
 
-              <!-- <div class="col-lg-3 col-6">
-                <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0" class="purecounter">1453</span>
-                  <p>jobs</p>
-                </div>
-              </div> -->
-              <!-- End Stats Item -->
+            <div class="col-lg-3 col-6">
+                    <div class="stats-item text-center w-100 h-100">
+                      <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0" class="purecounter">1453</span>
+                      <p>jobs</p>
+                    </div>
+                  </div> 
+               
 
-              <!-- <div class="col-lg-3 col-6">
+              <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
                   <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="0" class="purecounter">32</span>
                   <p>Workers</p>
                 </div>
-              </div> -->
-              <!-- End Stats Item -->
+              </div>  
+              
 
             </div>
 
           </div>
 
           <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <!-- <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt=""> -->
+     <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">  
           </div>
 
         </div>
       </div>
-
     </section>
-    
+     -->
     <!-- / Section -->
 
+
+
+
+        <!-- Gallery Section -->
+        <!-- <section id="gallery" class="gallery section">
+
+          
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Gallery</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+          </div> 
+    
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+            <div class="swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "centeredSlides": true,
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  },
+                  "breakpoints": {
+                    "320": {
+                      "slidesPerView": 1,
+                      "spaceBetween": 0
+                    },
+                    "768": {
+                      "slidesPerView": 3,
+                      "spaceBetween": 20
+                    },
+                    "1200": {
+                      "slidesPerView": 5,
+                      "spaceBetween": 20
+                    }
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt=""></a></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+    
+          </div>
+    
+        </section> -->
+        <!-- /Gallery Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- testimonial -->
+        
+        <!-- testimonial -->
 
 
 
