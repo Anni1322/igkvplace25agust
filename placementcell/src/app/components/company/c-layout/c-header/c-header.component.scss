@@ -28,7 +28,7 @@
     // background-color: #ffffff;
     // background-color: #8254d8;
     // background-color: #1B1464;
-    background-color: #1886E5;
+    background-color: #182C61;
     color: #ffffff;
   border-radius: 0px 0px 20px 20px;
   
@@ -105,3 +105,43 @@
     color: white !important;
   }
   
+
+
+
+  // for logo
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .site-title {
+    color: #ffffff; /* Dark blue color */
+    font-size: 1.5rem; /* Larger size for h1 */
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* More spacing between letters */
+    font-family: 'Montserrat', sans-serif; /* Example of a stylish font */
+  }
+  
+  .site-subtitle {
+    color: #ffffff; /* Slightly lighter color */
+    font-size: 1rem; /* Smaller size for h4 */
+    margin-top: -8px;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif; /* Complementary font for subtitle */
+  }
+  
+  // for logo

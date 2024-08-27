@@ -148,6 +148,8 @@ import { ADashbComponent } from './components/admin/a-dashb/a-dashb.component';
 import { CFileuploadsComponent } from './components/company/c-fileuploads/c-fileuploads.component';
 import { FrontpageComponent } from './components/other/frontpage/frontpage.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { Home1Component } from './components/home1/home1.component';
+import { NavbarComponent } from './m-layout/navbar/navbar.component';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -249,6 +251,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
       ADashbComponent,
       CFileuploadsComponent,
       FrontpageComponent,
+      Home1Component,
+      NavbarComponent,
    
      
      

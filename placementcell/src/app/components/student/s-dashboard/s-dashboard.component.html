@@ -2,50 +2,51 @@
     <!-- <h2>Welcome to Your Dashboard</h2> -->
 
 
-    <div class="notification-section">
-        <h2>Notifications</h2>
-  
-        <div class="card">
-            <marquee class="notification_body " style="margin: 20px;" behavior="scroll" direction="up" scrollamount="3" scrolldelay="10" onmouseover="this.stop();" onmouseout="this.start();">
-                <div class="row">
-                  <div class="mt-4" *ngFor="let vacancy of data">
-                      <span class="card-subtitle mb-2 text-muted" hidden>VID: {{ vacancy.Vacancy_ID }} </span>
-                    
-                              <span class="card-title"><img src="https://img.icons8.com/?size=100&id=mIQ6moZZHoBs&format=png&color=000000" width="20px"  height="15px" alt="" srcset="">  Last Date : {{ vacancy.Last_Date_for_apply | date }} </span>
-                              <span class="card-title">Post : {{ vacancy.Job_Title }} </span>
-                         
-                              <!-- <span class="card-title">Company : {{ vacancy.Company_Id }} </span> -->
+
+            <!-- Faq Section -->
+            <section id="faq" class="faq section" >
+
+                <!-- Section Title -->
+                <div class="container card section-title" data-aos="fade-up">
+                  <div class="col-lg-12">
+                    <div class="faq-container" style="margin-top: -80px;">
+                      <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200" style="height: 7px; background-color: #8a2be2; border-radius: 10px;">
+                        <i style="margin-top: -11px;" class="faq-icon bi bi-bell"></i>
+                        <h3 style="margin-top: -11px;">Notification</h3>
+                        <div  class="faq-content">
+                          <!-- <p>jobs available's.</p> -->
+                        </div>
+                      </div>
+                      <!-- End Faq item-->
+                  
+                      <marquee class="notification_body " behavior="scroll" direction="up" scrollamount="3" scrolldelay="15" onmouseover="this.stop();" onmouseout="this.start();" style="height: 200px;  overflow: hidden;">
+                        <div class="faq-item " data-aos="fade-up" data-aos-delay="300" *ngFor="let vacancy of data" style="height: 7px; margin-top: -11px;">
+                          <!-- <i class="faq -icon bi bi-info-circle"></i> -->
+                          <img src="https://img.icons8.com/?size=100&id=mIQ6moZZHoBs&format=png&color=000000" width="20px" alt="" srcset="">  
+                          Last Date : {{ vacancy.Last_Date_for_apply | date }} 
+                          <span class="card-subtitle text-muted" hidden>VID: {{ vacancy.Vacancy_ID }} </span>
+                  
+                        
+            
+                          <!-- <a [routerLink]="['/notification']" class="card-link"> More</a> -->
+                          <!-- <h3>Post : {{ vacancy.Job_Title }}</h3> -->
                           
-                              <!-- <span class="card-title">Post No : {{ vacancy.Vacancy_ID }} </span> -->
-                         
-                              <a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="card-link"> Apply Now</a> 
-                              <a [routerLink]="['/student/s-vacany-details']" class="card-link"> More</a>
-                       
+                          <a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="card-link"> Apply Now</a> 
+                          <a [routerLink]="['/student/s-vacany-details']" class="card-link"> More</a>
+
+                          <!-- <i [routerLink]="['/notification']" class="faq-toggle bi bi-chevron-right"><a [routerLink]="['/notification']" class="card-link"> More</a></i> -->
+                        </div><!-- End Faq item-->
+                      </marquee>
+                    </div>
                   </div>
-              </div>
-              </marquee>
-        </div>
-        
-
-        <!-- <div class="col-md-4" *ngFor="let vacancy of data">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title  ">Post Name: {{ vacancy.Job_Title }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">VID: {{ vacancy.Vacancy_ID }}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">Company Id: {{ vacancy.No_Of_Post }}</h6>
-                <p class="card-text">Description: {{ vacancy.Job_Description }}</p>
-                <p class="card-text"><strong>Location:</strong> {{ vacancy.Job_Location }}</p>
-                <p class="card-text"><strong>Salary:</strong> {{ vacancy.Salary }}</p>
-                <p class="card-text"><strong>Type:</strong> {{ vacancy.Job_Selection }}</p>
-                <p class="card-text"><strong>Last Date to Apply:</strong> {{ vacancy.Last_Date_for_apply }}</p>
-        
-                <a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="card-link">Apply Now</a>
-              </div>
-            </div>
-          </div> -->
+                </div>
+                <!-- End Section Title -->
+              </section>
+              <!-- /Faq Section -->
+      
 
 
-      </div>
+      
 
     <div class="row mt-2">
         <!-- <div class="col-md-4 mb-4">
@@ -108,16 +109,18 @@
             </div>
         </div>
 
-        <div class="col-md-4 mb-4">
+        <!-- <div class="col-md-4 mb-4">
             <div class="card shadow card1 " >
                 <div class="card-body">
                     <h4 class="card-title">My Profile</h4>
-                    <!-- <p class="card-text">Some example text.</p> -->
-                    <!-- <a href="#" class="btn btn-warning">View</a> -->
+                    <p class="card-text">Some example text.</p>
+                    <a href="#" class="btn btn-warning">View</a>
                     <a [routerLink]="'/student/s-profile/' + user.eid" class="btn btn-warning">View</a>
                   </div>
             </div>
-        </div>
+        </div> -->
+
+        
     </div>
 
 

@@ -59,7 +59,9 @@
             <td>{{ vacancy.Salary }}</td>
             <td>{{ vacancy.Job_Selection }}</td>
             <td>{{ vacancy.Last_Date_for_apply | date }}</td>
-            <td><a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="btn-primary">Apply Now</a></td>
+            <!-- <td><a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="btn-primary">Apply Now</a></td> -->
+
+            <td><a [routerLink]="['/student/s-vacancy-apply', vacancy.Vacancy_ID]" class="" style="background-color: #8a2be2;"> <i style="margin-top: 5px; color: #ffffff;" class="fas fa-check-circle"></i></a></td>
           </tr>
         </tbody>
       </table>

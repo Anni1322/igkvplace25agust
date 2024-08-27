@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CServiceService } from '../service/c-service.service';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Route, Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -45,12 +45,29 @@ export class CBasicDetailsComponent implements OnInit {
     private router: Router,
   ) {}
 
+
+
+  // validation 
+  textOnlyValidator(control: FormControl): { [key: string]: boolean } | null {
+    // Regular expression to allow only letters and spaces
+    const valid = /^[a-zA-Z\s]+$/.test(control.value);
+    return valid ? null : { 'textOnly': true };
+  }
+
+  phoneNumberValidator(control: AbstractControl): ValidationErrors | null {
+    const phoneNumber = control.value;
+    const isValid = phoneNumber && phoneNumber.toString().length === 10 && /^[9876]\d{9}$/.test(phoneNumber);
+    return isValid ? null : { invalidPhoneNumber: true };
+  }
+  
+  // validation 
+
   ngOnInit(): void {
     this.companyregistrationForm = this.fb.group({
       Company_Id: ['', Validators.required],
       Company_Registration_No: ['', Validators.required],
       Tnp_Registration_No: ['', Validators.required],
-      Company_Name: ['', Validators.required],
+      Company_Name: ['', [Validators.required, this.textOnlyValidator]],
       Company_Type: ['', Validators.required],
       Company_Category: ['', Validators.required],
       Company_Email: ['', [Validators.required, Validators.email]],
@@ -166,11 +183,7 @@ export class CBasicDetailsComponent implements OnInit {
 
 
 
-  phoneNumberValidator(control: AbstractControl): ValidationErrors | null {
-    const phoneNumber = control.value;
-    const isValid = phoneNumber && phoneNumber.toString().length === 10 && /^[9876]\d{9}$/.test(phoneNumber);
-    return isValid ? null : { invalidPhoneNumber: true };
-  }
+
 
   get email() {
     return this.companyregistrationForm.get('Company_Email');

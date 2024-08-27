@@ -60,6 +60,26 @@ button {
 }
 }
 
+
+
+
+
+// for basic details form width
+.custom-input-field {
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.custom-input-field .mat-form-field-infix {
+  height: 6px; /* Adjust the height as needed */
+}
+
+.custom-input-field input {
+  padding: 1px -4px; /* Adjust padding to control input field height */
+  font-size: 12px; /* Ensure the input font size matches the label */
+}
+
+// for basic details form width
+
 @media (max-width: 768px) {
 .col-md-3 {
   margin-bottom: 1rem;
