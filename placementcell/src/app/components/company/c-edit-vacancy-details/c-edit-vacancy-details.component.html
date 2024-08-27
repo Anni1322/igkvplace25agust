@@ -19,6 +19,7 @@
 
                        <!-- <mat-stepper>
                             <mat-step>-->
+                                <br>
                                 <div class="card-body">
                                     <div class="row">
 
@@ -27,26 +28,26 @@
                                         <div class="col-lg-4 ">
                                             <div class="form-group">
                                                 <label for="Vacancy_ID">Vacancy ID: </label>
-                                                <input type="text" class="form-control " [(ngModel)]="vacancydata.Vacancy_ID" id="Vacancy_ID" name="Vacancy_ID" ngModel required>
+                                                <input readonly type="text" class="form-control " [(ngModel)]="vacancydata.Vacancy_ID" id="Vacancy_ID" name="Vacancy_ID" ngModel required>
                         
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="Company_Id">Company ID: </label>
-                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Company_Id"  id="Company_Id" name="Company_Id" ngModel required> 
+                                                <input readonly type="text" class="form-control" [(ngModel)]="vacancydata.Company_Id"  id="Company_Id" name="Company_Id" ngModel required> 
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label for="Company_Name">Company_Name: </label>
-                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Company_Name"  id="Company_Name" name="Company_Name" ngModel required> 
+                                                <label for="Company_Name">Company Name: </label>
+                                                <input readonly type="text" class="form-control" [(ngModel)]="vacancydata.Company_Name"  id="Company_Name" name="Company_Name" ngModel required> 
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="Company_Registration_No">Company Registration No: </label>
-                                                <input type="text" class="form-control" [(ngModel)]="vacancydata.Company_Registration_No" id="Company_Registration_No" name="Company_Registration_No"ngModel>
+                                                <input readonly type="text" class="form-control" [(ngModel)]="vacancydata.Company_Registration_No" id="Company_Registration_No" name="Company_Registration_No"ngModel>
                                               
                                             </div>
                                         </div>
@@ -126,7 +127,7 @@
                                         <div class="col-lg-4">
                                             <div class="form-group">     
                                                 <label for="Job_Description">Job Description: </label>
-                                                <textarea class="form-control" [(ngModel)]="vacancydata.Job_Description" id="Job_Description" name="Job_Description" rows="4" ngModel></textarea>
+                                                <textarea class="form-control" [(ngModel)]="vacancydata.Job_Description" id="Job_Description" name="Job_Description" rows="2" ngModel></textarea>
                                             </div>
                                         </div>
                                         <!--comment the create date

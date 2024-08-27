@@ -117,7 +117,9 @@ export class SSkillDetailsComponent implements OnInit {
       this.skilldetailsform.patchValue({
         Skill_Certificate_Url: fileUrl
       })
-    }
+       
+    };
+    Swal.fire("Certificate uploaded successfully");
   });
   }
 

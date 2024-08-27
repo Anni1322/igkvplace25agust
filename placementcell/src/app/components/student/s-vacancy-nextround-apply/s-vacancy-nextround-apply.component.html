@@ -19,7 +19,7 @@
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="Company_ID">Company ID:</label>
-              <input type="text" id="Company_ID" placeholder="Company_Id" formControlName="Company_ID"
+              <input readonly type="text" id="Company_ID" placeholder="Company_Id" formControlName="Company_ID"
                 class="form-control"
                 [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched }">
               <div class="invalid-feedback"
@@ -30,8 +30,8 @@
           </div>
           <div class="col-lg-4">
             <div class="form-group mb-2">
-              <label for="Company_Name">Company_Name:</label>
-              <input type="text" id="Company_Name" placeholder="Company_Name" formControlName="Company_Name"
+              <label for="Company_Name">Company Name:</label>
+              <input readonly type="text" id="Company_Name" placeholder="Company_Name" formControlName="Company_Name"
                 class="form-control"
                 [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched }">
               <div class="invalid-feedback"
@@ -51,7 +51,7 @@
           <div class="col-lg-4" hidden>
             <div class="form-group mb-2">
               <label for="Application_Submission_Date">Application Submission Date:</label>
-              <input type="date" id="Application_Submission_Date" placeholder="submission date"
+              <input readonly type="date" id="Application_Submission_Date" placeholder="submission date"
                 formControlName="Application_Submission_Date" class="form-control">
             </div>
           </div>
@@ -59,7 +59,7 @@
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="Vacancy_ID">Vacancy ID:</label>
-              <input type="text" id="Vacancy_ID" placeholder="vacancy id" formControlName="Vacancy_ID"
+              <input readonly type="text" id="Vacancy_ID" placeholder="vacancy id" formControlName="Vacancy_ID"
                 class="form-control">
             </div>
           </div>
@@ -67,15 +67,15 @@
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="Student_ID">Student ID:</label>
-              <input type="text" id="Student_ID" placeholder="student id" formControlName="Student_ID"
+              <input readonly type="text" id="Student_ID" placeholder="student id" formControlName="Student_ID"
                 class="form-control">
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="form-group mb-2">
-              <label for="Full_Name">Full Name: </label>
-              <input type="text" id="Full_Name" placeholder="full name" formControlName="Full_Name"
+              <label for="Full_Name">Name: </label>
+              <input readonly type="text" id="Full_Name" placeholder="full name" formControlName="Full_Name"
                 class="form-control">
             </div>
           </div>
@@ -83,7 +83,7 @@
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="Fathers_Name">Father Name:</label>
-              <input type="text" id="Fathers_Name" placeholder="father name" formControlName="Fathers_Name"
+              <input readonly type="text" id="Fathers_Name" placeholder="father name" formControlName="Fathers_Name"
                 class="form-control">
             </div>
           </div>
@@ -91,14 +91,14 @@
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="Mobile">Mobile No:</label>
-              <input type="number" id="Mobile" placeholder="number" class="form-control" formControlName="Mobile">
+              <input readonly type="number" id="Mobile" placeholder="number" class="form-control" formControlName="Mobile">
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="Job_Title">Post Name:</label>
-              <input type="text" id="Job_Title" placeholder="job title" formControlName="Job_Title"
+              <input readonly type="text" id="Job_Title" placeholder="job title" formControlName="Job_Title"
                 class="form-control">
             </div>
           </div>
@@ -106,14 +106,14 @@
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="Email">Email:</label>
-              <input type="email" id="Email" placeholder="email" class="form-control" formControlName="Email">
+              <input readonly type="email" id="Email" placeholder="email" class="form-control" formControlName="Email">
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="form-group mb-2">
               <label for="">Placement Schedule: </label>
-              <input type="text" id="schedule" placeholder="schedules" class="form-control" formControlName="Schedule">
+              <input  type="text" id="schedule" placeholder="schedules" class="form-control" formControlName="Schedule">
             </div>
           </div>
 

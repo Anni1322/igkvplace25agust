@@ -10,7 +10,7 @@
           <div class="col-md-3">
             <div class="form-group mb-1">
               <label for="Student_ID" style="font-size: .77rem;">Student ID: </label>
-              <input id="Student_ID" formControlName="Student_ID" class="form-control" style="font-size: .77rem;" />
+              <input readonly id="Student_ID" formControlName="Student_ID" class="form-control" style="font-size: .77rem;" />
             </div>
           </div>
           <!--Oragization details-->
@@ -26,7 +26,7 @@
             <div class="form-group mb-1">
               <label for="Organization_Name" style="font-size: .77rem;">Organization Name: </label>
               <input id="Organization_Name" type="text" formControlName="Organization_Name" class="form-control"
-                style="font-size: .77rem;" />
+                style="font-size: .77rem;" (keypress)="validateInput($event)" />
             </div>
           </div>
 
@@ -34,7 +34,7 @@
             <div class="form-group mb-1">
               <label for="Post_Name" style="font-size: .77rem;">Post Name: </label>
               <input type="text" id="Post_Name" formControlName="Post_Name" class="form-control"
-                style="font-size: .77rem;" />
+                style="font-size: .77rem;" (keypress)="validateInput($event)" />
             </div>
           </div>
 
@@ -43,7 +43,7 @@
             <div class="form-group mb-1">
               <label for="WorkPlace_Address" style="font-size: .77rem;">WorkPlace Address: </label>
               <input id="WorkPlace_Address" formControlName="WorkPlace_Address" class="form-control"
-                style="font-size: .77rem;" />
+                style="font-size: .77rem;" (keypress)="validateInput($event)" />
             </div>
           </div>
 
@@ -75,7 +75,7 @@
             <div class="form-group mb-1">
               <label for="City_Name" style="font-size: .77rem;">City Name: </label>
               <input type="text" id="City_Name" formControlName="City_Name" class="form-control"
-                style="font-size: .77rem;" />
+                style="font-size: .77rem;" (keypress)="validateInput($event)" />
             </div>
           </div>
 
@@ -83,7 +83,7 @@
             <div class="form-group mb-1">
               <label for="Description" style="font-size: .77rem;">Description: </label>
               <input type="text" id="Description" formControlName="Description" class="form-control"
-                style="font-size: .77rem;" />
+                style="font-size: .77rem;" (keypress)="validateInput($event)" />
             </div>
           </div>
           <!--Time Period details-->

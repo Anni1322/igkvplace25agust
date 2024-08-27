@@ -6,7 +6,7 @@
                     <div class="card-header p-1" style="background-color: #ffffff">
                         <h2 class="ms-1 mt-1 " style="color: blueviolet;"><b>Basic Information / मूलभूत जानकारी</b></h2>
                     </div>
-
+                    
 
                     <div class="container-fluid" id="addstudent">
                         <mat-card>
@@ -86,7 +86,7 @@
                                                                 First Name
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="First_Name"
-                                                                formControlName="Student_First_Name_E">
+                                                                formControlName="Student_First_Name_E" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -97,7 +97,7 @@
                                                                 Middle Name
                                                             </mat-label>
                                                             <input matInput type="text" placeholder=" Middle_Name"
-                                                                formControlName="Student_Middle_Name_E">
+                                                                formControlName="Student_Middle_Name_E" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -108,7 +108,7 @@
                                                                 Last Name
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="Last_Name"
-                                                                formControlName="Student_Last_Name_E">
+                                                                formControlName="Student_Last_Name_E" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -135,7 +135,7 @@
                                                                 विद्यार्थी का प्रथम नाम:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="प्रथम नाम"
-                                                                formControlName="Student_First_Name_H">
+                                                                formControlName="Student_First_Name_H" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -146,7 +146,7 @@
                                                                 विद्यार्थी का मध्य नाम:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="मध्य नाम"
-                                                                formControlName="Student_Middle_Name_H">
+                                                                formControlName="Student_Middle_Name_H" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -157,7 +157,7 @@
                                                                 विद्यार्थी का अंतिम नाम:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="अंतिम नाम"
-                                                                formControlName="Student_Last_Name_H">
+                                                                formControlName="Student_Last_Name_H" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -195,7 +195,7 @@
                                                             <mat-label for="Mobile_No">
                                                                 Mobile No:
                                                             </mat-label>
-                                                            <input matInput type="text" placeholder="Mobile no"
+                                                            <input matInput type="number" placeholder="Mobile no"
                                                                 formControlName="Mobile_No">
                                                                 <mat-error *ngIf="studentregistrationForm?.get('Mobile_No')?.hasError('invalidPhoneNumber')">
                                                                      only 10 digits and start with 9, 8, 7, or 6 is valid..
@@ -226,7 +226,7 @@
                                                                 Father Name E:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="Father_Name"
-                                                                formControlName="Father_Name_E">
+                                                                formControlName="Father_Name_E" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -237,7 +237,7 @@
                                                                 Mother Name E:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="Mother_Name"
-                                                                formControlName="Mother_Name_E">
+                                                                formControlName="Mother_Name_E" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -248,7 +248,7 @@
                                                                 Father Name Hindi:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="Father_Name"
-                                                                formControlName="Father_Name_H">
+                                                                formControlName="Father_Name_H" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -259,7 +259,7 @@
                                                                 Mother Name Hindi:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="Mother_Name"
-                                                                formControlName="Mother_Name_H">
+                                                                formControlName="Mother_Name_H" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -270,7 +270,7 @@
                                                                 Guardian Name E:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="Guardian_Name"
-                                                                formControlName="Guardian_Name_E">
+                                                                formControlName="Guardian_Name_E" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
@@ -281,7 +281,7 @@
                                                                 Spouse Name E:
                                                             </mat-label>
                                                             <input matInput type="text" placeholder="Spouse_Name"
-                                                                formControlName="Spouse_Name_E">
+                                                                formControlName="Spouse_Name_E" (keypress)="validateInput($event)">
                                                         </mat-form-field>
                                                     </div>
                                                 </div>

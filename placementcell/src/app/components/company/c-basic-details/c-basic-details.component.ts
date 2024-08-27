@@ -293,7 +293,12 @@ uploadBroucher(){                            //multer will accept form data so w
 
   
 
-
+validateInput(event: KeyboardEvent): void {
+  const inputChar = String.fromCharCode(event.charCode);
+  if (!/^[a-zA-Z ]*$/.test(inputChar)) {
+    event.preventDefault();
+  }
+}
 
 
   
@@ -357,6 +362,7 @@ uploadBroucher(){                            //multer will accept form data so w
     }
   }
   
+
 
   getCompanydata(cid: any) {
     console.log('cID:', cid);

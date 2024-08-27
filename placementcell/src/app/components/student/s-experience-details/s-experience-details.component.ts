@@ -54,6 +54,12 @@ export class SExperienceDetailsComponent implements OnInit {
 
   }
 
+  validateInput(event: KeyboardEvent): void {
+    const inputChar = String.fromCharCode(event.charCode);
+    if (!/^[a-zA-Z ]*$/.test(inputChar)) {
+      event.preventDefault();
+    }
+  }
 
   getvalueFromform(value: any) {
     const formValue = this.experiencedetailsform.value;

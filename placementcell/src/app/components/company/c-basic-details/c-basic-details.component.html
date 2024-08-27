@@ -6,7 +6,7 @@
                 <div class="#">
                     <div class="card row">  
                         <div class="" style="background-color: #182C61" >
-                            <h5 class="ms-1 mt-1 text-white"><b>Basic Information / मूलभूत जानकारी</b></h5>
+                            <h2 class="ms-1 mt-1 text-white"><b>Basic Information / मूलभूत जानकारी</b></h2>
                         </div>
                         
                         <form [formGroup]="companyregistrationForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" autocomplete="off">
@@ -16,6 +16,7 @@
                                 
                             <form [formGroup]="companyregistrationForm">
                                 <ng-template matStepLabel>Basic Details</ng-template>
+                                <br>
                                 <div class="card-body"> 
                                     <div class="row">
                                 <!--<div class="col-md-3">
@@ -44,7 +45,7 @@
                                             <mat-label for="Company_Registration_No">
                                                 Company Registration No:
                                             </mat-label>
-                                            <input matInput placeholder="registration no" formControlName="Company_Registration_No">
+                                            <input matInput placeholder="registration no" formControlName="Company_Registration_No" readonly>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -64,7 +65,7 @@
                                             <mat-label for="Company_Name">
                                                 Company Name:
                                             </mat-label>
-                                            <input matInput type="text" placeholder="company name" formControlName="Company_Name">
+                                            <input matInput type="text" placeholder="company name" formControlName="Company_Name" readonly>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -131,7 +132,7 @@
                                             <mat-label for="Hr_Name">
                                                 Hr Name:
                                             </mat-label>
-                                            <input matInput type="text" placeholder="Hr name" formControlName="Hr_Name">
+                                            <input matInput type="text" placeholder="Hr name" formControlName="Hr_Name" (keypress)="validateInput($event)">
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -164,7 +165,7 @@
                                             <mat-label for="Contact_Person">
                                                 Contact Person Name:
                                             </mat-label>
-                                            <input matInput type="text" placeholder="contact person name" formControlName="Contact_Person">
+                                            <input matInput type="text" placeholder="contact person name" formControlName="Contact_Person" (keypress)="validateInput($event)">
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -197,7 +198,7 @@
                                             <mat-label for="Company_Short_Name">
                                                 Company Short Name:
                                             </mat-label>
-                                            <input matInput placeholder="company short name" formControlName="Company_Short_Name">
+                                            <input matInput placeholder="company short name" formControlName="Company_Short_Name" (keypress)="validateInput($event)">
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -226,6 +227,7 @@
                                 
                                 <form [formGroup]="companyregistrationForm">
                                 <ng-template matStepLabel>Address Section </ng-template>
+                                <br>
                                 <div class="card-body">
                                     <div class="row">
                                 <div class="col-md-3">
@@ -234,7 +236,7 @@
                                             <mat-label for="Address">
                                                 Address: 
                                             </mat-label>
-                                            <input matInput placeholder="address" formControlName="Address">
+                                            <input matInput placeholder="address" formControlName="Address" (keypress)="validateInput($event)">
                                          </mat-form-field>
                                      </div>
                                 </div>
@@ -417,7 +419,7 @@
 
 
                         <div class="row">
-                            <ng-template matStepLabel>Submition section</ng-template>
+                            <ng-template matStepLabel>Upload Section</ng-template>
                               <!-- <div class="col-md-3">
                                 <div class="form-group">
                                   <mat-form-field appearance="outline" class="inputfieldsize">
@@ -460,14 +462,14 @@
                            <!-- stapper end --> 
                 </form>
 
-                    <div
+                    <!-- <div
                             class="rounded-bottom border border-dark border-1 p-1 text-center m-0 bg-dark text-light fw-bold">
-                            <!-- <a class="text-light" href="#">User Manual</a> || -->
+                            <a class="text-light" href="#">User Manual</a> || -->
                             <!-- <a class="text-light" href="#">User Instruction</a> || -->
                             <!-- <small class="text-primary register-text">If Already have an account !.. -->
                             <!-- </small> -->
-                            <!-- <a class="text-warning" routerLink="/login" href="#"><b>Login</b></a> -->
-                        </div>
+                            <!-- <a class="text-warning" routerLink="/login" href="#"><b>Login</b></a> 
+                        </div> -->
 
                     </div>
                 </div>

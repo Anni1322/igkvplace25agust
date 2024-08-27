@@ -49,79 +49,63 @@
 
   <!-- login  -->
   <section id="appointment" class="appointment section light-background" style="background-color: #EAEAEA;">
-
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up"  style="margin-top: -50px; padding: 0px;">
-      <h2>Login</h2>
-      <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-    </div>
-    <!-- End Section Title -->
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100"  style="margin-top: 0px; padding: 0px;">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off" class="container-fluid">
-        <div class="row justify-content-center" style="margin: 13px;">
-          <div class="col-md-4 col-12">
-            <!-- Username Field -->
-            <div class="form-group mb-3">
-              <!-- <label for="username">Username</label> -->
-              <input type="text" id="username" formControlName="username" class="form-control" placeholder="Username" required>
-            </div>
-      
-            <!-- Password Field -->
-            <div class="form-group mb-3">
-              <!-- <label for="password">Password</label> -->
-              <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password" required>
-            </div>
-      
-            <!-- <div class="form-group mb-3">
-              <img class="bg-white" [src]="captchaImage" alt="CAPTCHA" width="100" height="30" />
-              <svg (click)="loadCaptcha()" xmlns="http://www.w3.org/2000/svg" width="60" height="35" fill="currentColor" class="bi bi-arrow-clockwise m-3 btn" viewBox="0 0 16 16" style="background-color: rgb(214, 214, 214);">
-                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
-                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
-              </svg>
-            </div>
-            
-            <div class="form-group mb-3">
-              <label for="captcha">CAPTCHA</label>
-              <input type="text" id="captcha" formControlName="captcha" class="form-control" placeholder="Enter CAPTCHA" required>
-            </div> -->
-
-
-
-            <div class="mt-1">
-              <div class="mt-1">
-                <div class="text-center">
-                  <img class="bg-white me-2" [src]="captchaImage" alt="CAPTCHA" width="100" height="30" />
-                  <i (click)="loadCaptcha()" class="fa-solid fa-arrow-rotate-right me-2"></i>
+    <!-- Card Wrapper -->
+    <div class="container" data-aos="fade-up" data-aos-delay="100" style="margin-top: 0px; padding: 0px;">
+      <div class="card mx-auto shadow-lg" style="max-width: 500px;">
+        <div class="card-body">
+          <!-- Section Title -->
+          <div class="text-center mb-4" >
+            <h2>Login</h2>
+          </div>
+          <!-- End Section Title -->
+  
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off" class="container-fluid">
+            <div class="row justify-content-center" style="margin: 13px;">
+              <div class="col-md-10 col-12">
+                <!-- Username Field -->
+                <div class="form-group mb-3">
+                  <input type="text" id="username" formControlName="username" class="form-control" placeholder="Username" required>
+                </div>
+  
+                <!-- Password Field -->
+                <div class="form-group mb-3">
+                  <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password" required>
+                </div>
+  
+                <!-- CAPTCHA Section -->
+                <div class="mt-1">
+                  <div class="text-center">
+                    <img class="bg-white me-2" [src]="captchaImage" alt="CAPTCHA" width="100" height="30" />
+                    <i (click)="loadCaptcha()" class="fa-solid fa-arrow-rotate-right me-2" style="cursor: pointer;"></i>
+                  </div>
+                  <div class="text-center">
+                    <input id="captcha" formControlName="captcha" type="text" required class="form-control col-md-6 mx-auto mt-2" placeholder="Enter CAPTCHA">
+                  </div>
                 </div>
               </div>
-    
-    
-              <div class="text-center ">
-                <input id="captcha" formControlName="captcha" type="text" required class="col-md-6">
-              </div>
             </div>
+  
+            <div class="d-flex justify-content-around align-items-center mb-4">
+              <!-- Checkbox -->
+              
+              <a href="#!">Forgot password?</a>
+            </div>
+  
 
 
-
-
-
-          </div>
+            <!-- Buttons -->
+            <div class="text-center mt-3">
+              <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary mb-4 m-3">Login</button>
+              <button type="button" routerLink="/" class="btn btn-secondary mb-4 m-3">Home</button>
+            </div>
+          </form>
         </div>
-      
-        <div class="text-center mt-3">
-          <button type="submit" [disabled]="loginForm.invalid" class="btn mb-4 m-3">Login</button>
-          <button type="button" routerLink="/" class="btn  mb-4 m-3">Home</button>
-        </div>
-      </form>
-      
-      
-      
-      
-
+      </div>
     </div>
-
+    <!-- End Card Wrapper -->
   </section>
+  
+  
   
   <!-- login  -->
 

@@ -189,6 +189,23 @@ export class SAplicationComponent implements OnInit {
     return this.studentregistrationForm.get('Email_Id');
   }
 
+   validateInput(event: KeyboardEvent): void {
+    const inputChar = String.fromCharCode(event.charCode);
+    if (!/^[a-zA-Z]*$/.test(inputChar)) {
+      event.preventDefault();
+    }
+  }
+
+  validateInputHindi(event: KeyboardEvent): void {
+    const inputChar = String.fromCharCode(event.charCode);
+    // Regular expression for Hindi characters
+    const hindiRegex = /^[\u0900-\u097F\s]*$/;
+
+    if (!hindiRegex.test(inputChar)) {
+      event.preventDefault();
+    }
+  }
+
   onSubmit(): void {
     if (this.studentregistrationForm.valid) {
       console.log('Form Submitted!', this.studentregistrationForm.value);
@@ -198,6 +215,7 @@ export class SAplicationComponent implements OnInit {
         () => {
           alert('Form submitted successfully!');
           this.studentregistrationForm.reset();
+          this.router.navigate(['/student/s-profile']);
 
         },
         (error) => {

@@ -179,6 +179,7 @@
                 </div>
                 <!--<mat-stepper>
                   <mat-step>-->
+                    <br>
                     <div class="card-body">
                       <div class="row">
                        <!-- <ng-template matStepLabel="content">Basic Details</ng-template>-->
@@ -202,8 +203,8 @@
                         <!-- Company Name Column -->
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Company_Name"> Company Name</label>
-                            <input type="text" class="form-control" formControlName="Company_Name" id="Company_Name" required>
+                            <label for="Company_Name"> Company Name :</label>
+                            <input readonly type="text" class="form-control" formControlName="Company_Name" id="Company_Name" required>
                           </div>
                         </div>
                         <div class="col-lg-3">
@@ -215,7 +216,7 @@
                         <div class="col-lg-3">
                           <div class="form-group">
                             <label for="Job_Title">Job Title :</label>
-                            <input type="text" class="form-control" formControlName="Job_Title" id="Job_Title">
+                            <input type="text" class="form-control" formControlName="Job_Title" id="Job_Title" (keypress)="validateInput($event)">
                           </div>
                         </div>
                      
@@ -231,8 +232,9 @@
                         </div> -->
 
 
-                        <div class="col-md-3 form-group mt-3">
-                          <select formControlName="Job_Selection" id="Job_Selection" class="form-select" required="">
+                        <div class="col-md-3 form-group">
+                          <label>Job Selection :</label>
+                          <select formControlName="Job_Selection" id="Job_Selection" class="form-select" required="" >
                             <option value="">Select</option>
                             <option value="interview">Interview</option>
                             <option value="merit-list">Merit List</option>
@@ -243,12 +245,12 @@
                         <div class="col-lg-3">
                           <div class="form-group">
                             <label for="Job_Location">Job Location :</label>
-                            <input type="text" class="form-control" formControlName="Job_Location" id="Job_Location">
+                            <input type="text" class="form-control" formControlName="Job_Location" id="Job_Location" (keypress)="validateInput($event)">
                           </div>
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="No_Of_Post">Post No:</label>
+                            <label for="No_Of_Post">No of Post :</label>
                             <input type="number" class="form-control" formControlName="No_Of_Post" id="No_Of_Post">
                           </div>
                         </div>
@@ -357,14 +359,14 @@
                             <div class="col-lg-3">
                               <div class="form-group">
                                 <label for="Job_Description">Job Description :</label>
-                                <textarea class="form-control" type="text" formControlName="Job_Description" id="Job_Description" rows="2"></textarea>
+                                <textarea class="form-control" type="text" formControlName="Job_Description" id="Job_Description" rows="2" (keypress)="validateInput($event)"></textarea>
                               </div>
                             </div>
                             
   
                             <!-- <div class="col-lg-3">
                               <div class="form-group">
-                                <label for="Status">Status:</label>
+                                <label for="pdf">PDF:</label>
                                 <input type="text" placeholder="status" class="form-control" formControlName="Status" id="Status" value="Pending">
                               </div>
                             </div> -->

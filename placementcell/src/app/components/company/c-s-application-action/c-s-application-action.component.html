@@ -21,13 +21,13 @@
           <div class="col-lg-4">
           <div class="form-group mb-2">
             <label for="Student_Application_ID">Student Application ID</label>
-            <input type="text" id="Student_Application_ID" formControlName="Student_Application_ID" class="form-control" >
+            <input readonly type="text" id="Student_Application_ID" formControlName="Student_Application_ID" class="form-control" >
          
          
           </div>
           <div class="form-group mb-2">
             <label for="Company_ID">Company ID</label>
-            <input type="text" id="Company_ID" formControlName="Company_ID" class="form-control" [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched }">
+            <input readonly type="text" id="Company_ID" formControlName="Company_ID" class="form-control" [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched }">
             <div class="invalid-feedback" *ngIf="vacancyApplydata.controls['Company_ID'].invalid && vacancyApplydata.controls['Company_ID'].touched">
               Company_ID is required.
             </div>
@@ -35,7 +35,7 @@
           </div>
           <div class="form-group mb-2">
             <label for="Company_Name">Company Name</label>
-            <input type="text" id="Company_Name" formControlName="Company_Name" class="form-control" [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched }">
+            <input readonly type="text" id="Company_Name" formControlName="Company_Name" class="form-control" [ngClass]="{ 'is-invalid': vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched }">
             <div class="invalid-feedback" *ngIf="vacancyApplydata.controls['Company_Name'].invalid && vacancyApplydata.controls['Company_Name'].touched">
               Company_Name is required.
             </div>
@@ -43,47 +43,47 @@
           </div>
           <div class="form-group mb-2">
             <label for="Student_ID">Student ID</label>
-            <input type="text" id="Student_ID"  formControlName="Student_ID" class="form-control" >
+            <input readonly type="text" id="Student_ID"  formControlName="Student_ID" class="form-control" >
           </div>
           <div class="form-group">
               <label for="Vacancy_ID">Vacancy ID</label>
-                  <input type="text" id="Vacancy_ID" formControlName="Vacancy_ID" class="form-control" >
+                  <input readonly type="text" id="Vacancy_ID" formControlName="Vacancy_ID" class="form-control" >
            </div>
 
           <div class="form-group mb-2" hidden>
           <!-- <div class="form-group mb-2" > -->
             <label for="Flag">Flag</label>
-            <input type="text" id="Flag" formControlName="Flag" class="form-control" >
+            <input readonly type="text" id="Flag" formControlName="Flag" class="form-control" >
           </div>
                     
           <div class="form-group" hidden>
           <!-- <div class="form-group" > -->
               <label for="Application_Submission_Date">Application Submission Date</label>
-                  <input type="date" id="Application_Submission_Date"  formControlName="Application_Submission_Date" class="form-control" >
+                  <input readonly type="date" id="Application_Submission_Date"  formControlName="Application_Submission_Date" class="form-control" >
           </div>
        
 
 
           <div class="form-group mb-3" hidden>
               <label for="Resume_Path">Resume Upload</label>
-              <input type="text" id="Resume_Path" formControlName="Resume_Path" class="form-control" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+              <input readonly type="text" id="Resume_Path" formControlName="Resume_Path" class="form-control" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
             </div>
       </div>  
       
       <div class="col-lg-4">
           <div class="form-group mb-2" >
-              <label for="Full_Name">Full Name</label>
-              <input type="text" id="Full_Name"  formControlName="Full_Name" class="form-control" >
+              <label for="Full_Name">Student Name</label>
+              <input readonly type="text" id="Full_Name"  formControlName="Full_Name" class="form-control" >
             </div>
 
             <div class="form-group">
               <label for="Fathers_Name">Fathers Name</label>
-                  <input type="text" id="Fathers_Name"  formControlName="Fathers_Name" class="form-control" >
+                  <input readonly type="text" id="Fathers_Name"  formControlName="Fathers_Name" class="form-control" >
           </div>
 
           <div class="form-group">
               <label for="Post_Name">Post Name</label>
-                  <input type="text" id="Post_Name"  formControlName="Post_Name" class="form-control" >
+                  <input readonly type="text" id="Post_Name"  formControlName="Post_Name" class="form-control" >
           </div>
           <div class="form-group">
             <label for="Status">Status</label>
@@ -103,11 +103,11 @@
       <div class="col-lg-4">
       <div class="form-group">
           <label for="Mobile">Mobile Number</label>
-              <input type="number" id="Mobile"  class="form-control" formControlName="Mobile">
+              <input readonly type="number" id="Mobile"  class="form-control" formControlName="Mobile">
       </div>        
       <div class="form-group">
           <label for="Email">Email</label>
-          <input type="Email" id="Email"  class="form-control" formControlName="Email" >
+          <input readonly type="Email" id="Email"  class="form-control" formControlName="Email" >
       </div>
       <div class="form-group" hidden>
           <label for="Status">Status</label>

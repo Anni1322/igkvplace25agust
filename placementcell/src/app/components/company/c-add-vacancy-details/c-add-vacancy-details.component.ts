@@ -56,7 +56,13 @@ export class CAddVacancyDetailsComponent {
   }
   
 
-
+  validateInput(event: KeyboardEvent): void {
+    const inputChar = String.fromCharCode(event.charCode);
+    if (!/^[a-zA-Z ]*$/.test(inputChar)) {
+      event.preventDefault();
+    }
+  }
+  
  
 
 
