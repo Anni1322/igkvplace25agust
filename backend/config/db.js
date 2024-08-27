@@ -3,14 +3,14 @@ const sql = require("mssql/msnodesqlv8");
 
 
 // Anil database 
-var config = {
-server: "ANNI\\SQLEXPRESS",
-database: "placementcell",
-driver: "msnodesqlv8",
-options: {
-    trustedConnection: true
-}
-};
+// var config = {
+// server: "ANNI\\SQLEXPRESS",
+// database: "placementcell",
+// driver: "msnodesqlv8",
+// options: {
+//     trustedConnection: true
+// }
+// };
 
 
 
@@ -27,15 +27,15 @@ options: {
 
 
 //Roshni database
-//    var config = {
-//        user: "igkv",
-//        database: "placementcell",
-//        server:"DESKTOP-NDU9JS5",
-//        password: "igkv@123",
-//           options: {
-//           trustedConnection: true
-//      }
-//   };
+   var config = {
+       user: "igkv",
+       database: "placementcell",
+       server:"DESKTOP-NDU9JS5",
+       password: "igkv@123",
+          options: {
+          trustedConnection: true
+     }
+  };
 
 
 // Connect to the database

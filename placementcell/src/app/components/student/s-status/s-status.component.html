@@ -50,16 +50,17 @@
         <thead>
             <tr>
                 <!-- <th>Company ID</th> -->
-                <th>Job Title</th>
-                <th>Student ID</th>
+               
                 <th>Vacancy ID</th>
-                <th>Company_Name</th>
+                <th>Company Name</th>
+                <th>Post Name</th>
                 <!-- <th>Flag</th> -->
-                <th>Submission Date</th>
-                <th>Full Name</th>
+                <th>Student ID</th>
+                <th>Name</th>
                 <!-- <th>Father's Name</th> -->
                 <!-- <th>Mobile</th> -->
                 <!-- <th>Email</th> -->
+                <th>Submission Date</th>
                 <th>Status</th>
                 <th>Next Round Apply</th>
             </tr>
@@ -67,16 +68,18 @@
         <tbody>
             <tr *ngFor="let application of vacancyApplications">
                 <!-- <td>{{ application.Company_ID }}</td> -->
-                <td>{{ application.Post_Name }}</td>
-                <td>{{ application.Student_ID }}</td>
+               
+               
                 <td>{{ application.Vacancy_ID }}</td>
                 <td>{{ application.Company_Name }}</td>
+                <td>{{ application.Post_Name }}</td>
                 <!-- <td>{{ application.Flag }}</td> -->
-                <td>{{ application.Application_Submission_Date | date }}</td>
+                <td>{{ application.Student_ID }}</td>
                 <td>{{ application.Full_Name }}</td>
                 <!-- <td>{{ application.Fathers_Name }}</td> -->
                 <!-- <td>{{ application.Mobile }}</td> -->
                 <!-- <td>{{ application.Email }}</td> -->
+                <td>{{ application.Application_Submission_Date | date }}</td>
                 <td>{{ application.Status }}</td>
                 <td>
                     <ng-container *ngIf="application.Status === 'Short Listed'; else blankCell">

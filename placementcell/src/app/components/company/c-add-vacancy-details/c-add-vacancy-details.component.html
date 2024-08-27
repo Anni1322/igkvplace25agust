@@ -2,14 +2,8 @@
 
 
 <!-- oringinal  -->
-
+<div class="container">
 <div class=" container container-flude mt-2 mb-3 p-0 user-select-none">
-  <div class="container page-heading text-center p-0 bg-white rounded shadow">
-      <h3 style="background-color: #1886E5"
-          class="card-header p-2 text-light rounded border border-end-0 border-bottom-0 border-start-0 border-5 border-dark">
-          <strong>Add Vacancy Details</strong>
-      </h3>
-  </div>
 
   <div class="container main-con mt-2 bg-white-subtle p-1  rounded">
       <!-- <form class="form" #NgForm="ngForm" enctype="multipart/form-data">
@@ -180,8 +174,8 @@
           <div class="row basic-row">
             <div class="#">
               <div class="card">
-                <div class="card-header p-1" style="background-color:#66b2f5">
-                  <h5 class="ms-1 mt-1 text-white"><b>Basic Information</b></h5>
+                <div class="card-header p-1" style="background-color:#dfdddd">
+                  <h1 class="ms-1 mt-1 text-black"><b>Add Vacancy</b></h1>
                 </div>
                 <!--<mat-stepper>
                   <mat-step>-->
@@ -201,71 +195,71 @@
                         <!-- Company Id Column -->
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Company_Id">Company ID:</label>
+                            <label for="Company_Id">Company ID :</label>
                             <input readonly type="text" class="form-control" formControlName="Company_Id" id="Company_Id" required>
                           </div>
                         </div>
                         <!-- Company Name Column -->
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Company_Name"> Company_Name</label>
+                            <label for="Company_Name"> Company Name :</label>
                             <input type="text" class="form-control" formControlName="Company_Name" id="Company_Name" required>
                           </div>
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Company_Registration_No">Company Registration No:</label>
+                            <label for="Company_Registration_No">Company Registration No :</label>
                             <input readonly type="text" class="form-control" formControlName="Company_Registration_No" id="Company_Registration_No" required>
                           </div>
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Job_Title">Job Title:</label>
+                            <label for="Job_Title">Job Title :</label>
                             <input type="text" class="form-control" formControlName="Job_Title" id="Job_Title">
                           </div>
                         </div>
                      
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Job_Selection">Job Selection:</label>
+                            <label for="Job_Selection">Job Selection :</label>
                             <input type="text" class="form-control" formControlName="Job_Selection" id="Job_Selection">
                           </div>
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Job_Location">Job Location:</label>
+                            <label for="Job_Location">Job Location :</label>
                             <input type="text" class="form-control" formControlName="Job_Location" id="Job_Location">
                           </div>
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="No_Of_Post">Number of Posts:</label>
+                            <label for="No_Of_Post">Number of Posts :</label>
                             <input type="number" class="form-control" formControlName="No_Of_Post" id="No_Of_Post">
                           </div>
                         </div>
                          
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Maximum_Age">Maximum Age:</label>
+                            <label for="Maximum_Age">Maximum Age :</label>
                             <input type="number" class="form-control" formControlName="Maximum_Age" id="Maximum_Age">
                           </div>
                         </div>
                         
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Salary">Salary:</label>
+                            <label for="Salary">Salary :</label>
                             <input type="number" class="form-control" formControlName="Salary" id="Salary">
                           </div>
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Last_Date_for_apply">Last Date to Apply:</label>
+                            <label for="Last_Date_for_apply">Last Date to Apply :</label>
                             <input type="date" class="form-control" formControlName="Last_Date_for_apply" id="Last_Date_for_apply">
                           </div>
                         </div>
                         <div class="col-lg-3">
                           <div class="form-group">
-                            <label for="Min_Experience_in_Year">Minimum Experience (Years):</label>
+                            <label for="Min_Experience_in_Year">Minimum Experience (Years) :</label>
                             <input type="number" class="form-control" formControlName="Min_Experience_in_Year" id="Min_Experience_in_Year">
                           </div>
                         </div>
@@ -276,7 +270,6 @@
                         <div class="card-body">
                           <div class="row">
                             <!-- <h2>Other details</h2> -->
-                            <ng-template matStepLabel="content">Other details</ng-template>
                          
                             <!-- <div class="col-lg-3">
                               <div class="form-group">
@@ -286,7 +279,7 @@
                             </div> -->
 
                             <div class="col-lg-3">
-                              <label for="Preferred_Gender">Preferred Gender:</label>
+                              <label for="Preferred_Gender">Preferred Gender :</label>
                               <div class="form-group d-flex">
                                 
                                 <div id="Preferred_Gender">
@@ -317,7 +310,7 @@
 
                             <div class="col-lg-3">
                               <div class="form-group">
-                                <label for="Prefered_Language">Preferred Language:</label>
+                                <label for="Prefered_Language">Preferred Language :</label>
                                 <div class="form-group d-flex">
                                 
                                   <div id="Prefered_Language">
@@ -348,7 +341,7 @@
 
                             <div class="col-lg-3">
                               <div class="form-group">
-                                <label for="Job_Description">Job Description:</label>
+                                <label for="Job_Description">Job Description :</label>
                                 <textarea class="form-control" type="text" formControlName="Job_Description" id="Job_Description" rows="2"></textarea>
                               </div>
                             </div>
@@ -369,7 +362,7 @@
                             </div> -->
                             
                             <!-- <button mat-button matStepperPrevious>Back</button> -->
-                            <div class="mt-2 d-flex justify-content-evenly pt-4 pb-3 rounded-top bg-white border border-1 border-dark">
+                            <div class="d-flex justify-content-evenly">
                               <button type="submit" class="btn btn-primary" [disabled]="formData.invalid" (click)="getvalueFromform()" >Submit</button>
                             </div>
                           </div>
@@ -386,7 +379,7 @@
                    
                   </mat-step> -->
               <!--  </mat-stepper> -->
-                <div class="rounded-bottom border border-dark border-1 p-1 text-center m-0 bg-dark text-light fw-bold">
+               
                   <!-- <a class="text-light" href="#">User Manual</a> || -->
                   <!-- <a class="text-light" href="#">User Instruction</a> || -->
                   <!-- <small class="text-primary register-text">If Already have an account !..</small> -->
@@ -394,13 +387,13 @@
                 </div>
               </div>
             </div>
-          </div>
+        
         </form>
         
   </div>
 </div>
 
-
+</div>
 
 
 

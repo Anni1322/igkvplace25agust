@@ -1,5 +1,5 @@
 <div class="container mt-3">
-  <h2>Vacancy Details for Students</h2>
+  <h1>Vacancy Details</h1>
   <div class="input-group mb-3">
       <!-- <input type="text" class="form-control" placeholder="Search jobs" aria-label="Search jobs" aria-describedby="search-button"> -->
       <!-- <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button> -->
@@ -32,11 +32,12 @@
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <th>Post Name</th>
-            <th>VID</th>
-            <th>Company Id</th>
+           
+            <th>Vacancy ID</th>
+            <th>Company ID</th>
             <th>Company Name</th>
-            <th>Post No</th>
+            <th>Post Name</th>
+            <th>No. of post</th>
             <!--<th>Description</th>-->
             <th>Location</th>
             <th>Salary</th>
@@ -47,10 +48,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let vacancy of data">
-            <td>{{ vacancy.Job_Title }}</td>
+           
             <td>{{ vacancy.Vacancy_ID }}</td>
             <td>{{ vacancy.Company_Id }}</td>
             <td>{{ vacancy.Company_Name }}</td>
+            <td>{{ vacancy.Job_Title }}</td>
             <td>{{ vacancy.No_Of_Post }}</td>
            <!-- <td>{{ vacancy.Job_Description }}</td>-->
             <td>{{ vacancy.Job_Location }}</td>

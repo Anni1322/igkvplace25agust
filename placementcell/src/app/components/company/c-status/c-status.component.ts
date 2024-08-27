@@ -12,7 +12,7 @@ import { CServiceService } from '../service/c-service.service';
  
   
 export class CStatusComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['S.No.','id', 'jobTitle','CompanyId', 'companyName', 'jobLocation', 'jobType', 'status', 'edit'];
+  displayedColumns: string[] = ['S.No.','id', 'CompanyId', 'companyName', 'jobTitle','jobLocation', 'jobType', 'status', 'edit'];
   // dataSource = new MatTableDataSource<JobStatus>(JOB_DATA);
   dataSource = new MatTableDataSource<JobStatus>();
 
